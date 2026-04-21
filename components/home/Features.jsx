@@ -2,11 +2,11 @@
 
 import { useRef } from "react"
 
-// import Classroom from "../features/Classroom"
-// import Educraft from "../features/Educraft"
-// import Karate from "../features/Karate"
-// import School from "../features/School"
-// import Sports from "../features/Sports"
+import Classroom from "../features/Classroom"
+import Educraft from "../features/Educraft"
+import Karate from "../features/Karate"
+import School from "../features/School"
+import Sports from "../features/Sports"
 import { useSequenceScroll } from "../../lib/sequence/useSequenceScroll"
 
 const frameCount = 266
