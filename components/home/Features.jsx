@@ -9,17 +9,17 @@ import School from "../features/School"
 import Sports from "../features/Sports"
 import { useSequenceScroll } from "../../lib/sequence/useSequenceScroll"
 
-const frameCount = 266
+const frameCount = 117
 
 const anchors = [
   { id: "school", frame: 1, component: "school" },
-  { id: "classroom", frame: 68, component: "classroom" },
-  { id: "educraft", frame: 126, component: "educraft" },
-  { id: "karate", frame: 190, component: "karate" },
-  { id: "sports", frame: 248, component: "sports" },
+  { id: "classroom", frame: 117, component: "classroom" },
+  // { id: "educraft", frame: 117, component: "educraft" },
+  // { id: "karate", frame: 117, component: "karate" },
+  // { id: "sports", frame: 117, component: "sports" },
 ]
 
-const frameSrc = (frame) => `/sequences/home/${String(frame).padStart(4, "0")}.webp`
+const frameSrc = (frame) => `/sequences/sports-swim/${String(frame).padStart(4, "0")}.webp`
 
 const componentMap = {
   school: School,
