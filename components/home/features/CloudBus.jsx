@@ -1,11 +1,12 @@
 "use client"
 
 import { useRef } from "react"
+import DebugPanel from "../../../lib/DebugPanel"
 import { useSimpleSequenceScroll } from "../../../lib/gsap/SimpleSequenceScroll"
 import SchoolFront from "../SchoolFront"
 
 const frameCount = 136
-const frameSrc = (frame) => `/sequences/new/white-bus-3/${String(frame).padStart(4, "0")}.webp`
+const frameSrc = (frame) => `/sequences/new/white-bus/${String(frame).padStart(4, "0")}.webp`
 
 const anchors = [
   {
@@ -74,7 +75,7 @@ function CloudBusContent() {
 export default function CloudBus() {
   const sectionRef = useRef(null)
   const canvasRef = useRef(null)
-  const { currentFrame } = useSimpleSequenceScroll({
+  const { currentFrame, progress, activeAnchor } = useSimpleSequenceScroll({
     sectionRef,
     canvasRef,
     frameCount,
@@ -86,6 +87,13 @@ export default function CloudBus() {
   return (
     <section ref={sectionRef} className="relative h-screen overflow-hidden bg-white">
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
+      <DebugPanel
+        label="Cloud Bus"
+        currentFrame={currentFrame}
+        frameCount={frameCount}
+        progress={progress}
+        activeAnchor={activeAnchor}
+      />
       {anchors
         .filter((anchor) => anchor.component)
         .map((anchor) => {

@@ -2,10 +2,11 @@
 
 import { useRef } from "react"
 import HeroContent from "./HeroContent"
-import { useSimpleSequenceScroll } from "../../lib/gsap/SimpleSequenceScroll"
+import DebugPanel from "../../lib/DebugPanel"
+import { useStrictSequenceScroll } from "../../lib/gsap/StrictSequenceScroll"
 
-const frameCount = 39
-const frameSrc = (frame) => `/sequences/new/hero-white/${String(frame).padStart(4, "0")}.webp`
+const frameCount = 163
+const frameSrc = (frame) => `/sequences/new/hero-white-3/${String(frame).padStart(4, "0")}.webp`
 
 const anchors = [
   {
@@ -14,8 +15,10 @@ const anchors = [
     component: "HeroContent",
     enter: { animation: "zoom-out", from: 1, to: 1 },
     exit: { animation: "zoom-in", from: 5, to: 10 },
+    stepDuration: 1,
   },
-  { id: "white", frame: 39, component: null },
+  { id: "test", frame: 28, component: null, stepDuration: 1 },
+  { id: "white", frame: 163, component: null, stepDuration: 4 },
 ]
 
 const componentMap = {
@@ -60,19 +63,25 @@ const layerStyle = (anchor, frame) => {
 export default function HerotoWhite() {
   const sectionRef = useRef(null)
   const canvasRef = useRef(null)
-  const { currentFrame } = useSimpleSequenceScroll({
+  const { currentFrame, progress, activeAnchor } = useStrictSequenceScroll({
     sectionRef,
     canvasRef,
     frameCount,
     frameSrc,
     anchors,
-    scrollScreens: 1,
   })
   const contentAnchors = anchors.filter((anchor) => anchor.component)
 
   return (
     <section ref={sectionRef} className="relative h-screen overflow-hidden bg-white">
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
+      <DebugPanel
+        label="Hero To White"
+        currentFrame={currentFrame}
+        frameCount={frameCount}
+        progress={progress}
+        activeAnchor={activeAnchor}
+      />
       {contentAnchors.map((anchor) => {
         const Content = componentMap[anchor.component]
 

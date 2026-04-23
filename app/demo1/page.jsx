@@ -8,8 +8,8 @@ const Page = () => {
   return (
     <div>
       <HerotoWhite />
-      <TextSection/>
-      <CloudBus/>
+      {/* <TextSection/> */}
+      {/* <CloudBus/> */}
       {/* <MoreDetails /> */}
       {/* <Footer/> */}
     </div>
