@@ -1,4 +1,9 @@
 import "./globals.css"
+import StickyHeader from "../components/layout/StickyHeader"
+import AssetLoader from "@/lib/AssetLoader"
+import SmoothScrollProvider from "@/lib/SmoothScrollProvider"
+import SoundBtn from "../components/ui/SoundBtn"
+
 
 export const metadata = {
   title: "Apex New",
@@ -8,7 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white text-neutral-950 antialiased">{children}</body>
+      <body className="">
+        <AssetLoader>
+          <StickyHeader />
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+          <SoundBtn />
+        </AssetLoader>
+      </body>
     </html>
   )
 }

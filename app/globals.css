@@ -1,11 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
 @import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-primary-500: #334086;
+  --font-sans: "Lato", Arial, Helvetica, sans-serif;
+}
+
+/* RFRufo local font family */
+
+@font-face {
+  font-family: "RFRufo";
+  src:
+    url("/font/RFRufo-Light.woff2") format("woff2"),
+    url("/font/RFRufo-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RFRufo";
+  src:
+    url("/font/RFRufo-Regular.woff2") format("woff2"),
+    url("/font/RFRufo-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RFRufo";
+  src:
+    url("/font/RFRufo-Semibold.woff2") format("woff2"),
+    url("/font/RFRufo-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RFRufo";
+  src:
+    url("/font/RFRufo-Bold.woff2") format("woff2"),
+    url("/font/RFRufo-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   scroll-behavior: auto;
 }
 
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
 body {
   margin: 0;
+  font-family: var(--font-sans);
 }
 
 a {
@@ -15,4 +74,59 @@ a {
 
 canvas {
   display: block;
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+.font-accent {
+  font-family: "RFRufo", Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  .text-eyebrow {
+    font-family: var(--font-sans);
+    font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.95rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .text-display {
+    font-family: "RFRufo", Arial, Helvetica, sans-serif;
+    font-size: clamp(3.0rem, 1.2rem + 4vw, 6rem);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+
+  .text-heading {
+    font-family: "RFRufo", Arial, Helvetica, sans-serif;
+    font-size: clamp(1.8rem, 1.1rem + 2vw, 3rem);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .text-body-lg {
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 0.9rem + 0.35vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .text-body {
+    font-family: var(--font-sans);
+    font-size: clamp(0.95rem, 0.65rem + 0.15vw, 1.05rem);
+    font-weight: 700;
+    line-height: 1.6;
+  }
+
+  .text-caption {
+    font-family: var(--font-sans);
+    font-size: clamp(0.85rem, 0.6rem + 0.05vw, 0.85rem);
+    font-weight: 400;
+    line-height: 1.4;
+  }
 }

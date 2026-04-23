@@ -2,11 +2,11 @@
 
 import { useRef } from "react"
 
-import Classroom from "../features/Classroom"
-import Educraft from "../features/Educraft"
-import Karate from "../features/Karate"
-import School from "../features/School"
-import Sports from "../features/Sports"
+import Classroom from "./features/Classroom"
+import Educraft from "./features/Educraft"
+import Karate from "./features/Karate"
+import School from "./features/School"
+import Sports from "./features/Sports"
 import { useSequenceScroll } from "../../lib/sequence/useSequenceScroll"
 
 const frameCount = 117
@@ -19,7 +19,7 @@ const anchors = [
   // { id: "sports", frame: 117, component: "sports" },
 ]
 
-const frameSrc = (frame) => `/sequences/sports-swim/${String(frame).padStart(4, "0")}.webp`
+const frameSrc = (frame) => `/sequences/new/hero-white/${String(frame).padStart(4, "0")}.webp`
 
 const componentMap = {
   school: School,
@@ -47,7 +47,7 @@ export default function Features() {
       ref={sectionRef}
       className="relative overflow-hidden overscroll-none bg-[#f5efe7] text-neutral-950"
     >
-      <div className="relative h-[100svh] overflow-hidden">
+      <div className="relative h-[100vh] overflow-hidden">
         <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.24),transparent_62%)]" />
 
