@@ -1,6 +1,6 @@
 import "./globals.css"
 import StickyHeader from "../components/layout/StickyHeader"
-import AssetLoader from "@/lib/AssetLoader"
+// import AssetLoader from "@/lib/AssetLoader"
 import SmoothScrollProvider from "@/lib/SmoothScrollProvider"
 import SoundBtn from "../components/ui/SoundBtn"
 
@@ -14,11 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">
-        <AssetLoader>
+        {/* <AssetLoader> */}
           <StickyHeader />
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
           <SoundBtn />
-        </AssetLoader>
+        {/* </AssetLoader> */}
       </body>
     </html>
   )

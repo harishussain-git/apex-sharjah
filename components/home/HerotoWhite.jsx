@@ -2,6 +2,8 @@
 
 import { useRef } from "react"
 import HeroContent from "./HeroContent"
+import TextSection from "./TextSection"
+import SchoolFront from "./SchoolFront"
 import DebugPanel from "../../lib/DebugPanel"
 import { useStrictSequenceScroll } from "../../lib/gsap/StrictSequenceScroll"
 
@@ -17,12 +19,22 @@ const anchors = [
     exit: { animation: "zoom-in", from: 5, to: 10 },
     stepDuration: 1,
   },
-  { id: "test", frame: 28, component: null, stepDuration: 1 },
-  { id: "white", frame: 163, component: null, stepDuration: 4 },
+  {
+    id: "test", frame: 28, component: "TextSection",
+    enter: { animation: "zoom-out", from: 24, to: 28 },
+    exit: { animation: "zoom-in", from: 29, to: 32 },
+    stepDuration: 1
+  },
+  { id: "white", frame: 163, component: "SchoolFront",
+    enter: { animation: "zoom-out", from: 160, to: 163 },
+    exit: { animation: "zoom-in", from: 163, to: 163 },
+    stepDuration: 4 },
 ]
 
 const componentMap = {
   HeroContent,
+  TextSection,
+  SchoolFront,
 }
 
 const clamp = (value) => Math.min(Math.max(value, 0), 1)
