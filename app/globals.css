@@ -1,55 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-
 @import "tailwindcss";
 
 
 :root {
-  --background: #ffffff;
+  --background: #0b1220;
   --foreground: #171717;
   --color-primary-500: #334086;
-  --font-sans: "Lato", Arial, Helvetica, sans-serif;
-}
-
-/* RFRufo local font family */
-
-@font-face {
-  font-family: "RFRufo";
-  src:
-    url("/font/RFRufo-Light.woff2") format("woff2"),
-    url("/font/RFRufo-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "RFRufo";
-  src:
-    url("/font/RFRufo-Regular.woff2") format("woff2"),
-    url("/font/RFRufo-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "RFRufo";
-  src:
-    url("/font/RFRufo-Semibold.woff2") format("woff2"),
-    url("/font/RFRufo-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "RFRufo";
-  src:
-    url("/font/RFRufo-Bold.woff2") format("woff2"),
-    url("/font/RFRufo-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-accent: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -81,7 +38,7 @@ canvas {
 }
 
 .font-accent {
-  font-family: "RFRufo", Arial, Helvetica, sans-serif;
+  font-family: var(--font-accent), Arial, Helvetica, sans-serif;
 }
 
 @layer base {
@@ -94,7 +51,7 @@ canvas {
   }
 
   .text-display {
-    font-family: "RFRufo", Arial, Helvetica, sans-serif;
+    font-family: var(--font-accent), Arial, Helvetica, sans-serif;
     font-size: clamp(3.0rem, 1.2rem + 4vw, 6rem);
     font-weight: 600;
     line-height: 0.95;
@@ -102,7 +59,7 @@ canvas {
   }
 
   .text-heading {
-    font-family: "RFRufo", Arial, Helvetica, sans-serif;
+    font-family: var(--font-accent), Arial, Helvetica, sans-serif;
     font-size: clamp(1.8rem, 1.1rem + 2vw, 3rem);
     font-weight: 500;
     line-height: 1.05;
