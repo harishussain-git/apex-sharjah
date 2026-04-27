@@ -125,7 +125,11 @@ export default function SliderFeatures() {
 
   return (
     <>
-      <section ref={sectionRef} className="relative h-screen overflow-hidden bg-[#0b1220] text-white">
+      <section
+        id="features"
+        ref={sectionRef}
+        className="relative h-screen overflow-hidden bg-[#0b1220] text-white"
+      >
         <div className="absolute inset-0">
           {slides.map((item, index) => (
             <div

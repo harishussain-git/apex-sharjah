@@ -42,7 +42,7 @@ export default function StickyHeader() {
             ))}
           </nav>
 
-          <Link href="/beta" className="hidden min-h-12 items-center rounded-full bg-white px-7  shadow-[0_12px_26px_rgb(35_73_105_/_12%)] md:inline-flex">
+          <Link href="#" className="hidden min-h-12 items-center rounded-full bg-white px-7  shadow-[0_12px_26px_rgb(35_73_105_/_12%)] md:inline-flex">
             Book Admission
           </Link>
 
@@ -67,7 +67,7 @@ export default function StickyHeader() {
               {label}
             </Link>
           ))}
-          <Link href="/beta" onClick={close} className="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-neutral-950 px-6 font-extrabold text-white">
+          <Link href="#" onClick={close} className="mt-2 inline-flex min-h-12 items-center justify-center rounded-full bg-neutral-950 px-6 font-extrabold text-white!">
             Book Admission
           </Link>
         </nav>

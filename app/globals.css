@@ -52,7 +52,7 @@ canvas {
 
   .text-display {
     font-family: var(--font-accent), Arial, Helvetica, sans-serif;
-    font-size: clamp(3.0rem, 1.2rem + 4vw, 6rem);
+    font-size: clamp(3.0rem, 1.3rem + 4vw, 6rem);
     font-weight: 600;
     line-height: 0.95;
     letter-spacing: -0.03em;
