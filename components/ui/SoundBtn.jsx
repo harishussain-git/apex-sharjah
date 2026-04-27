@@ -1,46 +1,87 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-
-function SoundGlyph({ muted = false }) {
-  const lineClassName = muted ? "opacity-0" : "opacity-100";
-
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      className="h-5 w-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M5 10.5h2.8l3.7-3.5v10l-3.7-3.5H5z" />
-      <path className={lineClassName} d="M15 9.25a4 4 0 0 1 0 5.5" />
-      <path className={lineClassName} d="M17.5 7a7 7 0 0 1 0 10" />
-      {muted ? <path d="M15.25 8.75 19 12.5m0-3.75-3.75 3.75" /> : null}
-    </svg>
-  );
-}
+import Image from "next/image"
+import { useEffect, useRef, useState } from "react"
 
 export default function SoundBtn() {
-  const [muted, setMuted] = useState(false);
+  const audioRef = useRef(null)
+  const shouldPlayRef = useRef(true)
+  const [isPlaying, setIsPlaying] = useState(true)
+
+  useEffect(() => {
+    const audio = new Audio("/sound/bgm-1.mp3")
+    audioRef.current = audio
+    audio.loop = true
+    audio.volume = 0.32
+    audio.preload = "auto"
+
+    const tryPlay = async () => {
+      if (!shouldPlayRef.current) return
+
+      try {
+        await audio.play()
+      } catch {
+        // Mobile/desktop browsers may block autoplay until first interaction.
+      }
+    }
+
+    const resumeOnInteract = () => {
+      tryPlay()
+    }
+
+    tryPlay()
+
+    window.addEventListener("pointerdown", resumeOnInteract)
+    window.addEventListener("touchstart", resumeOnInteract, { passive: true })
+    window.addEventListener("keydown", resumeOnInteract)
+    window.addEventListener("wheel", resumeOnInteract, { passive: true })
+
+    return () => {
+      window.removeEventListener("pointerdown", resumeOnInteract)
+      window.removeEventListener("touchstart", resumeOnInteract)
+      window.removeEventListener("keydown", resumeOnInteract)
+      window.removeEventListener("wheel", resumeOnInteract)
+      audio.pause()
+      audio.src = ""
+      audioRef.current = null
+    }
+  }, [])
+
+  const toggleSound = async () => {
+    const nextPlaying = !isPlaying
+    setIsPlaying(nextPlaying)
+    shouldPlayRef.current = nextPlaying
+
+    if (!audioRef.current) return
+
+    if (nextPlaying) {
+      try {
+        await audioRef.current.play()
+      } catch {
+        // If blocked, first interaction listeners will retry.
+      }
+      return
+    }
+
+    audioRef.current.pause()
+  }
 
   return (
-    <div className="relative w-full h-full">
-      <button
-        type="button"
-        onClick={() => setMuted((prev) => !prev)}
-
-        className={`fixed left-6 bottom-6 z-[1001] inline-flex h-14 w-14 items-center justify-center rounded-full border border-black/10 shadow-[0_12px_30px_rgba(0,0,0,0.14)] backdrop-blur transition-colors sm:right-6 ${muted ? "bg-black text-white" : "bg-white/92 text-neutral-900"
-          }`}
-        aria-label={muted ? "Turn sound on" : "Turn sound off"}
-        aria-pressed={muted}
-      >
-        <SoundGlyph muted={muted} />
-      </button>
-    </div>
-
-  );
+    <button
+      type="button"
+      onClick={toggleSound}
+      className={`fixed bottom-6 left-6 z-[1001] inline-flex h-14 w-14 items-center justify-center rounded-full border border-black/10 shadow-[0_12px_30px_rgba(0,0,0,0.14)] backdrop-blur transition-all sm:right-6 ${isPlaying ? "bg-white text-neutral-900" : "bg-black text-white"}`}
+      aria-label={isPlaying ? "Pause background sound" : "Play background sound"}
+      aria-pressed={isPlaying}
+    >
+      <Image
+        src={isPlaying ? "/icons/sound-on.gif" : "/icons/sound-off.svg"}
+        alt=""
+        width={28}
+        height={28}
+        unoptimized
+        className="h-6 w-6 object-contain"
+      />
+    </button>
+  )
 }

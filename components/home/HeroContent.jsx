@@ -9,7 +9,7 @@ export default function HeroContent() {
       <div className="mx-auto mt-30 flex max-w-4xl flex-col items-center gap-6 text-center">
         <p className="text-eyebrow">45 Years of educational excellence</p>
 
-        <h1 className="text-display text-balance uppercase tracking-tight">
+        <h1 className="text-display text-balance uppercase tracking-tight px-4">
           Education that shapes character and confidence
         </h1>
 

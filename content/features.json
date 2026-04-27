@@ -1,137 +1,192 @@
 {
-  "school": {
-    "eyebrow": "Modern School",
-    "title": "Every journey begins with purpose, direction, and care",
-    "intro": "A school environment designed for clarity, curiosity, and confidence.",
-    "metric": "25%",
-    "metricLabel": "stronger student participation",
-    "points": [
-      "Safe campus",
-      "Guided learning",
-      "Smart classrooms",
-      "Student support"
-    ],
-    "items": [
-      {
-        "title": "Purposeful learning spaces",
-        "text": "Every area is planned to help students stay focused, comfortable, and ready to learn.",
-        "image": "/home/schoolfront.webp"
-      },
-      {
-        "title": "Student-first environment",
-        "text": "Supportive systems help children feel seen, guided, and encouraged throughout the day.",
-        "image": "/home/schoolfront.webp"
-      },
-      {
-        "title": "Student-first environment",
-        "text": "Supportive systems help children feel seen, guided, and encouraged throughout the day.",
-        "image": "/home/schoolfront.webp"
-      },
-      {
-        "title": "Student-first environment",
-        "text": "Supportive systems help children feel seen, guided, and encouraged throughout the day.",
-        "image": "/home/schoolfront.webp"
-      }
-    ]
-  },
-  "classroom": {
-    "eyebrow": "Modern Classrooms",
-    "title": "Technology that supports learning - not distracts from it",
-    "intro": "Every classroom is designed for clarity, curiosity, and understanding.",
-    "metric": "20-30%",
-    "metricLabel": "higher engagement in classrooms",
-    "points": [
-      "VR based",
-      "Chrome book for every student",
-      "AI powered Books",
-      "Blockchain integrated"
-    ],
-    "items": [
-      {
-        "title": "Smart teaching tools",
-        "text": "Interactive displays and modern systems help teachers explain concepts clearly and visually.",
-        "image": "/home/schoolfront.webp"
-      },
-      {
-        "title": "Gamified learning platforms",
-        "text": "Game-inspired learning makes lessons more engaging while improving retention.",
-        "image": "/home/schoolfront.webp"
-      }
-    ]
-  },
-  "educraft": {
-    "eyebrow": "Educraft Lab",
-    "title": "Hands-on discovery for future-ready learners",
-    "intro": "Students learn by building, testing, exploring, and improving ideas.",
-    "metric": "3x",
-    "metricLabel": "more hands-on learning time",
-    "points": [
-      "Robotics",
-      "STEM labs",
-      "Creative projects",
-      "Guided experiments"
-    ],
-    "items": [
-      {
-        "title": "STEM exploration",
-        "text": "Students use practical tools to understand science, technology, and design thinking.",
-        "image": "/home/schoolfront.webp"
-      },
-      {
-        "title": "Project-based learning",
-        "text": "Real activities help students connect classroom knowledge with real-world application.",
-        "image": "/home/schoolfront.webp"
-      }
-    ]
-  },
-  "karate": {
-    "eyebrow": "Karate",
-    "title": "Discipline, movement, and confidence in action",
-    "intro": "Karate helps students build focus, balance, respect, and physical confidence.",
-    "metric": "2x",
-    "metricLabel": "more structured physical activity",
-    "points": [
-      "Discipline",
-      "Focus",
-      "Fitness",
-      "Confidence"
-    ],
-    "items": [
-      {
-        "title": "Confidence through practice",
-        "text": "Students learn consistency, control, and self-belief through guided training.",
-        "image": "/home/schoolfront.webp"
-      },
-      {
-        "title": "Healthy movement",
-        "text": "Regular movement helps improve fitness, attention, and emotional balance.",
-        "image": "/home/schoolfront.webp"
-      }
-    ]
-  },
-  "sports": {
-    "eyebrow": "Sports",
-    "title": "Energy beyond the classroom",
-    "intro": "Sports build teamwork, resilience, confidence, and a healthy daily rhythm.",
-    "metric": "40%",
-    "metricLabel": "more active student participation",
-    "points": [
-      "Team games",
-      "Fitness",
-      "Outdoor activity",
-      "Sportsmanship"
-    ],
-    "items": [
-      {
-        "title": "Team spirit",
-        "text": "Students learn communication, leadership, and discipline through team play.",
-        "image": "/home/schoolfront.webp"
-      },
-      {
-        "title": "Active routines",
-        "text": "Regular sports activities support physical health and classroom readiness.",
-        "image": "/home/schoolfront.webp"
-      }
-    ]
+  "features": [
+    {
+      "eyebrow": "Smart Learning",
+      "title": "Where clarity meets curiosity in every classroom",
+      "intro": "Purposefully designed spaces that nurture focus, confidence, and active learning.",
+      "metric": "30%",
+      "metricLabel": "higher engagement",
+      "image": "/home/features/classroom.webp",
+      "points": [
+        "Interactive displays",
+        "Device-assisted learning",
+        "Collaborative seating",
+        "Inclusive support"
+      ]
+    },
+    {
+      "eyebrow": "Early Development",
+      "title": "Learning begins with touch, movement, and discovery",
+      "intro": "Specially crafted zones that support sensory growth and early skill development.",
+      "metric": "20%",
+      "metricLabel": "stronger motor skills",
+      "image": "/home/features/sensory.webp",
+      "points": [
+        "Water play",
+        "Sand exploration",
+        "Sensory activities",
+        "Motor development"
+      ]
+    },
+    {
+      "eyebrow": "Innovation Labs",
+      "title": "Turning ideas into real-world creation",
+      "intro": "Hands-on environments where students build, code, and explore future technologies.",
+      "metric": "2x",
+      "metricLabel": "practical learning exposure",
+      "image": "/home/features/educraft.webp",
+      "points": [
+        "Robotics & coding",
+        "STEM projects",
+        "VR learning",
+        "Innovation space"
+      ]
+    },
+    {
+      "eyebrow": "Design & Technology",
+      "title": "Practical skills that shape confident thinkers",
+      "intro": "Real-world learning through design, tools, and problem-solving experiences.",
+      "metric": "25%",
+      "metricLabel": "hands-on skill growth",
+      "image": "/home/features/reverseeng.webp",
+      "points": [
+        "Carpentry basics",
+        "Electrical learning",
+        "Engineering skills",
+        "Design thinking"
+      ]
+    },
+    {
+      "eyebrow": "Creative Arts",
+      "title": "Where imagination finds expression",
+      "intro": "Studios that inspire creativity, confidence, and personal expression.",
+      "metric": "40%",
+      "metricLabel": "creative engagement",
+      "image": "/home/features/art.webp",
+      "points": [
+        "Drawing & painting",
+        "Craft activities",
+        "Textile work",
+        "Fine motor skills"
+      ]
+    },
+    {
+      "eyebrow": "Life Skills",
+      "title": "Learning for life beyond the classroom",
+      "intro": "Practical experiences that build independence, awareness, and everyday skills.",
+      "metric": "3x",
+      "metricLabel": "real-life exposure",
+      "image": "/home/features/food.webp",
+      "points": [
+        "Cooking basics",
+        "Nutrition awareness",
+        "Food science",
+        "Life training"
+      ]
+    },
+    {
+      "eyebrow": "Confidence Building",
+      "title": "Every voice heard, every child empowered",
+      "intro": "Spaces designed to build communication, presence, and self-confidence.",
+      "metric": "35%",
+      "metricLabel": "confidence growth",
+      "image": "/home/features/speaking.webp",
+      "points": [
+        "Stage performance",
+        "Public speaking",
+        "Indoor activities",
+        "Movement training"
+      ]
+    },
+    {
+      "eyebrow": "Active Living",
+      "title": "Movement, play, and wellbeing every day",
+      "intro": "Balanced environments supporting physical health and emotional wellbeing.",
+      "metric": "50%",
+      "metricLabel": "active participation",
+      "image": "/home/features/sports.webp",
+      "points": [
+        "Play zones",
+        "Sports grounds",
+        "Fitness areas",
+        "Mindfulness spaces"
+      ]
+    },
+    {
+      "eyebrow": "Water Confidence",
+      "title": "Building strength and safety through water",
+      "intro": "Safe, guided swimming programs that develop confidence and life skills.",
+      "metric": "100%",
+      "metricLabel": "supervised sessions",
+      "image": "/home/features/pool.webp",
+      "points": [
+        "Kids pool",
+        "Swimming training",
+        "Water safety",
+        "Supervised learning"
+      ]
+    },
+    {
+      "eyebrow": "Nature Learning",
+      "title": "Rooted in nature, guided by values",
+      "intro": "Outdoor spaces that connect learning with environment and reflection.",
+      "metric": "2x",
+      "metricLabel": "outdoor engagement",
+      "image": "/home/features/garden.webp",
+      "points": [
+        "Qur’anic plants",
+        "Sustainability learning",
+        "Outdoor classrooms",
+        "Reflection spaces"
+      ]
+    },
+    {
+      "eyebrow": "Spiritual Growth",
+      "title": "A calm space for reflection and connection",
+      "intro": "A peaceful environment nurturing values, mindfulness, and spiritual awareness.",
+      "metric": "Daily",
+      "metricLabel": "guided practice",
+      "image": "/home/features/masjid.webp",
+      "points": [
+        "Quiet reflection",
+        "Value-based learning",
+        "Spiritual growth",
+        "Islamic environment"
+      ]
+    },
+    {
+      "eyebrow": "Health & Safety",
+      "title": "Care, safety, and trust in every step",
+      "intro": "A secure environment with dedicated support for every child’s wellbeing.",
+      "metric": "24/7",
+      "metricLabel": "supervision & care",
+      "image": "/home/features/medical.webp",
+      "points": [
+        "Medical support",
+        "Safe campus",
+        "Child-safe design",
+        "Supervised spaces"
+      ]
+    },
+    {
+      "eyebrow": "Smart Mobility",
+      "title": "Safe journeys, always connected",
+      "intro": "Reliable transport and communication systems designed for peace of mind.",
+      "metric": "Live",
+      "metricLabel": "tracking enabled",
+      "image": "/home/features/gps-tracking.webp",
+      "points": [
+        "GPS tracking",
+        "Safe transport",
+        "Parent updates",
+        "Secure systems"
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Experience the Apex difference",
+    "description": "Discover how our thoughtfully designed spaces and programs can nurture your child’s growth, creativity, and confidence. Join us for a tour or contact us to learn more about our unique approach to education.",
+    "buttonText": "Schedule a Tour",
+    "buttonLink": "/contact"
   }
 }

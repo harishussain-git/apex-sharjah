@@ -40,17 +40,21 @@ export default function FeatureCardDrawer({ data, open, onClose }) {
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-[2000] overscroll-contain bg-black/35 md:flex md:justify-end">
+    <div
+      className="fixed inset-0 z-[2000] overscroll-contain bg-black/45 md:flex md:justify-end"
+      onClick={onClose}
+    >
       <aside
         data-lenis-prevent
-        className="h-dvh w-full touch-pan-y overflow-y-auto overscroll-contain bg-white p-5 [-webkit-overflow-scrolling:touch] md:w-[58vw] md:max-w-4xl md:p-8"
+        onClick={(event) => event.stopPropagation()}
+        className="h-dvh w-full touch-pan-y overflow-y-auto overscroll-contain bg-white p-5 [-webkit-overflow-scrolling:touch] md:w-[50vw] md:min-w-[720px] md:max-w-none md:p-8"
       >
         <button
           type="button"
           onClick={onClose}
-          className="fixed right-4 top-4 z-10 grid size-10 place-items-center rounded-full bg-white shadow"
+          className="sticky left-full top-0 z-10 ml-auto grid size-11 place-items-center rounded-full bg-white shadow"
         >
-          x
+          <span className="text-xl leading-none text-neutral-700">×</span>
         </button>
 
         <p className="mb-6 flex items-center gap-2 text-eyebrow text-neutral-700">

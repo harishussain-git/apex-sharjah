@@ -5,6 +5,7 @@
 import Hero from "../components/home/Hero1";
 import Features from "../components/home/Features";
 import MoreDetails from "../components/home/MoreDetails";
+import CtaSection from "../components/home/CtaSection";
 import Footer from "../components/home/Footer";
 import TextSection from "../components/home/TextSection";
 import SchoolFront from "../components/home/SchoolFront";
@@ -29,6 +30,7 @@ export default function Page() {
       <SchoolFront />
       <Features />
       <MoreDetails />
+      <CtaSection />
       <Footer /> */}
     </>
   );

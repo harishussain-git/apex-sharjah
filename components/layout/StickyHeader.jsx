@@ -60,10 +60,10 @@ export default function StickyHeader() {
       </div>
 
       {open ? (
-        <nav className="pointer-events-auto ml-auto mr-3 mt-2 flex max-w-xs flex-col gap-1 rounded-[26px] bg-white/92 p-3 shadow-[0_18px_50px_rgb(35_73_105_/_18%)] backdrop-blur-xl md:mr-5">
+        <nav className="pointer-events-auto ml-auto mr-3 mt-2 flex max-w-xs flex-col gap-1 rounded-[26px] bg-white/92 p-3 shadow-[0_18px_50px_rgb(35_73_105_/_18%)] backdrop-blur-xl md:mr-5 ">
           <button className="rounded-2xl px-4 py-3 text-left font-bold md:hidden" type="button">EN</button>
           {links.map(([label, href]) => (
-            <Link key={label} href={href} onClick={close} className="rounded-2xl px-4 py-3 font-bold transition hover:bg-black/5">
+            <Link key={label} href={href} onClick={close} className=" rounded-2xl px-4 py-3 font-bold transition hover:bg-black/5">
               {label}
             </Link>
           ))}
