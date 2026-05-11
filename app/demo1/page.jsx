@@ -5,13 +5,15 @@ import TextSection from "@/components/home/TextSection"
 import CloudBus from "@/components/home/features/CloudBus"
 import SliderFeatures from "@/components/home/SliderFeatures"
 import CtaSection from "@/components/home/CtaSection"
+import LearningJourney from "@/components/home/LearningJourney"
 
 
 const Page = () => {
   return (
     <div>
       <HerotoWhite />
-      <SliderFeatures />
+      <LearningJourney />
+      {/* <SliderFeatures /> */}
       {/* <TextSection/> */}
       {/* <CloudBus/> */}
       <MoreDetails />

@@ -9,7 +9,7 @@ export default function SoundBtn() {
   const [isPlaying, setIsPlaying] = useState(true)
 
   useEffect(() => {
-    const audio = new Audio("/sound/bgm-1.mp3")
+    const audio = new Audio("/sound/bgm-2.mp3")
     audioRef.current = audio
     audio.loop = true
     audio.volume = 0.32

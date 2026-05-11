@@ -14,9 +14,9 @@ export default function SchoolFront() {
           Every space is designed with purpose.
         </p>
 
-        <a href="#features" className=" rounded-full bg-[#364486] px-6 py-3 text-white! hover:bg-gray-800">
+        {/* <a href="#features" className=" rounded-full bg-[#364486] px-6 py-3 text-white! hover:bg-gray-800">
           Walkthrough journey
-        </a>
+        </a> */}
       </div>
     </section>
   )

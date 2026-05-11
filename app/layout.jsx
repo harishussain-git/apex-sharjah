@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       className={`${lato.variable} ${rfRufo.variable}`}
       style={{ backgroundColor: "#0b1220" }}
     >
-      <body style={{ backgroundColor: "#0b1220" }}>
+      <body>
         {/* <AssetLoader> */}
           <StickyHeader />
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
