@@ -32,14 +32,14 @@ const anchors = [
     enter: { animation: "zoom-out", from: 129, to: 134 },
     exit: { animation: "zoom-in", from: 144, to: 144 },
     stepDurationDown: 5,
-    stepDurationUp: 3
+    stepDurationUp: 1,
   },
   {
     id: "building", frame: 194, component: null,
     enter: { animation: "zoom-out", from: 180, to: 194 },
     exit: { animation: "zoom-in", from: 194, to: 194 },
-    stepDurationDown: 5,
-    stepDurationUp: 3
+    stepDurationDown: 1.3,
+    stepDurationUp: 1.2
   },
 ]
 
