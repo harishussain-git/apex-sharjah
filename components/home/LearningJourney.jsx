@@ -22,6 +22,7 @@ function IconMark({ icon }) {
 export default function LearningJourney() {
   const sectionRef = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [videoError, setVideoError] = useState(false)
   const activeItem = learningJourneyData[activeIndex]
 
   useEffect(() => {
@@ -69,10 +70,14 @@ export default function LearningJourney() {
     }
   }, [])
 
+  useEffect(() => {
+    setVideoError(false)
+  }, [activeItem.id])
+
   return (
     <section
       ref={sectionRef}
-      className="relative h-[500vh] bg-white text-[#111111]"
+      className="relative h-[1200vh] bg-white text-[#111111]"
     >
       <div className="sticky top-0 flex min-h-screen items-center overflow-hidden">
         <div className="mx-auto grid w-full  grid-cols-1 gap-10 px-6 py-16 md:grid-cols-[45%_48%] md:items-center md:justify-between md:px-10 lg:px-16">
@@ -86,7 +91,7 @@ export default function LearningJourney() {
                 <span>{activeItem.eyebrow}</span>
               </div>
 
-              <h2 className="max-w-[680px] text-[clamp(2.5rem,4vw,5.2rem)] text-display uppercase leading-[0.88] tracking-normal text-neutral-950">
+              <h2 className="max-w-[680px] text-[clamp(2.5rem,3.8vw,4.5rem)] text-display uppercase  tracking-normal text-neutral-950">
                 {activeItem.title}
               </h2>
 
@@ -122,19 +127,27 @@ export default function LearningJourney() {
 
           <div className="relative min-h-[360px] md:min-h-[560px]">
             <div
-              key={activeItem.video}
+              key={activeItem.video || activeItem.img}
               className="h-full min-h-[360px] animate-[learningVideoIn_650ms_ease_both] overflow-hidden rounded-lg bg-[#cac8ad] mt-6 md:h-[80vh] border border-neutral-200"
             >
-              <video
-                className="h-full w-full object-cover"
-                src={activeItem.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-              />
-              {/* <img className="object-cover min-h-full w-full" src={activeItem.video} alt="image" /> */}
+              {activeItem.video && !videoError ? (
+                <video
+                  className="h-full w-full object-cover"
+                  src={activeItem.video}
+                  onError={() => setVideoError(true)}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
+              ) : (
+                <img
+                  className="h-full w-full object-cover"
+                  src={activeItem.img}
+                  alt=""
+                />
+              )}
             </div>
           </div>
         </div>

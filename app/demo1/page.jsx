@@ -1,25 +1,23 @@
 import HerotoWhite from "@/components/home/HerotoWhite"
 import MoreDetails from "@/components/home/MoreDetails"
 import Footer from "@/components/home/Footer"
-import TextSection from "@/components/home/TextSection"
-import CloudBus from "@/components/home/features/CloudBus"
-import SliderFeatures from "@/components/home/SliderFeatures"
 import CtaSection from "@/components/home/CtaSection"
 import LearningJourney from "@/components/home/LearningJourney"
+import AssetLoader from "@/lib/AssetLoader"
+import { demo1Assets } from "@/lib/pageAssets"
 
 
 const Page = () => {
   return (
-    <div>
-      <HerotoWhite />
-      <LearningJourney />
-      {/* <SliderFeatures /> */}
-      {/* <TextSection/> */}
-      {/* <CloudBus/> */}
-      <MoreDetails />
-      <CtaSection />
-      <Footer/>
-    </div>
+    <AssetLoader assets={demo1Assets} label="Loading Apex">
+      <div>
+        <HerotoWhite />
+        <LearningJourney />
+        <MoreDetails />
+        <CtaSection />
+        <Footer/>
+      </div>
+    </AssetLoader>
   )
 }
 
