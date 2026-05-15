@@ -6,11 +6,11 @@ import { useEffect, useState } from "react"
 import ContactPopup from "./ContactPopup"
 
 const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/#about" },
-  { label: "Learning Journey", href: "/#learning-journey" },
-  { label: "Admission", href: "/#admission" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Home", href: "/demo1" },
+  { label: "About Us", href: "/demo1/about" },
+  { label: "Learning Journey", href: "/demo1#learning-journey" },
+  { label: "Admission", href: "/demo1/admission" },
+  { label: "Contact Us", href: "/demo1/contact" },
 ]
 
 export default function FullscreenMenu() {
@@ -91,7 +91,7 @@ export default function FullscreenMenu() {
             </button>
           </div>
 
-          <header className="flex items-center justify-between px-6 py-2 md:px-8 md:py-5 md:col-start-2 ">
+          <header className="flex items-center justify-between bg-white px-6 py-2 md:col-start-2 md:px-8 md:py-5">
             <Link href="/" onClick={() => setOpen(false)} className="inline-flex md:hidden" aria-label="Apex homepage">
               <Image src="/home/apex-logo-big.webp" alt="Apex" width={150} height={50} className="h-auto w-28" />
             </Link>
@@ -123,7 +123,7 @@ export default function FullscreenMenu() {
             </div>
           </header>
 
-          <main className="flex items-center px-5 py-8 sm:px-8 md:col-start-2 md:px-20 md:py-12 lg:px-28">
+          <main className="flex items-center bg-white px-5 py-8 sm:px-8 md:col-start-2 md:px-20 md:py-12 lg:px-28">
             <nav aria-label="Main menu" className="w-full">
               <ul className="space-y-2 sm:space-y-3">
                 {menuItems.map((item, index) => (
@@ -149,7 +149,7 @@ export default function FullscreenMenu() {
             </nav>
           </main>
 
-          <footer className="px-5 pb-8 sm:px-8 md:col-start-2 md:px-20 lg:px-28">
+          <footer className="bg-white px-5 pb-8 sm:px-8 md:col-start-2 md:px-20 lg:px-28">
             <div className="mb-7 overflow-hidden rounded-[22px] md:hidden">
               <div
                 className={`relative h-32 transition-transform duration-[1400ms] ease-out sm:h-40 ${open ? "scale-105" : "scale-100"

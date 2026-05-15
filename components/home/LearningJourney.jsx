@@ -76,6 +76,7 @@ export default function LearningJourney() {
 
   return (
     <section
+      id="learning-journey"
       ref={sectionRef}
       className="relative h-[1200vh] bg-white text-[#111111]"
     >

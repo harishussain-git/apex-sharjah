@@ -7,7 +7,7 @@ import FullscreenMenu from "../ui/FullscreenMenu"
 
 export default function StickyHeader() {
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-[1000] text-body">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-[1000] text-body ">
       <div className="pointer-events-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-5">
         {/* Logo */}
         <Link href="/" aria-label="Apex homepage" className="inline-flex items-center">
@@ -34,11 +34,12 @@ export default function StickyHeader() {
 
           {/* Desktop Book Admission */}
           <div className="hidden md:block">
-            <ContactPopup
-              label="Book Admission"
-              variant="button"
-              className="inline-flex min-h-12 items-center rounded-full  px-7 hover:cursor-pointer"
-            />
+            <Link
+              href="/demo1/admission"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-slate-200 border border-black/10 px-7 text-sm font-semibold text-white transition hover:bg-white hover:cursor-pointer"
+            >
+              Book Admission
+            </Link>
           </div>
 
           {/* Hamburger - Mobile + Desktop */}
