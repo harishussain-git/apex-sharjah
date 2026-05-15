@@ -10,7 +10,7 @@ export default function StickyHeader() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-[1000] text-body ">
       <div className="pointer-events-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-5">
         {/* Logo */}
-        <Link href="/" aria-label="Apex homepage" className="inline-flex items-center">
+        <Link href="/demo1" aria-label="Apex homepage" className="inline-flex items-center">
           <Image
             src="/home/apex-logo-big.webp"
             alt="Apex"
