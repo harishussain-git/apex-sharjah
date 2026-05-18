@@ -18,15 +18,15 @@ const anchors = [
     enter: { animation: "zoom-out", from: 1, to: 1 },
     exit: { animation: "zoom-in", from: 5, to: 10 },
     // stepDurationDown: 1,
-    stepDurationUp: 0.8,
-  },
-  {
-    id: "text", frame: 28, component: "TextSection",
-    enter: { animation: "zoom-out", from: 24, to: 26 },
-    exit: { animation: "zoom-in", from: 29, to: 35 },
-    stepDurationDown: 1.2,
     stepDurationUp: 1,
   },
+  // {
+  //   id: "text", frame: 28, component: "TextSection",
+  //   enter: { animation: "zoom-out", from: 24, to: 26 },
+  //   exit: { animation: "zoom-in", from: 29, to: 35 },
+  //   stepDurationDown: 1.2,
+  //   stepDurationUp: 1,
+  // },
   {
     id: "white", frame: 144, component: "SchoolFront",
     enter: { animation: "zoom-out", from: 129, to: 134 },

@@ -1,10 +1,6 @@
 import "./globals.css"
 import localFont from "next/font/local"
 import { Lato } from "next/font/google"
-import StickyHeader from "../components/layout/StickyHeader"
-// import AssetLoader from "@/lib/AssetLoader"
-import SmoothScrollProvider from "@/lib/SmoothScrollProvider"
-import SoundBtn from "../components/ui/SoundBtn"
 
 const lato = Lato({
   subsets: ["latin"],
@@ -36,13 +32,7 @@ export default function RootLayout({ children }) {
       className={`${lato.variable} ${rfRufo.variable}`}
       style={{ backgroundColor: "#0b1220" }}
     >
-      <body>
-        {/* <AssetLoader> */}
-          <StickyHeader />
-          <SmoothScrollProvider>{children}</SmoothScrollProvider>
-          <SoundBtn />
-        {/* </AssetLoader> */}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

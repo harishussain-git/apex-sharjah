@@ -9,6 +9,8 @@ import CtaSection from "../components/home/CtaSection";
 import Footer from "../components/home/Footer";
 import TextSection from "../components/home/TextSection";
 import SchoolFront from "../components/home/SchoolFront";
+// import DemoPreviewPage from "./demo1/page";
+import DemoPreviewPage from "@/components/DemoPreviewPage";
 
 export default function Page() {
   // useSectionSnap([
@@ -19,9 +21,8 @@ export default function Page() {
 
   return (
     <>
-      <div className="bg-gray-900  flex flex-col gap-4 justify-center items-center min-h-screen">
-        <p className="text-white">Site under construction</p>
-        <a href="/demo1" className="bg-white/80 px-4 py-2 text-black font-semibold rounded-full hover:bg-white hover:text-black">Demo 1</a>
+      <div className="">
+        <DemoPreviewPage/>
       </div>
 
 
