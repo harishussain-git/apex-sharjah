@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { learningJourneyData } from "@/lib/learningJourney"
+import LearningJourneyControls from "@/components/ui/LearningJourneyControls"
+import LearningJourneyProgress from "@/components/ui/LearningJourneyProgress"
 
 function IconMark({ icon }) {
   const labels = {
@@ -22,6 +24,7 @@ function IconMark({ icon }) {
 export default function LearningJourney() {
   const sectionRef = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [controlsVisible, setControlsVisible] = useState(false)
   const [videoError, setVideoError] = useState(false)
   const activeItem = learningJourneyData[activeIndex]
 
@@ -47,6 +50,10 @@ export default function LearningJourney() {
         start: "top top",
         end: "bottom bottom",
         scrub: true,
+        onEnter: () => setControlsVisible(true),
+        onEnterBack: () => setControlsVisible(true),
+        onLeave: () => setControlsVisible(false),
+        onLeaveBack: () => setControlsVisible(false),
         onUpdate: (self) => {
           const nextIndex = Math.min(
             learningJourneyData.length - 1,
@@ -74,6 +81,26 @@ export default function LearningJourney() {
     setVideoError(false)
   }, [activeItem.id])
 
+  const scrollToJourneyItem = (nextIndex) => {
+    if (!sectionRef.current || typeof window === "undefined") return
+
+    const safeIndex = Math.max(
+      0,
+      Math.min(learningJourneyData.length - 1, nextIndex)
+    )
+    const sectionTop =
+      sectionRef.current.getBoundingClientRect().top + window.scrollY
+    const scrollDistance = sectionRef.current.offsetHeight - window.innerHeight
+    const progress =
+      learningJourneyData.length <= 1
+        ? 0
+        : safeIndex / (learningJourneyData.length - 1)
+    const target = sectionTop + scrollDistance * progress
+
+    window.__lenis?.scrollTo(target, { duration: 0.9 })
+    if (!window.__lenis) window.scrollTo({ top: target, behavior: "smooth" })
+  }
+
   return (
     <section
       id="learning-journey"
@@ -82,7 +109,7 @@ export default function LearningJourney() {
     >
       <div className="sticky top-0 flex min-h-screen items-center overflow-hidden">
         <div className="mx-auto grid w-full  grid-cols-1 gap-10 px-6 py-16 md:grid-cols-[45%_48%] md:items-center md:justify-between md:px-10 lg:px-16">
-          <div className="flex min-h-[420px] flex-col  justify-center md:min-h-[560px]">
+          <div className="flex md:pl-10 min-h-[420px] flex-col  justify-center md:min-h-[560px]">
             <div
               key={activeItem.id}
               className="animate-[learningTextIn_650ms_ease_both]"
@@ -92,11 +119,11 @@ export default function LearningJourney() {
                 <span>{activeItem.eyebrow}</span>
               </div>
 
-              <h2 className="max-w-[680px] text-[clamp(2.5rem,3.8vw,4.5rem)] text-display uppercase  tracking-normal text-neutral-950">
+              <h2 className="max-w-[680px] text-[clamp(2.5rem,3vw,4rem)] text-display uppercase  tracking-normal text-neutral-950">
                 {activeItem.title}
               </h2>
 
-              <p className="mt-9 max-w-[470px] text-base font-medium leading-snug text-neutral-700 md:text-xl">
+              <p className="mt-9 max-w-[470px] text-base  leading-snug text-neutral-700 md:text-lg">
                 {activeItem.description}
               </p>
 
@@ -153,6 +180,22 @@ export default function LearningJourney() {
           </div>
         </div>
       </div>
+
+      {controlsVisible ? (
+        <>
+          <LearningJourneyProgress
+            items={learningJourneyData}
+            activeIndex={activeIndex}
+            onSelect={scrollToJourneyItem}
+          />
+          <LearningJourneyControls
+            onPrevious={() => scrollToJourneyItem(activeIndex - 1)}
+            onNext={() => scrollToJourneyItem(activeIndex + 1)}
+            previousDisabled={activeIndex === 0}
+            nextDisabled={activeIndex === learningJourneyData.length - 1}
+          />
+        </>
+      ) : null}
 
       <style jsx global>{`
         @keyframes learningTextIn {

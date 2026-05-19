@@ -6,6 +6,7 @@ import {
   PiMapPinFill,
   PiPhoneFill,
 } from "react-icons/pi"
+import FAQAccordion from "@/components/ui/FAQAccordion"
 
 const contactItems = [
   {
@@ -180,6 +181,14 @@ export default function ContactPage() {
             </div>
           </div>
 
+          <div id="faqs" className="scroll-mt-28">
+            <h1 className="mt-20 max-w-xl font-accent text-5xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-5xl">
+              Frequently Asked Questions
+            </h1>
+            <FAQAccordion className="mx-auto mt-12" />
+          </div>
+
+
           <div className="mt-24 overflow-hidden rounded-[32px] bg-gray-100 shadow-[0_18px_50px_rgba(0,0,0,0.06)]">
             <iframe
               title="Apex Vision Model School location map"
@@ -188,6 +197,8 @@ export default function ContactPage() {
               loading="lazy"
             />
           </div>
+
+
         </div>
       </section >
       <Footer />

@@ -8,7 +8,7 @@ import ContactPopup from "./ContactPopup"
 const menuItems = [
   { label: "Home", href: "/demo1" },
   { label: "About Us", href: "/demo1/about" },
-  { label: "Learning Journey", href: "/demo1#learning-journey" },
+  // { label: "Learning Journey", href: "/demo1#learning-journey" },
   { label: "Admission", href: "/demo1/admission" },
   { label: "Contact Us", href: "/demo1/contact" },
 ]
@@ -106,7 +106,7 @@ export default function FullscreenMenu() {
                 <ContactPopup
                   label="Get In Touch"
                   variant="button"
-                  className="font-bold cursor-pointer transition hover:text-[var(--color-primary-500)]"
+                  className="font-bold cursor-pointer transition"
                 />
               </div>
 

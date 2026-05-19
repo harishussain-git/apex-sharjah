@@ -1,3 +1,4 @@
+import Link from "next/link"
 import {
   PiArrowRight,
   PiCalendarDots,
@@ -24,6 +25,7 @@ const cards = [
       "What co-curricular activities are available?",
     ],
     cta: "View FAQs",
+    href: "/demo1/contact#faqs",
   },
   {
     title: "Admissions\nOpen for 2026–27",
@@ -34,13 +36,14 @@ const cards = [
       "bg-[linear-gradient(180deg,#4d57f5_0%,#2c33c8_100%)] text-white lg:-translate-y-4 lg:hover:-translate-y-7",
     lineClass: "bg-white/18",
     bulletClass: "bg-white/18 text-white",
-    buttonClass: "bg-white text-[#3d45dc]",
+    buttonClass: "bg-white text-black",
     points: [
-      "Playgroup to Grade 12",
+      "KG 1 to Grade 4 ",
       "Holistic Learning Approach",
       "World-Class Facilities",
     ],
     cta: "Apply Now",
+    href: "/demo1/admission",
     featured: true,
   },
   {
@@ -59,6 +62,7 @@ const cards = [
       "Learn about our programs",
     ],
     cta: "Book a Tour",
+    href: "/demo1/contact",
   },
 ]
 
@@ -113,13 +117,23 @@ export default function CtaSection() {
                   </div>
 
                   <div className="mt-auto pt-8">
-                    <button
-                      type="button"
-                      className={`inline-flex min-w-[210px] items-center justify-center gap-4 rounded-full border px-6 py-3.5 text-base font-medium transition hover:translate-x-1 ${card.buttonClass} ${card.featured ? "border-white/0 hover:bg-white/92" : "bg-transparent hover:bg-white/60"}`}
-                    >
-                      <span>{card.cta}</span>
-                      <PiArrowRight className="text-xl" />
-                    </button>
+                    {card.href ? (
+                      <Link
+                        href={card.href}
+                        className={`inline-flex min-w-[210px] items-center justify-center gap-4 rounded-full border px-6 py-3.5 text-base font-medium transition hover:translate-x-1 ${card.buttonClass} ${card.featured ? "!text-black border-white/0 hover:bg-white/92" : "bg-transparent hover:bg-white/60"}`}
+                      >
+                        <span className={card.featured ? "text-black" : ""}>{card.cta}</span>
+                        <PiArrowRight className={`text-xl ${card.featured ? "text-black" : ""}`} />
+                      </Link>
+                    ) : (
+                      <button
+                        type="button"
+                        className={`inline-flex min-w-[210px] items-center justify-center gap-4 rounded-full border px-6 py-3.5 text-base font-medium transition hover:translate-x-1 ${card.buttonClass} ${card.featured ? "!text-black border-white/0 hover:bg-white/92" : "bg-transparent hover:bg-white/60"}`}
+                      >
+                        <span className={card.featured ? "text-black" : ""}>{card.cta}</span>
+                        <PiArrowRight className={`text-xl ${card.featured ? "text-black" : ""}`} />
+                      </button>
+                    )}
                   </div>
                 </div>
               </article>

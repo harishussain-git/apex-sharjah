@@ -7,7 +7,7 @@ export default function SchoolFront() {
     >
       <div className="max-w-2xl rounded-2xl border border-white/70 bg-white/80 p-6 shadow-[0_20px_70px_rgba(51,64,134,0.16)] backdrop-blur-lg flex flex-col items-start gap-4 w-fit ">
         <h2 className="font-accent text-heading uppercase font-semibold leading-[0.95] tracking-[-0.04em] text-black">
-          NOT JUST A SCHOOL BUILDING.
+          Not Just a Campus
         </h2>
 
         <p className=" max-w-[380px] font-semibold leading-tight text-black">

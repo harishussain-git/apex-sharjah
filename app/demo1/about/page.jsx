@@ -1,7 +1,5 @@
-"use client"
-
-import { useState } from "react"
 import Footer from "@/components/home/Footer"
+import FAQAccordion from "@/components/ui/FAQAccordion"
 import {
   PiEye,
   PiGraduationCap,
@@ -30,32 +28,7 @@ const values = [
   { title: "Collaboration and Respect", Icon: PiUsersThree },
 ]
 
-const faqs = [
-  {
-    question: "What age groups do you cater to?",
-    answer:
-      "We offer education from Foundation Stage through to Grade 12, catering to students aged 3 to 18 years.",
-  },
-  {
-    question: "What curriculum do you follow?",
-    answer:
-      "We follow a balanced, future-ready curriculum designed to support academic excellence, creativity, and strong character development.",
-  },
-  {
-    question: "What are the school timings?",
-    answer:
-      "School timings are shared with families according to grade level and academic schedule.",
-  },
-  {
-    question: "How can I apply for admission?",
-    answer:
-      "You can contact our admissions team to learn about availability, required documents, and the next steps for enrollment.",
-  },
-]
-
 export default function AboutPage() {
-  const [openFaq, setOpenFaq] = useState(0)
-
   return (
     <>
       <style>{`
@@ -205,34 +178,7 @@ export default function AboutPage() {
             Frequently Asked Questions
           </h2>
 
-          <div className="mx-auto mt-12 max-w-5xl space-y-4">
-            {faqs.map((item, index) => {
-              const isOpen = openFaq === index
-
-              return (
-                <div key={item.question} className="rounded-[24px] bg-slate-50 px-6 py-5 md:px-8 md:py-6">
-                  <button
-                    type="button"
-                    aria-expanded={isOpen}
-                    onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className="flex w-full items-center justify-between gap-6 text-left"
-                  >
-                    <h3 className="text-base font-semibold md:text-lg">
-                      {item.question}
-                    </h3>
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center text-3xl font-semibold leading-none">
-                      {isOpen ? "-" : "+"}
-                    </span>
-                  </button>
-                  {isOpen && (
-                  <p className="mt-6 text-base font-medium leading-7 text-slate-700">
-                    {item.answer}
-                  </p>
-                  )}
-                </div>
-              )
-            })}
-          </div>
+          <FAQAccordion className="mx-auto mt-12 max-w-5xl" />
         </div>
       </section>
       <Footer />
