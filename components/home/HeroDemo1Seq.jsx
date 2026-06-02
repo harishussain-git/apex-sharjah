@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import HeroContent from "./HeroContent"
+import HeroContent2 from "./HeroContent2"
 import TextSection from "./TextSection"
 import SchoolFront from "./SchoolFront"
 import { getSequenceLayerStyle } from "../../lib/gsap/sequenceContentAnimation"
@@ -14,24 +14,17 @@ const anchors = [
   {
     id: "hero",
     frame: 1,
-    component: "HeroContent",
+    component: "HeroContent2",
     enter: { animation: "zoom-out", from: 1, to: 1 },
     exit: { animation: "zoom-in", from: 5, to: 10 },
-    // stepDurationDown: 1,
+    stepDurationDown: 4,
     stepDurationUp: 1,
   },
-  // {
-  //   id: "text", frame: 28, component: "TextSection",
-  //   enter: { animation: "zoom-out", from: 24, to: 26 },
-  //   exit: { animation: "zoom-in", from: 29, to: 35 },
-  //   stepDurationDown: 1.2,
-  //   stepDurationUp: 1,
-  // },
   {
     id: "white", frame: 144, component: "SchoolFront",
-    enter: { animation: "zoom-out", from: 129, to: 134 },
-    exit: { animation: "zoom-in", from: 144, to: 144 },
-    stepDurationDown: 5,
+    enter: { animation: "zoom-out", from: 129, to: 144 },
+    exit: { animation: "zoom-in", from: 144, to: 148 },
+    stepDurationDown: 3,
     stepDurationUp: 1,
   },
   {
@@ -44,12 +37,12 @@ const anchors = [
 ]
 
 const componentMap = {
-  HeroContent,
+  HeroContent2,
   TextSection,
   SchoolFront,
 }
 
-export default function HerotoWhite() {
+export default function HerotoFull() {
   const sectionRef = useRef(null)
   const canvasRef = useRef(null)
   const { currentFrame } = useStrictSequenceScroll({

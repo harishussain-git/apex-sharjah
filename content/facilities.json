@@ -1,0 +1,47 @@
+{
+  "classroom": {
+    "eyebrow": "Modern Classrooms",
+    "title": "Technology that supports learning - not distracts from it.",
+    "intro": "Every classroom is designed for clarity, curiosity, and understanding.",
+    "metric": "20-30%",
+    "metricLabel": "higher engagement in classrooms",
+    "points": [
+      "Age Appropriate Digital Tools",
+      "Chromebook for every student",
+      "Subject Specialty Classrooms",
+      "Individualized Learning Support"
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "earlyDevelopment": {
+    "eyebrow": "Early Development",
+    "title": "Learning begins with touch, movement, and discovery",
+    "intro": "Sand, water, textures, and guided activities support balance, coordination, focus, and early motor skill development.",
+    "metric": "20%",
+    "metricLabel": "stronger motor skills founded.",
+    "points": [
+      "Water play experiences",
+      "Texture-rich sensory zones",
+      "Guided movement activities",
+      "Early coordination building"
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "innovationLabs": {
+    "eyebrow": "Innovation Labs",
+    "title": "Turning ideas into real-world creation",
+    "intro": "Hands-on environments where students build, code, and explore future technologies.",
+    "metric": "2x",
+    "metricLabel": "more practical learning exposure than 80% schools",
+    "points": [
+      "Build-and-test projects",
+      "Coding and robotics",
+      "Future tech exploration",
+      "Practical STEM experiences"
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  }
+}

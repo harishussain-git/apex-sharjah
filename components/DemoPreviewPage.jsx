@@ -38,11 +38,11 @@ export default function DemoPreviewPage() {
           </a>
 
           <a
-            href="/"
+            href="/demo2"
             className="rounded-[28px] border border-gray-200 bg-white p-4 shadow-[0_20px_60px_rgba(0,0,0,0.06)]"
           >
             <img
-              src="/img/demo2-thumbnail.webp"
+              src="sequences/demo2/0001.webp"
               alt="Demo 2 preview"
               className="h-64 w-full rounded-[22px] bg-gray-100 object-cover md:h-72"
             />

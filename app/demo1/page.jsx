@@ -1,4 +1,4 @@
-import HerotoWhite from "@/components/home/HerotoWhite"
+import HeroDemo1Seq from "@/components/home/HeroDemo1Seq"
 import MoreDetails from "@/components/home/MoreDetails"
 import Footer from "@/components/home/Footer"
 import CtaSection from "@/components/home/CtaSection"
@@ -11,7 +11,7 @@ const Page = () => {
   return (
     <AssetLoader assets={demo1Assets} label="Loading Apex">
       <div>
-        <HerotoWhite />
+        <HeroDemo1Seq />
         <LearningJourney />
         <MoreDetails />
         <CtaSection />

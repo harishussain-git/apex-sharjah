@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="#"
+              href="/demo1/admission"
               className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/6 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
             >
               <span>Book Admission</span>
