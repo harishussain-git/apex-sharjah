@@ -10,6 +10,10 @@ import { useStrictSequenceScroll } from "../../lib/gsap/StrictSequenceScroll"
 const frameCount = 194
 const frameSrc = (frame) => `/sequences/new/hero-white-4/${String(frame).padStart(4, "0")}.webp`
 
+// Baby-simple:
+// `stepDurationDown` = how many seconds it takes to move to the next step when scrolling DOWN.
+// `stepDurationUp` = how many seconds it takes to move to the previous step when scrolling UP.
+// Bigger number = slower move. Smaller number = faster move.
 const anchors = [
   {
     id: "hero",

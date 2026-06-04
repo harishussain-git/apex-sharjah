@@ -43,5 +43,37 @@
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
+  },
+  "arts": {
+    "eyebrow": "Art & Creative Studios",
+    "title": "A happy place where children create, imagine, and express themselves",
+    "intro": "Students explore color, texture, craft, and design in a warm studio space that builds confidence and creativity.",
+    "metric": "5+",
+    "metricLabel": "creative experiences in one inspiring space",
+    "points": [
+      "Drawing & Painting",
+      "Craft Activities",
+      "Textile Learning",
+      "Creative Expression",
+      "Fine Motor Skill Development"
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "reverseEngineering": {
+    "eyebrow": "Design & Technology Exploration Rooms",
+    "title": "Children learn how things work by building, exploring, and trying with their own hands",
+    "intro": "These practical learning rooms help students grow curious, confident, and capable through guided real-world activities.",
+    "metric": "10+",
+    "metricLabel": "hands-on life skill areas learning",
+    "points": [
+      "Carpentry Learning",
+      "Reverse Engineering",
+      "Electrical Fundamentals",
+      "Plumbing Fundamentals",
+      "Practical Skill Development"
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
   }
 }

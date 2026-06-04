@@ -2,16 +2,22 @@
 
 import { useRef } from "react"
 import HeroContent2 from "./HeroContent2"
+import ArtsCard from "./facilities/ArtsCard"
 import ClassroomCard from "./facilities/ClassroomCard"
 import EarlyDevelopmentCard from "./facilities/EarlyDevelopmentCard"
 import InnovationLabsCard from "./facilities/InnovationLabsCard"
+import ReverseEngineeringCard from "./facilities/ReverseEngineeringCard"
 import SchoolFront2 from "./SchoolFront2"
 import { getSequenceLayerStyle } from "../../lib/gsap/sequenceContentAnimation"
 import { useStrictSequenceScroll } from "../../lib/gsap/StrictSequenceScroll"
 
-const frameCount = 168
+const frameCount = 304
 const frameSrc = (frame) => `/sequences/demo2/${String(frame).padStart(4, "0")}.webp`
 
+// Explanation:
+// `stepDurationDown` = how many seconds it takes to move to the next step when scrolling DOWN.
+// `stepDurationUp` = how many seconds it takes to move to the previous step when scrolling UP.
+// Bigger number = slower move. Smaller number = faster move.
 const anchors = [
   {
     id: "hero",
@@ -36,28 +42,44 @@ const anchors = [
     stepDurationDown: 2,
     stepDurationUp: 0.5
   },
-    {
+  {
     id: "earlyDevelopment", frame: 134, component: "EarlyDevelopmentCard",
     enter: { animation: "zoom-out", from: 130, to: 134 },
     exit: { animation: "zoom-in", from: 136, to: 140 },
     stepDurationDown: 1,
     stepDurationUp: 0.5
   },
-    {
+  {
     id: "innovationLabs", frame: 168, component: "InnovationLabsCard",
     enter: { animation: "zoom-out", from: 160, to: 168 },
     exit: { animation: "zoom-in", from: 170, to: 175 },
     stepDurationDown: 1.2,
     stepDurationUp: 1
   },
+  {
+    id: "arts", frame: 266, component: "ArtsCard",
+    enter: { animation: "zoom-out", from: 260, to: 266 },
+    exit: { animation: "zoom-in", from: 268, to: 273 },
+    stepDurationDown: 2.5,
+    stepDurationUp: 1
+  },
+  {
+    id: "reverseEngineering", frame: 304, component: "ReverseEngineeringCard",
+    enter: { animation: "zoom-out", from: 296, to: 304 },
+    exit: { animation: "zoom-in", from: 306, to: 310 },
+    stepDurationDown: 1,
+    stepDurationUp: 1
+  }
 ]
 
 const componentMap = {
+  ArtsCard,
   HeroContent2,
   ClassroomCard,
   SchoolFront2,
   EarlyDevelopmentCard,
-  InnovationLabsCard
+  InnovationLabsCard,
+  ReverseEngineeringCard
 }
 
 export default function HerotoFull() {
