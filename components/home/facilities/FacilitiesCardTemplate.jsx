@@ -8,7 +8,7 @@ export default function FacilitiesCardTemplate({ data }) {
   return (
     <div className="relative h-full w-full px-4">
       {/* Desktop card: full content, hidden on mobile so positioning stays independent. */}
-      <article className="hidden w-full rounded-[1.75rem] border border-white/70 bg-white/72 p-2 shadow-[0_18px_50px_rgba(44,61,98,0.14)] backdrop-blur-xl md:ml-4 md:mt-24 md:block md:w-[26rem]">
+      <article className="hidden w-full rounded-[1.75rem] border border-white/70 bg-white/80 p-2 shadow-[0_18px_50px_rgba(44,61,98,0.14)] backdrop-blur-xl md:ml-4 md:mt-24 md:block md:w-[26rem]">
         <div className="rounded-[1.4rem] bg-[#fbfbfb]/96 p-6 text-[#141414]">
           <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-black/72">
             <PiImageSquareLight className="text-black/80" />

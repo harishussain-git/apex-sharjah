@@ -5,13 +5,14 @@ import HeroContent2 from "./HeroContent2"
 import ArtsCard from "./facilities/ArtsCard"
 import ClassroomCard from "./facilities/ClassroomCard"
 import EarlyDevelopmentCard from "./facilities/EarlyDevelopmentCard"
+import FoodCard from "./facilities/FoodCard"
 import InnovationLabsCard from "./facilities/InnovationLabsCard"
 import ReverseEngineeringCard from "./facilities/ReverseEngineeringCard"
 import SchoolFront2 from "./SchoolFront2"
 import { getSequenceLayerStyle } from "../../lib/gsap/sequenceContentAnimation"
 import { useStrictSequenceScroll } from "../../lib/gsap/StrictSequenceScroll"
 
-const frameCount = 304
+const frameCount = 388
 const frameSrc = (frame) => `/sequences/demo2/${String(frame).padStart(4, "0")}.webp`
 
 // Explanation:
@@ -69,6 +70,13 @@ const anchors = [
     exit: { animation: "zoom-in", from: 306, to: 310 },
     stepDurationDown: 1,
     stepDurationUp: 1
+  },
+  {
+    id: "food", frame: 388, component: "FoodCard",
+    enter: { animation: "zoom-out", from: 380, to: 388 },
+    exit: { animation: "zoom-in", from: 388, to: 388 },
+    stepDurationDown: 2.3,
+    stepDurationUp: 2
   }
 ]
 
@@ -78,6 +86,7 @@ const componentMap = {
   ClassroomCard,
   SchoolFront2,
   EarlyDevelopmentCard,
+  FoodCard,
   InnovationLabsCard,
   ReverseEngineeringCard
 }

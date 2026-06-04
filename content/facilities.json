@@ -75,5 +75,20 @@
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
+  },
+  "food": {
+    "eyebrow": "Food Science & Life Skills Kitchen",
+    "title": "A joyful space where children learn healthy habits for life",
+    "intro": "Children explore food, nutrition, and simple life skills in a safe and engaging way.",
+    "metric": "Healthy Body",
+    "metricLabel": "better immunity, sharp mind, and good energy",
+    "points": [
+      "Cooking Skills",
+      "Nutrition Learning",
+      "Food Science",
+      "Life Skills Training"
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
   }
 }
