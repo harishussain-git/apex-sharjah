@@ -7,10 +7,10 @@ import FullscreenMenu from "../ui/FullscreenMenu"
 
 export default function StickyHeader() {
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-[1000] text-body ">
-      <div className="pointer-events-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-5">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-[1000] text-body bg-white/75 backdrop-blur-sm">
+      <div className="pointer-events-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-3  mx-auto">
         {/* Logo */}
-        <Link href="/demo1" aria-label="Apex homepage" className="inline-flex items-center">
+        <Link href="/demo2" aria-label="Apex homepage" className="inline-flex items-center">
           <Image
             src="/home/apex-logo-big.webp"
             alt="Apex"
@@ -36,7 +36,7 @@ export default function StickyHeader() {
           <div className="hidden md:block">
             <Link
               href="/demo1/admission"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-slate-200 border border-black/10 px-7 text-sm font-semibold text-white transition hover:bg-white hover:cursor-pointer"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-black/10 bg-[var(--color-primary-500)] px-7 text-sm font-semibold text-white transition hover:cursor-pointer hover:bg-[#2a356f] hover:text-white"
             >
               Book Admission
             </Link>

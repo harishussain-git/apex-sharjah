@@ -15,10 +15,11 @@ const Page = () => {
       <div>
         {/* <HeroOnly/> */}
         <HeroDemo2Seq />
-        {/* <LearningJourney /> */}
-        {/* <MoreDetails /> */}
-        {/* <CtaSection /> */}
         <MoresectionComingSoon />
+        
+        <MoreDetails />
+        <CtaSection />
+      
         <Footer />
       </div>
     </AssetLoader>

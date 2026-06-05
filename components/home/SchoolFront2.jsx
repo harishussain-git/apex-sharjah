@@ -3,7 +3,7 @@ import { PiBuildingsLight, PiHeadsetLight } from "react-icons/pi"
 export default function SchoolFront2() {
   return (
     <section
-      id="school-front"
+      id="demo2-school-front"
       className="relative h-screen overflow-hidden px-5 pt-24 md:px-10 md:pt-28"
     >
       <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-white/88 via-white/68 to-transparent md:w-[40%]" />

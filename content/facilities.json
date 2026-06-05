@@ -62,31 +62,16 @@
   },
   "reverseEngineering": {
     "eyebrow": "Design & Technology Exploration Rooms",
-    "title": "Children learn how things work by building, exploring, and trying with their own hands",
-    "intro": "These practical learning rooms help students grow curious, confident, and capable through guided real-world activities.",
+    "title": "Children learn how things work by trying with their own hands",
+    "intro": "Hands-on labs help students become curious, confident, and capable through guided real-world activities.",
     "metric": "10+",
-    "metricLabel": "hands-on life skill areas learning",
+    "metricLabel": "hands-on life skill areas covered",
     "points": [
       "Carpentry Learning",
       "Reverse Engineering",
       "Electrical Fundamentals",
       "Plumbing Fundamentals",
       "Practical Skill Development"
-    ],
-    "buttonText": "Read more",
-    "buttonLink": "/demo2"
-  },
-  "food": {
-    "eyebrow": "Food Science & Life Skills Kitchen",
-    "title": "A joyful space where children learn healthy habits for life",
-    "intro": "Children explore food, nutrition, and simple life skills in a safe and engaging way.",
-    "metric": "Healthy Body",
-    "metricLabel": "better immunity, sharp mind, and good energy",
-    "points": [
-      "Cooking Skills",
-      "Nutrition Learning",
-      "Food Science",
-      "Life Skills Training"
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"

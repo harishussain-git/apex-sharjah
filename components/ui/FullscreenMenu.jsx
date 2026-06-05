@@ -58,7 +58,7 @@ export default function FullscreenMenu() {
               }`}
           >
             <Image
-              src="/img/menu-video-thumbnail.webp"
+              src="/img/menu-video-thumbnail2.webp"
               alt="Apex Vision Model School campus"
               fill
               priority
@@ -91,15 +91,15 @@ export default function FullscreenMenu() {
             </button>
           </div>
 
-          <header className="flex items-center justify-between bg-white px-6 py-2 md:col-start-2 md:px-8 md:py-5">
+          <header className="flex items-center justify-between bg-white px-6 py-2 md:col-start-2 md:px-8 md:py-3">
             <Link href="/" onClick={() => setOpen(false)} className="inline-flex md:hidden" aria-label="Apex homepage">
               <Image src="/home/apex-logo-big.webp" alt="Apex" width={150} height={50} className="h-auto w-28" />
             </Link>
 
             <div className="ml-auto flex items-center gap-3 sm:gap-6">
-              <button type="button" className="hidden text-sm font-bold text-[#343195] transition hover:text-[#111744] sm:inline-flex cursor-pointer">
+              {/* <button type="button" className="hidden text-sm font-bold text-[#343195] transition hover:text-[#111744] sm:inline-flex cursor-pointer">
                 العربية
-              </button>
+              </button> */}
 
               <div className="hidden md:block">
 
@@ -156,7 +156,7 @@ export default function FullscreenMenu() {
                   }`}
               >
                 <Image
-                  src="/img/menu-video-thumbnail.webp"
+                  src="/sequences/demo2/0001.webp"
                   alt="Apex Vision Model School campus"
                   fill
                   sizes="(max-width: 768px) 100vw"
