@@ -13,9 +13,7 @@ import LearningJourneyControlsDemo2 from "../ui/LearningJourneyControlsDemo2"
 import LearningJourneyProgressDemo2 from "../ui/LearningJourneyProgressDemo2"
 import { getSequenceLayerStyle } from "../../lib/gsap/sequenceContentAnimation"
 import { useStrictSequenceScroll } from "../../lib/gsap/StrictSequenceScroll"
-
-const frameCount = 388
-const frameSrc = (frame) => `/sequences/demo2/${String(frame).padStart(4, "0")}.webp`
+import { DEMO2_FRAME_COUNT, demo2FrameSrc } from "../../lib/demo2Sequence"
 
 // Explanation:
 // `stepDurationDown` = how many seconds it takes to move to the next step when scrolling DOWN.
@@ -99,13 +97,15 @@ export default function HerotoFull() {
   const { activeIndex, currentFrame, scrollToIndex } = useStrictSequenceScroll({
     sectionRef,
     canvasRef,
-    frameCount,
-    frameSrc,
+    frameCount: DEMO2_FRAME_COUNT,
+    frameSrc: demo2FrameSrc,
     anchors,
   })
   const contentAnchors = anchors.filter((anchor) => anchor.component)
-  const controlsStartIndex = anchors.findIndex((anchor) => anchor.id === "demo2-schoolfront")
-  const showJourneyNav = controlsStartIndex >= 0 && activeIndex >= controlsStartIndex
+  const controlsStartIndex = anchors.findIndex((anchor) => anchor.id === "demo2-classroom")
+  const controlsStartFrame =
+    controlsStartIndex >= 0 ? anchors[controlsStartIndex].frame : Number.POSITIVE_INFINITY
+  const showJourneyNav = currentFrame >= controlsStartFrame
   const journeyItems = anchors.slice(Math.max(controlsStartIndex, 0)).map((anchor, index) => ({
     id: anchor.id,
     order: String(index + 1).padStart(2, "0"),

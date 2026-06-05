@@ -9,7 +9,7 @@ export default function LearningJourneyProgressDemo2({
   const progress = (activeIndex / total) * 100
 
   return (
-    <div className="fixed right-10 top-1/2 z-[850] hidden -translate-y-1/2 items-center gap-4 md:flex bg-white/50 p-4 rounded-lg backdrop-blur-md">
+    <div className=" md:fixed right-10 top-1/2 z-[850] hidden -translate-y-1/2 items-center gap-4 md:flex bg-white/50 py-4 px-3 rounded-lg backdrop-blur-md">
       <div className="relative h-[340px] w-px bg-[#344384]/18">
         <span
           className="absolute left-1/2 top-0 w-[3px] -translate-x-1/2 rounded-full bg-[#344384] transition-all duration-500 ease-out"

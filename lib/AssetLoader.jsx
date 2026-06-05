@@ -2,7 +2,47 @@
 
 import { useEffect, useMemo, useState } from "react"
 
+const imagePattern = /\.(avif|gif|jpe?g|png|svg|webp)(\?.*)?$/i
+
+const loadImageAsset = (src) =>
+  new Promise((resolve) => {
+    const image = new Image()
+
+    image.decoding = "async"
+    image.fetchPriority = "high"
+
+    const finish = (ok) => {
+      resolve({
+        ok,
+        src,
+        bytes: 0,
+      })
+    }
+
+    image.addEventListener(
+      "load",
+      async () => {
+        try {
+          if (image.decode) {
+            await image.decode()
+          }
+          finish(image.naturalWidth > 0)
+        } catch {
+          finish(image.naturalWidth > 0)
+        }
+      },
+      { once: true },
+    )
+
+    image.addEventListener("error", () => finish(false), { once: true })
+    image.src = src
+  })
+
 const loadAsset = async (src) => {
+  if (imagePattern.test(src)) {
+    return loadImageAsset(src)
+  }
+
   try {
     const response = await fetch(src, { cache: "force-cache" })
 

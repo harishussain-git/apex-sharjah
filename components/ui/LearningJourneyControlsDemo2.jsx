@@ -9,7 +9,7 @@ export default function LearningJourneyControlsDemo2({
   nextDisabled = false,
 }) {
   return (
-    <div className="fixed bottom-6 left-1/2 z-[900] flex -translate-x-1/2 items-center gap-3 rounded-full bg-white/50 p-2 backdrop-blur-lg">
+    <div className="md:fixed bottom-6 left-1/2 z-[900] flex -translate-x-1/2 items-center gap-3 rounded-full bg-white/50 p-2 backdrop-blur-lg">
       <button
         type="button"
         aria-label="Previous demo 2 item"
