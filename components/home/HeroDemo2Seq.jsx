@@ -69,12 +69,19 @@ const anchors = [
     enter: { animation: "zoom-out", from: 296, to: 304 },
     exit: { animation: "zoom-in", from: 306, to: 310 },
     stepDurationDown: 0.7,
-    stepDurationUp: 0.7
+    stepDurationUp: 1.3
   },
   {
     id: "demo2-food", frame: 388, component: "FoodCard",
     enter: { animation: "zoom-out", from: 380, to: 388 },
-    exit: { animation: "zoom-in", from: 388, to: 388 },
+    exit: { animation: "zoom-in", from: 392, to: 399 },
+    stepDurationDown: 2.3,
+    stepDurationUp: 2
+  },
+  {
+    id: "demo2-communication", frame: 420, component: "CommunicationCard",
+    enter: { animation: "zoom-out", from: 410, to: 420 },
+    exit: { animation: "zoom-in", from: 420, to: 425 },
     stepDurationDown: 2.3,
     stepDurationUp: 2
   }

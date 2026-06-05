@@ -75,5 +75,21 @@
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
+  },
+  "food": {
+    "eyebrow": "Food Science & Life Skills",
+    "title": "Healthy habits shaped through real hands-on experience",
+    "intro": "Children explore cooking basics, nutrition, cleanliness, responsibility, and healthy habits through guided practical learning.",
+    "metric": "4",
+    "metricLabel": "life-skill learning pillars",
+    "points": [
+      "Cooking Basics",
+      "Nutrition Awareness",
+      "Food Science Exploration",
+      "Cleanliness & Responsibility",
+      "Healthy Habit Building"
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
   }
 }
