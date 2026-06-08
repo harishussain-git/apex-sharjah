@@ -3,6 +3,7 @@
     "eyebrow": "Modern Classrooms",
     "title": "Technology that supports learning - not distracts from it.",
     "intro": "Every classroom is designed for clarity, curiosity, and understanding.",
+    "drawerIntro": "Each classroom blends calm design, age-appropriate technology, and teacher-led structure so students can stay focused, participate confidently, and build strong learning habits every day.",
     "metric": "20-30%",
     "metricLabel": "higher engagement in classrooms",
     "points": [
@@ -11,6 +12,24 @@
       "Subject Specialty Classrooms",
       "Individualized Learning Support"
     ],
+    "drawerPoints": [
+      "Clear front-of-room teaching visibility",
+      "Interactive lessons with guided device use",
+      "Flexible layouts for independent and group work",
+      "Supportive spaces for different learning needs"
+    ],
+    "items": [
+      {
+        "title": "Focused Learning Zones",
+        "text": "Seating, lighting, and classroom flow are planned to reduce distraction and help students stay attentive during both instruction and hands-on work.",
+        "image": "/home/features/classroom.webp"
+      },
+      {
+        "title": "Guided Digital Integration",
+        "text": "Technology is introduced with purpose, giving students access to interactive tools and personal devices without overwhelming the learning experience.",
+        "image": "/home/features/edu.webp"
+      }
+    ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
   },
@@ -18,6 +37,7 @@
     "eyebrow": "Early Development",
     "title": "Learning begins with touch, movement, and discovery",
     "intro": "Sand, water, textures, and guided activities support balance, coordination, focus, and early motor skill development.",
+    "drawerIntro": "Our early development spaces are built for safe sensory exploration, movement, and repetition so younger children can strengthen coordination, curiosity, and confidence through play-based routines.",
     "metric": "20%",
     "metricLabel": "stronger motor skills founded.",
     "points": [
@@ -26,6 +46,24 @@
       "Guided movement activities",
       "Early coordination building"
     ],
+    "drawerPoints": [
+      "Mess-friendly zones for hands-on exploration",
+      "Movement activities that improve balance and control",
+      "Sensory materials that build attention and curiosity",
+      "Teacher-guided play with clear developmental goals"
+    ],
+    "items": [
+      {
+        "title": "Sensory Discovery Areas",
+        "text": "Children explore texture, sound, and movement in calming spaces that encourage experimentation while supporting early concentration and self-regulation.",
+        "image": "/home/features/sensory.webp"
+      },
+      {
+        "title": "Water And Texture Play",
+        "text": "Practical activities with water, sand, and tactile materials help develop grip strength, coordination, and confidence through joyful repetition.",
+        "image": "/home/features/child-sensory.webp"
+      }
+    ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
   },
@@ -33,6 +71,7 @@
     "eyebrow": "Innovation Labs",
     "title": "Turning ideas into real-world creation",
     "intro": "Hands-on environments where students build, code, and explore future technologies.",
+    "drawerIntro": "Innovation labs give students space to test ideas, build prototypes, and see how design, coding, and problem-solving connect to real-world challenges.",
     "metric": "2x",
     "metricLabel": "more practical learning exposure than 80% schools",
     "points": [
@@ -41,6 +80,24 @@
       "Future tech exploration",
       "Practical STEM experiences"
     ],
+    "drawerPoints": [
+      "Project-based STEM challenges",
+      "Coding and robotics for applied thinking",
+      "Experiment-first learning with teacher support",
+      "Real materials, tools, and prototype workflows"
+    ],
+    "items": [
+      {
+        "title": "Build And Test Stations",
+        "text": "Students move beyond theory by designing, assembling, and improving working models in a space that rewards experimentation and iteration.",
+        "image": "/home/features/educraft.webp"
+      },
+      {
+        "title": "Coding And Robotics",
+        "text": "Structured digital making activities help students understand logic, teamwork, and systems thinking through practical, visible outcomes.",
+        "image": "/home/features/creative-2.webp"
+      }
+    ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
   },
@@ -48,6 +105,7 @@
     "eyebrow": "Art & Creative Studios",
     "title": "A happy place where children create, imagine, and express themselves",
     "intro": "Students explore color, texture, craft, and design in a warm studio space that builds confidence and creativity.",
+    "drawerIntro": "Creative studios invite students to explore ideas with their hands, experiment with different materials, and build confidence by turning imagination into visible work.",
     "metric": "5+",
     "metricLabel": "creative experiences in one inspiring space",
     "points": [
@@ -57,6 +115,24 @@
       "Creative Expression",
       "Fine Motor Skill Development"
     ],
+    "drawerPoints": [
+      "Dedicated zones for painting, craft, and making",
+      "Material-rich activities that build fine motor control",
+      "Open-ended prompts that encourage originality",
+      "Display-ready work that boosts confidence"
+    ],
+    "items": [
+      {
+        "title": "Studio Making Tables",
+        "text": "Children work with paper, paint, fabric, and craft materials in a welcoming environment designed for experimentation and self-expression.",
+        "image": "/home/features/art.webp"
+      },
+      {
+        "title": "Creative Process Display",
+        "text": "The studio celebrates both finished pieces and the process behind them, helping students feel proud of their ideas and effort.",
+        "image": "/home/features/creative-1.webp"
+      }
+    ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
   },
@@ -64,6 +140,7 @@
     "eyebrow": "Design & Technology Exploration Rooms",
     "title": "Children learn how things work by trying with their own hands",
     "intro": "Hands-on labs help students become curious, confident, and capable through guided real-world activities.",
+    "drawerIntro": "These exploration rooms help students understand systems by taking things apart, rebuilding them, and learning the practical logic behind tools, materials, and everyday mechanisms.",
     "metric": "10+",
     "metricLabel": "hands-on life skill areas covered",
     "points": [
@@ -73,6 +150,24 @@
       "Plumbing Fundamentals",
       "Practical Skill Development"
     ],
+    "drawerPoints": [
+      "Safe introductions to real tools and materials",
+      "Step-by-step reverse engineering activities",
+      "Basic electrical and plumbing awareness",
+      "Problem-solving through practical making"
+    ],
+    "items": [
+      {
+        "title": "Practical Tool Learning",
+        "text": "Students build comfort with measuring, assembling, and working carefully with guided tools that make abstract concepts easier to understand.",
+        "image": "/home/features/reverse-eng.webp"
+      },
+      {
+        "title": "Systems And Mechanisms",
+        "text": "By opening, observing, and rebuilding simple structures, learners begin to see how design decisions affect function in the real world.",
+        "image": "/home/features/reverseeng.webp"
+      }
+    ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
   },
@@ -80,6 +175,7 @@
     "eyebrow": "Food Science & Life Skills",
     "title": "Healthy habits shaped through real hands-on experience",
     "intro": "Children explore cooking basics, nutrition, cleanliness, responsibility, and healthy habits through guided practical learning.",
+    "drawerIntro": "Food science and life skills sessions turn everyday routines into meaningful learning, helping children understand healthy choices, responsibility, and practical independence.",
     "metric": "4",
     "metricLabel": "life-skill learning pillars",
     "points": [
@@ -88,6 +184,24 @@
       "Food Science Exploration",
       "Cleanliness & Responsibility",
       "Healthy Habit Building"
+    ],
+    "drawerPoints": [
+      "Simple cooking tasks with guided supervision",
+      "Food awareness linked to health and wellbeing",
+      "Cleanliness habits built into every activity",
+      "Responsibility and teamwork through shared routines"
+    ],
+    "items": [
+      {
+        "title": "Cooking And Preparation Basics",
+        "text": "Children learn simple food preparation routines that strengthen sequencing, responsibility, and practical confidence in a safe environment.",
+        "image": "/home/features/food.webp"
+      },
+      {
+        "title": "Nutrition And Healthy Habits",
+        "text": "Lessons connect ingredients, cleanliness, and healthy choices so students understand the daily habits that support long-term wellbeing.",
+        "image": "/home/features/plants.webp"
+      }
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
