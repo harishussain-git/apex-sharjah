@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import facilities from "../../content/facilities.json"
 import HeroContent2 from "./HeroContent2"
 import ArtsCard from "./facilities/ArtsCard"
 import ClassroomCard from "./facilities/ClassroomCard"
@@ -48,20 +49,20 @@ const anchors = [
     enter: { animation: "zoom-out", from: 130, to: 134 },
     exit: { animation: "zoom-in", from: 136, to: 140 },
     stepDurationDown: 1,
-    stepDurationUp: 0.5
+    stepDurationUp: 1
   },
   {
     id: "demo2-innovation-labs", frame: 168, component: "InnovationLabsCard",
     enter: { animation: "zoom-out", from: 160, to: 168 },
     exit: { animation: "zoom-in", from: 170, to: 175 },
     stepDurationDown: 1.2,
-    stepDurationUp: 1
+    stepDurationUp: 3
   },
   {
     id: "demo2-arts", frame: 266, component: "ArtsCard",
     enter: { animation: "zoom-out", from: 260, to: 266 },
     exit: { animation: "zoom-in", from: 268, to: 273 },
-    stepDurationDown: 2.5,
+    stepDurationDown: 4.5,
     stepDurationUp: 1
   },
   {
@@ -72,7 +73,7 @@ const anchors = [
     stepDurationUp: 1.3
   },
   {
-    id: "demo2-food", frame: 388, component: "FoodCard",
+    id: "demo2-food", frame: 389, component: "FoodCard",
     enter: { animation: "zoom-out", from: 380, to: 388 },
     exit: { animation: "zoom-in", from: 392, to: 399 },
     stepDurationDown: 2.3,
@@ -98,6 +99,15 @@ const componentMap = {
   ReverseEngineeringCard
 }
 
+const journeySteps = [
+  { id: "demo2-classroom", label: facilities.classroom.eyebrow },
+  { id: "demo2-early-development", label: facilities.earlyDevelopment.eyebrow },
+  { id: "demo2-innovation-labs", label: facilities.innovationLabs.eyebrow },
+  { id: "demo2-arts", label: facilities.arts.eyebrow },
+  { id: "demo2-reverse-engineering", label: facilities.reverseEngineering.eyebrow },
+  { id: "demo2-food", label: facilities.food.eyebrow },
+]
+
 export default function HerotoFull() {
   const sectionRef = useRef(null)
   const canvasRef = useRef(null)
@@ -110,14 +120,16 @@ export default function HerotoFull() {
   })
   const contentAnchors = anchors.filter((anchor) => anchor.component)
   const controlsStartIndex = anchors.findIndex((anchor) => anchor.id === "demo2-classroom")
+  const controlsEndIndex = anchors.findIndex((anchor) => anchor.id === "demo2-food")
   const controlsStartFrame =
     controlsStartIndex >= 0 ? anchors[controlsStartIndex].frame : Number.POSITIVE_INFINITY
   const showJourneyNav = currentFrame >= controlsStartFrame
-  const journeyItems = anchors.slice(Math.max(controlsStartIndex, 0)).map((anchor, index) => ({
-    id: anchor.id,
-    order: String(index + 1).padStart(2, "0"),
-  }))
-  const journeyActiveIndex = Math.max(activeIndex - Math.max(controlsStartIndex, 0), 0)
+  const lastJourneyIndex = controlsEndIndex >= 0 ? controlsEndIndex : anchors.length - 1
+  const journeyItems = journeySteps
+  const journeyActiveIndex = Math.min(
+    Math.max(activeIndex - Math.max(controlsStartIndex, 0), 0),
+    Math.max(journeyItems.length - 1, 0),
+  )
 
   return (
     <section ref={sectionRef} className="relative h-screen overflow-hidden bg-white">
@@ -147,9 +159,9 @@ export default function HerotoFull() {
           />
           <LearningJourneyControlsDemo2
             onPrevious={() => scrollToIndex(activeIndex - 1)}
-            onNext={() => scrollToIndex(activeIndex + 1)}
+            onNext={() => scrollToIndex(Math.min(lastJourneyIndex, activeIndex + 1))}
             previousDisabled={activeIndex <= controlsStartIndex}
-            nextDisabled={activeIndex === anchors.length - 1}
+            nextDisabled={activeIndex >= lastJourneyIndex}
           />
         </>
       ) : null}

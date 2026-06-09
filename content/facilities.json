@@ -1,6 +1,6 @@
 {
   "classroom": {
-    "eyebrow": "Modern Classrooms",
+    "eyebrow": "Smart Classrooms",
     "title": "Technology that supports learning - not distracts from it.",
     "intro": "Every classroom is designed for clarity, curiosity, and understanding.",
     "drawerIntro": "Each classroom blends calm design, age-appropriate technology, and teacher-led structure so students can stay focused, participate confidently, and build strong learning habits every day.",
@@ -102,7 +102,7 @@
     "buttonLink": "/demo2"
   },
   "arts": {
-    "eyebrow": "Art & Creative Studios",
+    "eyebrow": "Arts & Creativity",
     "title": "A happy place where children create, imagine, and express themselves",
     "intro": "Students explore color, texture, craft, and design in a warm studio space that builds confidence and creativity.",
     "drawerIntro": "Creative studios invite students to explore ideas with their hands, experiment with different materials, and build confidence by turning imagination into visible work.",
@@ -137,7 +137,7 @@
     "buttonLink": "/demo2"
   },
   "reverseEngineering": {
-    "eyebrow": "Design & Technology Exploration Rooms",
+    "eyebrow": "Reverse Engineering",
     "title": "Children learn how things work by trying with their own hands",
     "intro": "Hands-on labs help students become curious, confident, and capable through guided real-world activities.",
     "drawerIntro": "These exploration rooms help students understand systems by taking things apart, rebuilding them, and learning the practical logic behind tools, materials, and everyday mechanisms.",
@@ -172,7 +172,7 @@
     "buttonLink": "/demo2"
   },
   "food": {
-    "eyebrow": "Food Science & Life Skills",
+    "eyebrow": "Food Science",
     "title": "Healthy habits shaped through real hands-on experience",
     "intro": "Children explore cooking basics, nutrition, cleanliness, responsibility, and healthy habits through guided practical learning.",
     "drawerIntro": "Food science and life skills sessions turn everyday routines into meaningful learning, helping children understand healthy choices, responsibility, and practical independence.",

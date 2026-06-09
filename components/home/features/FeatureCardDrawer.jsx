@@ -8,31 +8,33 @@ export default function FeatureCardDrawer({ data, open, onClose }) {
   useEffect(() => {
     if (!open) return
 
-    const scrollY = window.scrollY
     const html = document.documentElement
     const body = document.body
     const previous = {
       htmlOverflow: html.style.overflow,
       bodyOverflow: body.style.overflow,
-      bodyPosition: body.style.position,
-      bodyTop: body.style.top,
-      bodyWidth: body.style.width,
+      htmlOverscrollBehavior: html.style.overscrollBehavior,
+      bodyOverscrollBehavior: body.style.overscrollBehavior,
+      bodyDrawerScrollLock: body.dataset.drawerScrollLock,
     }
 
     window.__lenis?.stop?.()
     html.style.overflow = "hidden"
+    html.style.overscrollBehavior = "none"
     body.style.overflow = "hidden"
-    body.style.position = "fixed"
-    body.style.top = `-${scrollY}px`
-    body.style.width = "100%"
+    body.style.overscrollBehavior = "none"
+    body.dataset.drawerScrollLock = "true"
 
     return () => {
       html.style.overflow = previous.htmlOverflow
       body.style.overflow = previous.bodyOverflow
-      body.style.position = previous.bodyPosition
-      body.style.top = previous.bodyTop
-      body.style.width = previous.bodyWidth
-      window.scrollTo(0, scrollY)
+      html.style.overscrollBehavior = previous.htmlOverscrollBehavior
+      body.style.overscrollBehavior = previous.bodyOverscrollBehavior
+      if (previous.bodyDrawerScrollLock) {
+        body.dataset.drawerScrollLock = previous.bodyDrawerScrollLock
+      } else {
+        delete body.dataset.drawerScrollLock
+      }
       window.__lenis?.start?.()
     }
   }, [open])

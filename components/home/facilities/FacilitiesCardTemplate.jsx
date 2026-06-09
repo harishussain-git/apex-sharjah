@@ -3,9 +3,11 @@
 import { useState } from "react"
 import { PiCheckLight, PiImageSquareLight } from "react-icons/pi"
 import FacilityCardDrawer from "./FacilityCardDrawer"
+import FacilityCardDrawerTest from "./FacilityCardDrawerTest"
 
 export default function FacilitiesCardTemplate({ data }) {
   const [open, setOpen] = useState(false)
+  const [showTest, setShowTest] = useState(false)
 
   if (!data) return null
 
@@ -50,11 +52,19 @@ export default function FacilitiesCardTemplate({ data }) {
 
             <button
               type="button"
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
               className="mt-4 inline-flex rounded-xl bg-[#dbe8fb] px-5 py-2 text-sm font-medium text-black transition-colors duration-300 hover:bg-[#cdddf6] cursor-pointer"
             >
               {data.buttonText}
             </button>
+{/* 
+            <button
+              type="button"
+              onClick={() => setShowTest(true)}
+              className="mt-4 inline-flex rounded-xl bg-[#dbe8fb] px-5 py-2 text-sm font-medium text-black transition-colors duration-300 hover:bg-[#cdddf6] cursor-pointer"
+            >
+              Read More Test
+            </button> */}
           </div>
         </article>
 
@@ -88,11 +98,20 @@ export default function FacilitiesCardTemplate({ data }) {
             >
               {data.buttonText}
             </button>
+
+            {/* <button
+              type="button"
+              onClick={() => setShowTest(true)}
+              className="mt-4 inline-flex rounded-xl bg-[#dbe8fb] px-4 py-2 text-sm font-medium text-black transition-colors duration-300 hover:bg-[#cdddf6] cursor-pointer"
+            >
+              Read More Test
+            </button> */}
           </div>
         </article>
       </div>
 
       <FacilityCardDrawer data={data} open={open} onClose={() => setOpen(false)} />
+      <FacilityCardDrawerTest data={data} open={showTest} onClose={() => setShowTest(false)} />
     </>
   )
 }

@@ -13,7 +13,6 @@ const Page = () => {
   return (
     <AssetLoader assets={demo2Assets} label="Loading Apex">
       <div>
-        {/* <HeroOnly/> */}
         <HeroDemo2Seq />
         <MoresectionComingSoon />
         
