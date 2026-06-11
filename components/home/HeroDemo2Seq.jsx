@@ -5,8 +5,10 @@ import facilities from "../../content/facilities.json"
 import HeroContent2 from "./HeroContent2"
 import ArtsCard from "./facilities/ArtsCard"
 import ClassroomCard from "./facilities/ClassroomCard"
+import CommunicationCard from "./facilities/CommunicationCard"
 import EarlyDevelopmentCard from "./facilities/EarlyDevelopmentCard"
 import FoodCard from "./facilities/FoodCard"
+import IndoorPlayCard from "./facilities/IndoorPlayCard"
 import InnovationLabsCard from "./facilities/InnovationLabsCard"
 import ReverseEngineeringCard from "./facilities/ReverseEngineeringCard"
 import SchoolFront2 from "./SchoolFront2"
@@ -80,11 +82,18 @@ const anchors = [
     stepDurationUp: 2
   },
   {
-    id: "demo2-communication", frame: 420, component: "CommunicationCard",
-    enter: { animation: "zoom-out", from: 410, to: 420 },
-    exit: { animation: "zoom-in", from: 420, to: 425 },
+    id: "demo2-communication", frame: 455, component: "CommunicationCard",
+    enter: { animation: "zoom-out", from: 450, to: 455 },
+    exit: { animation: "zoom-in", from: 459, to: 465 },
     stepDurationDown: 2.3,
-    stepDurationUp: 2
+    stepDurationUp: 1.6
+  },
+    {
+    id: "demo2-indoorplay", frame: 528, component: "indoorPlayCard",
+    enter: { animation: "zoom-out", from: 522, to: 528 },
+    exit: { animation: "zoom-in", from: 528, to: 533 },
+    stepDurationDown: 1.6,
+    stepDurationUp: 1.6
   }
 ]
 
@@ -92,9 +101,11 @@ const componentMap = {
   ArtsCard,
   HeroContent2,
   ClassroomCard,
+  CommunicationCard,
   SchoolFront2,
   EarlyDevelopmentCard,
   FoodCard,
+  indoorPlayCard: IndoorPlayCard,
   InnovationLabsCard,
   ReverseEngineeringCard
 }
@@ -106,6 +117,8 @@ const journeySteps = [
   { id: "demo2-arts", label: facilities.arts.eyebrow },
   { id: "demo2-reverse-engineering", label: facilities.reverseEngineering.eyebrow },
   { id: "demo2-food", label: facilities.food.eyebrow },
+  { id: "demo2-communication", label: facilities.auditoriumHall.eyebrow },
+  { id: "demo2-indoorplay", label: facilities.indoorSportsHall.eyebrow },
 ]
 
 export default function HerotoFull() {
@@ -120,7 +133,7 @@ export default function HerotoFull() {
   })
   const contentAnchors = anchors.filter((anchor) => anchor.component)
   const controlsStartIndex = anchors.findIndex((anchor) => anchor.id === "demo2-classroom")
-  const controlsEndIndex = anchors.findIndex((anchor) => anchor.id === "demo2-food")
+  const controlsEndIndex = anchors.findIndex((anchor) => anchor.id === "demo2-indoorplay")
   const controlsStartFrame =
     controlsStartIndex >= 0 ? anchors[controlsStartIndex].frame : Number.POSITIVE_INFINITY
   const showJourneyNav = currentFrame >= controlsStartFrame

@@ -205,5 +205,175 @@
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
+  },
+  "auditoriumHall": {
+    "eyebrow": "Auditorium Hall",
+    "title": "A welcoming stage where children learn to speak with confidence",
+    "intro": "A warm performance space for storytelling, dramatics, and public speaking.",
+    "drawerIntro": "The auditorium gives children a supportive setting to perform, express ideas clearly, and build confidence in front of others through regular stage-based activities.",
+    "metric": "3",
+    "metricLabel": "confidence-building performance formats",
+    "points": [
+      "Storytelling Sessions",
+      "Dramatics & Role Play",
+      "Public Speaking Practice",
+      "Stage Confidence Building"
+    ],
+    "drawerPoints": [
+      "Dedicated stage area for school performances",
+      "Speaking practice in a supportive environment",
+      "Creative expression through dramatics and storytelling",
+      "Confidence building through regular audience interaction"
+    ],
+    "items": [
+      {
+        "title": "Stage Performance Area",
+        "text": "Children participate in storytelling, skits, and performances that help them express ideas clearly and confidently.",
+        "image": "/home/features/art.webp"
+      },
+      {
+        "title": "Public Speaking Platform",
+        "text": "Structured speaking opportunities help students improve voice, presence, and comfort while addressing a group.",
+        "image": "/home/features/creative-1.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "indoorSportsHall": {
+    "eyebrow": "Indoor Sports Hall",
+    "title": "An active indoor space for movement, agility, and motor skill growth",
+    "intro": "A versatile hall designed for indoor sports, movement practice, and physical development.",
+    "drawerIntro": "The indoor sports hall supports energetic movement in a safe all-weather setting where children can strengthen agility, coordination, balance, and gross motor skills.",
+    "metric": "4",
+    "metricLabel": "core movement skills supported",
+    "points": [
+      "Indoor Sports Activities",
+      "Agility Building",
+      "Gross Motor Development",
+      "Movement Coordination"
+    ],
+    "drawerPoints": [
+      "All-weather space for guided physical activity",
+      "Movement drills that improve balance and agility",
+      "Games that strengthen gross motor control",
+      "Structured routines for active learning and coordination"
+    ],
+    "items": [
+      {
+        "title": "Versatile Activity Floor",
+        "text": "Open indoor space allows children to move freely through games, drills, and physical skill-building sessions.",
+        "image": "/home/features/edu.webp"
+      },
+      {
+        "title": "Motor Skill Training",
+        "text": "Age-appropriate activities help develop balance, speed, coordination, and physical confidence.",
+        "image": "/home/features/child-sensory.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "activityRooms": {
+    "eyebrow": "Activity Rooms",
+    "title": "Flexible rooms for play, movement, and group activities",
+    "intro": "Eight rumpus and sports activity rooms designed for fun, imagination, and collaboration.",
+    "drawerIntro": "These activity rooms give children flexible indoor spaces for energetic play, structured sessions, and collaborative experiences that support both creativity and physical development.",
+    "metric": "8",
+    "metricLabel": "rumpus and sports activity rooms",
+    "points": [
+      "Rumpus Play Sessions",
+      "Indoor Group Activities",
+      "Collaborative Play",
+      "Flexible Movement Spaces"
+    ],
+    "drawerPoints": [
+      "Multiple rooms for age-specific activity planning",
+      "Safe spaces for imaginative and active play",
+      "Indoor options for group games and collaboration",
+      "Flexible layouts for movement and learning sessions"
+    ],
+    "items": [
+      {
+        "title": "Rumpus Play Rooms",
+        "text": "Children enjoy active indoor play in secure rooms that encourage imagination, exploration, and teamwork.",
+        "image": "/home/features/sensory.webp"
+      },
+      {
+        "title": "Sports Activity Spaces",
+        "text": "Dedicated rooms support guided physical activities that build coordination, participation, and confidence.",
+        "image": "/home/features/educraft.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "outdoorSports": {
+    "eyebrow": "Outdoor Sports",
+    "title": "Expansive outdoor areas for play, fitness, and athletic growth",
+    "intro": "Open play zones, sports fields, and a running track support active learning every day.",
+    "drawerIntro": "Outdoor facilities give children room to run, play, compete, and build stamina through team sports, free movement, and structured athletic activities.",
+    "metric": "3",
+    "metricLabel": "major outdoor activity zones",
+    "points": [
+      "Outdoor Play Areas",
+      "Sports Fields",
+      "Running Track",
+      "Team Activity Space"
+    ],
+    "drawerPoints": [
+      "Secure open-air play zones for daily activity",
+      "Sports grounds for team games and fitness drills",
+      "Track space for running and endurance building",
+      "Large areas that support energetic, social play"
+    ],
+    "items": [
+      {
+        "title": "Outdoor Play Zones",
+        "text": "Children enjoy spacious and secure outdoor areas designed for movement, social interaction, and imaginative play.",
+        "image": "/home/features/classroom.webp"
+      },
+      {
+        "title": "Fields And Running Track",
+        "text": "Sports grounds and track facilities help students build stamina, teamwork, and athletic confidence.",
+        "image": "/home/features/reverseeng.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "wellbeingFitness": {
+    "eyebrow": "Wellbeing & Fitness",
+    "title": "Child-friendly spaces that support calm minds and healthy bodies",
+    "intro": "Dedicated areas for wellbeing, mindfulness, and physical fitness development.",
+    "drawerIntro": "These spaces are designed to support emotional wellbeing, self-awareness, and healthy physical development through calm routines, movement, and guided fitness activities.",
+    "metric": "2",
+    "metricLabel": "wellbeing and fitness focus areas",
+    "points": [
+      "Mindfulness Support",
+      "Emotional Wellbeing",
+      "Fitness Development",
+      "Healthy Routine Building"
+    ],
+    "drawerPoints": [
+      "Calm spaces that support emotional regulation",
+      "Child-friendly routines for mindfulness and focus",
+      "Fitness activities that promote healthy development",
+      "Balanced environments for movement and wellbeing"
+    ],
+    "items": [
+      {
+        "title": "Mindfulness And Wellbeing Areas",
+        "text": "Quiet, child-friendly environments help students slow down, reset, and strengthen emotional awareness.",
+        "image": "/home/features/plants.webp"
+      },
+      {
+        "title": "Fitness Development Spaces",
+        "text": "Guided physical routines help children build strength, coordination, and healthy movement habits.",
+        "image": "/home/features/food.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
   }
 }
