@@ -375,5 +375,73 @@
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
+  },
+  "karate": {
+    "eyebrow": "Karate Training",
+    "title": "A disciplined space where children build focus, balance, and self-confidence",
+    "intro": "Structured karate sessions help children grow stronger, calmer, and more confident.",
+    "drawerIntro": "Karate training gives children a focused environment to develop discipline, coordination, body control, and respect through consistent guided practice.",
+    "metric": "4",
+    "metricLabel": "core skills strengthened through practice",
+    "points": [
+      "Focus & Discipline",
+      "Balance & Coordination",
+      "Strength Building",
+      "Self-Confidence"
+    ],
+    "drawerPoints": [
+      "Guided karate practice with age-appropriate instruction",
+      "Movement routines that improve balance and control",
+      "Discipline-building activities with clear structure",
+      "Confidence growth through steady personal progress"
+    ],
+    "items": [
+      {
+        "title": "Structured Training Sessions",
+        "text": "Children follow clear routines that strengthen discipline, concentration, and body awareness in a supportive setting.",
+        "image": "/home/features/child-sensory.webp"
+      },
+      {
+        "title": "Confidence Through Movement",
+        "text": "Karate practice helps students build physical control, resilience, and self-belief step by step.",
+        "image": "/home/features/creative-2.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "football": {
+    "eyebrow": "Football Ground",
+    "title": "An energetic field where children learn teamwork, stamina, and game spirit",
+    "intro": "Football sessions build fitness, coordination, teamwork, and confidence through active play.",
+    "drawerIntro": "The football ground gives children an exciting team environment where they can develop endurance, coordination, strategy, and sportsmanship through guided play.",
+    "metric": "4",
+    "metricLabel": "key team-sport abilities developed",
+    "points": [
+      "Teamwork & Cooperation",
+      "Speed & Agility",
+      "Stamina Building",
+      "Game Awareness"
+    ],
+    "drawerPoints": [
+      "Large field space for active team play",
+      "Drills that improve speed, control, and coordination",
+      "Shared play that builds teamwork and communication",
+      "Fitness development through energetic outdoor movement"
+    ],
+    "items": [
+      {
+        "title": "Team Play And Coordination",
+        "text": "Children learn to move, pass, and play together while building social confidence and game understanding.",
+        "image": "/home/features/classroom.webp"
+      },
+      {
+        "title": "Outdoor Fitness And Stamina",
+        "text": "Football activities support endurance, agility, and healthy physical development through joyful movement.",
+        "image": "/home/features/reverseeng.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
   }
 }
