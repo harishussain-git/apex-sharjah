@@ -16,7 +16,11 @@ import LearningJourneyControlsDemo2 from "../ui/LearningJourneyControlsDemo2"
 import LearningJourneyProgressDemo2 from "../ui/LearningJourneyProgressDemo2"
 import { getSequenceLayerStyle } from "../../lib/gsap/sequenceContentAnimation"
 import { useStrictSequenceScroll } from "../../lib/gsap/StrictSequenceScroll"
-import { DEMO2_FRAME_COUNT, demo2FrameSrc } from "../../lib/demo2Sequence"
+import {
+  DEMO2_FRAME_COUNT,
+  DEMO2_INITIAL_FRAME_COUNT,
+  demo2FrameSrc,
+} from "../../lib/demo2Sequence"
 
 // Explanation:
 // `stepDurationDown` = how many seconds it takes to move to the next step when scrolling DOWN.
@@ -130,6 +134,9 @@ export default function HerotoFull() {
     frameCount: DEMO2_FRAME_COUNT,
     frameSrc: demo2FrameSrc,
     anchors,
+    options: {
+      priorityCount: DEMO2_INITIAL_FRAME_COUNT,
+    },
   })
   const contentAnchors = anchors.filter((anchor) => anchor.component)
   const controlsStartIndex = anchors.findIndex((anchor) => anchor.id === "demo2-classroom")

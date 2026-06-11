@@ -6,12 +6,12 @@ import CtaSection from "@/components/home/CtaSection"
 import LearningJourney from "@/components/home/LearningJourney"
 import MoresectionComingSoon from "@/components/home/MoresectionComingSoon"
 import AssetLoader from "@/lib/AssetLoader"
-import { demo2Assets } from "@/lib/pageAssets"
+import { demo2CriticalAssets } from "@/lib/pageAssets"
 
 
 const Page = () => {
   return (
-    <AssetLoader assets={demo2Assets} label="Loading Apex">
+    <AssetLoader assets={demo2CriticalAssets} label="Loading Apex">
       <div>
         <HeroDemo2Seq />
         <MoresectionComingSoon />
