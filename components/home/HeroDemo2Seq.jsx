@@ -96,14 +96,14 @@ const anchors = [
     enter: { animation: "zoom-out", from: 449, to: 455 },
     exit: { animation: "zoom-in", from: 455, to: 461 },
     stepDurationDown: 2,
-    stepDurationUp: 1.6
+    stepDurationUp: 1
   },
   {
     id: "demo2-swim", frame: 546, component: "KidsPoolSwimmingCard",
     enter: { animation: "zoom-out", from: 540, to: 546 },
     exit: { animation: "zoom-in", from: 546, to: 552 },
     stepDurationDown: 3,
-    stepDurationUp: 2.6
+    stepDurationUp: 1
   },
   {
     id: "demo2-reverse-engineering", frame: 580, component: "ReverseEngineeringCard",
@@ -117,13 +117,13 @@ const anchors = [
     enter: { animation: "zoom-out", from: 623, to: 629 },
     exit: { animation: "zoom-in", from: 629, to: 635 },
     stepDurationDown: 2.3,
-    stepDurationUp: 2
+    stepDurationUp: 1.7
   },
   {
     id: "demo2-garden", frame: 680, component: "IslamicGardenNatureLearningCard",
     enter: { animation: "zoom-out", from: 674, to: 680 },
     exit: { animation: "zoom-in", from: 680, to: 686 },
-    stepDurationDown: 2.3,
+    stepDurationDown: 2,
     stepDurationUp: 2
   },
   {
@@ -131,20 +131,20 @@ const anchors = [
     enter: { animation: "zoom-out", from: 719, to: 725 },
     exit: { animation: "zoom-in", from: 725, to: 731 },
     stepDurationDown: 2.3,
-    stepDurationUp: 2
+    stepDurationUp: 1.1
   },
   {
     id: "demo2-communication", frame: 761, component: "CommunicationCard",
     enter: { animation: "zoom-out", from: 755, to: 761 },
     exit: { animation: "zoom-in", from: 761, to: 767 },
-    stepDurationDown: 2.3,
-    stepDurationUp: 1.6
+    stepDurationDown: 1.6,
+    stepDurationUp: 2
   },
     {
     id: "demo2-home", frame: 867, component: "SmartTransportSafeConnectivityCard",
     enter: { animation: "zoom-out", from: 861, to: 867 },
     exit: { animation: "zoom-in", from: 867, to: 873 },
-    stepDurationDown: 4,
+    stepDurationDown: 4.5,
     stepDurationUp: 3
   },
 
@@ -223,8 +223,8 @@ export default function HerotoFull() {
         return (
           <div
             key={anchor.id}
-            className="absolute inset-0 z-10 transform-gpu"
-            style={{ ...getSequenceLayerStyle(anchor, currentFrame), willChange: "opacity, transform" }}
+            className="absolute inset-0 z-10"
+            style={getSequenceLayerStyle(anchor, currentFrame)}
           >
             <Content />
           </div>
