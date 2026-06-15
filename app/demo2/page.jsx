@@ -14,7 +14,7 @@ const Page = () => {
     <AssetLoader assets={demo2CriticalAssets} label="Loading Apex">
       <div>
         <HeroDemo2Seq />
-        <MoresectionComingSoon />
+        {/* <MoresectionComingSoon /> */}
         
         <MoreDetails />
         <CtaSection />

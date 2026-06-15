@@ -443,5 +443,142 @@
     ],
     "buttonText": "Read more",
     "buttonLink": "/demo2"
+  },
+  "kidsPoolSwimming": {
+    "eyebrow": "Kids' Pool & Swimming Pool",
+    "title": "Safe water spaces where children grow in confidence",
+    "intro": "Shallow pool play and supervised swimming help children build comfort, coordination, and water safety.",
+    "drawerIntro": "Our child-friendly pool areas introduce water in a calm and supervised way, helping students enjoy movement, learn basic swimming habits, and grow more confident around water.",
+    "metric": "4",
+    "metricLabel": "guided water learning areas",
+    "points": [
+      "Kids Pool",
+      "Swimming Training",
+      "Water Safety Learning",
+      "Supervised Swimming Programs"
+    ],
+    "drawerPoints": [
+      "Shallow pool space designed for young learners",
+      "Supervised swimming practice with guided routines",
+      "Water safety habits introduced early",
+      "Confidence building through calm step-by-step learning"
+    ],
+    "items": [
+      {
+        "title": "Kids Pool Play",
+        "text": "A child-friendly shallow pool gives young learners a safe start with water play, comfort, and confidence building.",
+        "image": "/home/features/pool.webp"
+      },
+      {
+        "title": "Supervised Swimming",
+        "text": "Guided swimming sessions help children strengthen coordination, discipline, and essential water safety awareness.",
+        "image": "/home/features/swim.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "islamicGardenNatureLearning": {
+    "eyebrow": "Islamic Garden & Nature Learning",
+    "title": "Nature-rich spaces that connect learning with reflection",
+    "intro": "Qur'anic plants and outdoor learning areas help children grow with care, gratitude, and environmental awareness.",
+    "drawerIntro": "These living learning spaces invite children to observe nature, explore Qur'anic plants, and develop respect for the environment through calm outdoor experiences.",
+    "metric": "5",
+    "metricLabel": "outdoor learning themes",
+    "points": [
+      "Qur'anic Plants Garden",
+      "Nature Learning",
+      "Sustainability Learning",
+      "Outdoor Learning Environment",
+      "Reflection Spaces"
+    ],
+    "drawerPoints": [
+      "Garden spaces featuring Qur'anic plants",
+      "Outdoor learning that links faith and nature",
+      "Simple sustainability lessons through observation",
+      "Reflection areas that encourage calm thinking"
+    ],
+    "items": [
+      {
+        "title": "Qur'anic Plants Garden",
+        "text": "Children explore meaningful plants in a peaceful setting that connects knowledge, reflection, and appreciation of nature.",
+        "image": "/home/features/garden.webp"
+      },
+      {
+        "title": "Nature Learning Areas",
+        "text": "Outdoor spaces support environmental learning, curiosity, and a sense of care for the world around them.",
+        "image": "/home/features/garden2.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "prayerRoomMosque": {
+    "eyebrow": "Prayer Room / Mosque",
+    "title": "A peaceful space for prayer, values, and reflection",
+    "intro": "A serene environment where children experience prayer, calm reflection, and value-based growth.",
+    "drawerIntro": "The prayer room offers a respectful setting where students can pause, reflect, and strengthen spiritual habits in an Islamic environment rooted in shared values.",
+    "metric": "Daily",
+    "metricLabel": "moments for prayer and reflection",
+    "points": [
+      "Quiet Reflection Area",
+      "Spiritual Development",
+      "Value-Based Learning",
+      "Islamic Environment"
+    ],
+    "drawerPoints": [
+      "Quiet space for prayer and reflection",
+      "Daily routines that support spiritual growth",
+      "Value-based learning in a calm setting",
+      "An environment that reinforces respect and mindfulness"
+    ],
+    "items": [
+      {
+        "title": "Quiet Reflection Area",
+        "text": "A calm dedicated space helps children slow down, reflect, and develop peaceful daily habits.",
+        "image": "/home/features/masjid.webp"
+      },
+      {
+        "title": "Islamic Values Environment",
+        "text": "Shared routines and guided practice support spiritual development, discipline, and respectful conduct.",
+        "image": "/home/features/plants.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
+  },
+  "smartTransportSafeConnectivity": {
+    "eyebrow": "Smart Transport & Safe Connectivity",
+    "title": "Safe school journeys and simple peace of mind for parents",
+    "intro": "GPS-tracked transport and secure communication systems help children travel safely while parents stay informed.",
+    "drawerIntro": "Our transport and communication systems are designed to support both students and parents, combining safe travel, clear updates, and dependable digital coordination.",
+    "metric": "Live",
+    "metricLabel": "tracking and parent updates",
+    "points": [
+      "GPS Tracking",
+      "Safe School Transport",
+      "Parent Communication",
+      "Secure Digital Systems"
+    ],
+    "drawerPoints": [
+      "GPS-enabled school transport for safer travel",
+      "Clear parent communication from pickup to drop-off",
+      "Secure digital systems that support coordination",
+      "A dependable school-home connection for daily peace of mind"
+    ],
+    "items": [
+      {
+        "title": "Safe School Transport",
+        "text": "Reliable school transport helps children travel comfortably and safely as part of a well-managed school day.",
+        "image": "/home/features/gps-tracking.webp"
+      },
+      {
+        "title": "Connected Parents",
+        "text": "Tracking and communication tools keep parents informed and reassured throughout the journey.",
+        "image": "/home/features/smart-tracking.webp"
+      }
+    ],
+    "buttonText": "Read more",
+    "buttonLink": "/demo2"
   }
 }
