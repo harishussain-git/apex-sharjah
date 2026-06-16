@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { demo2PreviewSrc } from "../../lib/demo2Sequence"
 import ContactPopup from "./ContactPopup"
 
 const menuItems = [
@@ -155,12 +156,10 @@ export default function FullscreenMenu() {
                 className={`relative h-32 transition-transform duration-[1400ms] ease-out sm:h-40 ${open ? "scale-105" : "scale-100"
                   }`}
               >
-                <Image
-                  src="/sequences/demo2/0001.webp"
+                <img
+                  src={demo2PreviewSrc}
                   alt="Apex Vision Model School campus"
-                  fill
-                  sizes="(max-width: 768px) 100vw"
-                  className="object-cover"
+                  className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/10" />
                 <button type="button" className="absolute inset-0 grid place-items-center text-xs font-bold text-white cursor-pointer">

@@ -89,7 +89,7 @@ export default function FacilitiesCardTemplate({ data }) {
             <button
               type="button"
               // onClick={() => setOpen(true)}
-              className="mt-4 inline-flex rounded-xl bg-[#e7f0fc] px-5 py-2 text-sm font-medium text-black transition-colors duration-300 hover:bg-[#cdddf6] cursor-pointer"
+              className="mt-4 inline-flex rounded-xl bg-[#ffffff] px-5 py-2 text-sm font-medium text-black transition-colors duration-300 hover:bg-[#ffffff] cursor-pointer"
             >
               {data.buttonText}
             </button>
