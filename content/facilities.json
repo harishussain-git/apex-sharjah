@@ -207,7 +207,7 @@
     "buttonLink": "/demo2"
   },
   "auditoriumHall": {
-    "eyebrow": "Auditorium Hall",
+    "eyebrow": "Personality Development",
     "title": "A welcoming stage where children learn to speak with confidence",
     "intro": "A warm performance space for storytelling, dramatics, and public speaking.",
     "drawerIntro": "The auditorium gives children a supportive setting to perform, express ideas clearly, and build confidence in front of others through regular stage-based activities.",
@@ -241,7 +241,7 @@
     "buttonLink": "/demo2"
   },
   "indoorSportsHall": {
-    "eyebrow": "Indoor Sports Hall",
+    "eyebrow": "Indoor Sports",
     "title": "An active indoor space for movement, agility, and motor skill growth",
     "intro": "A versatile hall designed for indoor sports, movement practice, and physical development.",
     "drawerIntro": "The indoor sports hall supports energetic movement in a safe all-weather setting where children can strengthen agility, coordination, balance, and gross motor skills.",
@@ -377,7 +377,7 @@
     "buttonLink": "/demo2"
   },
   "karate": {
-    "eyebrow": "Karate Training",
+    "eyebrow": "Martial Arts",
     "title": "A disciplined space where children build focus, balance, and self-confidence",
     "intro": "Structured karate sessions help children grow stronger, calmer, and more confident.",
     "drawerIntro": "Karate training gives children a focused environment to develop discipline, coordination, body control, and respect through consistent guided practice.",
@@ -411,7 +411,7 @@
     "buttonLink": "/demo2"
   },
   "football": {
-    "eyebrow": "Football Ground",
+    "eyebrow": "Outdoor Sports",
     "title": "An energetic field where children learn teamwork, stamina, and game spirit",
     "intro": "Football sessions build fitness, coordination, teamwork, and confidence through active play.",
     "drawerIntro": "The football ground gives children an exciting team environment where they can develop endurance, coordination, strategy, and sportsmanship through guided play.",
@@ -445,7 +445,7 @@
     "buttonLink": "/demo2"
   },
   "kidsPoolSwimming": {
-    "eyebrow": "Kids' Pool & Swimming Pool",
+    "eyebrow": "Swimming",
     "title": "Safe water spaces where children grow in confidence",
     "intro": "Shallow pool play and supervised swimming help children build comfort, coordination, and water safety.",
     "drawerIntro": "Our child-friendly pool areas introduce water in a calm and supervised way, helping students enjoy movement, learn basic swimming habits, and grow more confident around water.",
@@ -479,7 +479,7 @@
     "buttonLink": "/demo2"
   },
   "islamicGardenNatureLearning": {
-    "eyebrow": "Islamic Garden & Nature Learning",
+    "eyebrow": "Islamic Garden & Nature",
     "title": "Nature-rich spaces that connect learning with reflection",
     "intro": "Qur'anic plants and outdoor learning areas help children grow with care, gratitude, and environmental awareness.",
     "drawerIntro": "These living learning spaces invite children to observe nature, explore Qur'anic plants, and develop respect for the environment through calm outdoor experiences.",
@@ -514,7 +514,7 @@
     "buttonLink": "/demo2"
   },
   "prayerRoomMosque": {
-    "eyebrow": "Prayer Room / Mosque",
+    "eyebrow": "Prayer / Masjid",
     "title": "A peaceful space for prayer, values, and reflection",
     "intro": "A serene environment where children experience prayer, calm reflection, and value-based growth.",
     "drawerIntro": "The prayer room offers a respectful setting where students can pause, reflect, and strengthen spiritual habits in an Islamic environment rooted in shared values.",

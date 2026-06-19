@@ -44,9 +44,9 @@ export default function FullscreenMenu() {
         aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className="inline-flex size-12 items-center justify-center rounded-full bg-white hover:bg-slate-100 cursor-pointer border border-[#343195]/35 "
+        className="inline-flex md:size-10 lg:size-12 items-center justify-center rounded-full bg-white hover:bg-slate-100 cursor-pointer border border-[#343195]/35 "
       >
-        <img className="w-6 " src="/icons/menu.svg" alt="menu" />
+        <img className="md:w-5 lg:w-6" src="/icons/menu.svg" alt="menu" />
       </button>
 
       <div

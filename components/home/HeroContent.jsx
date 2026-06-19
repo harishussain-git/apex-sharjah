@@ -6,8 +6,8 @@ export default function HeroContent() {
       <div className="mx-auto mt-30 md:mt-24 flex max-w-2xl flex-col items-center gap-2 text-center">
 
         <div className="hero-badge flex justify-center items-center gap-2">
-          
-            <img className="w-9" src="/home/45.webp" alt="45 Years of Educational Excellence" />
+
+          <img className="w-9" src="/home/45.webp" alt="45 Years of Educational Excellence" />
           <p className="text-sm tracking-wider font-semibold uppercase">Years of educational excellence</p>
         </div>
 

@@ -3,19 +3,19 @@
 export default function HeroContent2() {
   return (
     <div className="pointer-events-none absolute inset-0 z-10 flex w-full h-full text-[#10213e] ">
-      <div className=" mt-30 md:mt-40 px-4 md:px-10 flex max-w-2xl h-fit  flex-col gap-2 text-left">
+      <div className="mt-25 md:mt-30 lg:mt-40 px-4 md:px-10 flex md:max-w-xl lg:max-w-2xl h-fit  flex-col gap-1 text-left">
 
         <div className="hero-badge flex  items-center gap-2">
 
           <img className="w-9" src="/home/45.webp" alt="45 Years of Educational Excellence" />
-          <p className="text-sm tracking-wider font-semibold uppercase">Years of educational excellence</p>
+          <p className="text-[clamp(.5rem,1vw+.6rem,.8rem)] tracking-wider font-semibold uppercase">Years of educational excellence</p>
         </div>
 
-        <h1 className="hero-title  text-5xl md:text-6xl  leading-14 font-bold font-accent uppercase tracking-tight ">
+        <h1 className="hero-title  text-4xl md:text-5xl lg:text-6xl  md:leading-12 lg:leading-14 font-bold font-accent uppercase tracking-tight ">
           Education that shapes character and confidence
         </h1>
 
-        <p className="hero-copy hidden max-w-2xl  mt-3 md:block">
+        <p className="hero-copy hidden max-w-2xl text-[clamp(.5rem,1vw+.7rem,.9rem)] md:mt-2  lg:mt-4 md:block">
           Guiding every child with knowledge, values, and confidence for the future.
         </p>
       </div>

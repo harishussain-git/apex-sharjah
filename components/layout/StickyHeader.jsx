@@ -10,7 +10,7 @@ export default function StickyHeader() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-[1000] text-body">
       <div className="pointer-events-auto flex items-center justify-between px-4 py-2 md:px-8 md:py-3  mx-auto">
         {/* Logo */}
-        <Link href="/demo2" aria-label="Apex homepage" className="inline-flex items-center">
+        <Link href="/demo2" aria-label="Apex homepage" className="inline-flex items-center md:w-32 lg:w-36">
           <Image
             src="/home/apex-logo-big.webp"
             alt="Apex"
@@ -28,7 +28,7 @@ export default function StickyHeader() {
             <ContactPopup
               label="Contact"
               variant="link"
-              className="font-bold cursor-pointer transition hover:text-[var(--color-primary-500)]"
+              className="font-bold text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] cursor-pointer transition hover:text-[var(--color-primary-500)]"
             />
           </div>
 
@@ -36,7 +36,7 @@ export default function StickyHeader() {
           <div className="hidden md:block">
             <Link
               href="/demo1/admission"
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-black/10 bg-[var(--color-primary-500)] px-7 text-sm font-semibold text-white transition hover:cursor-pointer hover:bg-[#2a356f] hover:text-white"
+              className="inline-flex md:min-h-10 lg:min-h-12 items-center justify-center rounded-full border border-black/10 bg-[var(--color-primary-500)] md:px-5 lg:px-7 text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] font-semibold text-white transition hover:cursor-pointer hover:bg-[#2a356f] hover:text-white"
             >
               Book Admission
             </Link>

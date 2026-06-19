@@ -1,8 +1,8 @@
 "use client"
 
 import facilities from "../../../content/facilities.json"
-import FacilitiesCardTemplate from "./FacilitiesCardTemplate"
+import FacilitiesCardTemplate2 from "./FacilitiesCardTemplate2"
 
 export default function FoodCard() {
-  return <FacilitiesCardTemplate data={facilities.food} />
+  return <FacilitiesCardTemplate2 data={facilities.food} />
 }
