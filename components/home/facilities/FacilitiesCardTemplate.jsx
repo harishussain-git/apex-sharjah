@@ -64,24 +64,24 @@ export default function FacilitiesCardTemplate({ data }) {
 
             <div className="my-3 h-px w-full bg-[#dddddd]" />
 
-            <p className="leading-[1.28] text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] text-[#1f2d48]">
+            <p className="leading-[1.28] text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] font-semibold text-[#1f2d48]">
               {data.intro}
             </p>
 
-            <div className="mt-3 flex items-center gap-2">
+            {/* <div className="mt-3 flex items-center gap-2">
               <p className="text-[1.1rem] font-semibold leading-none text-black">
                 {data.metric}
               </p>
               <p className="text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] leading-[1.2] text-black/90">
                 {data.metricLabel}
               </p>
-            </div>
+            </div> */}
 
             <ul className="mt-4 space-y-2 text-[#0b1018]">
               {data.points?.map((point) => (
                 <li key={point} className="flex items-center gap-2 text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] leading-[1.2]">
                   <PiCheckLight className="shrink-0 text-[1rem] text-[#0040ae]" />
-                  <span>{point}</span>
+                  <span className="font-medium">{point}</span>
                 </li>
               ))}
             </ul>

@@ -1,8 +1,8 @@
 "use client"
 
 import facilities from "../../../content/facilities.json"
-import FacilitiesCardTemplate2 from "./FacilitiesCardTemplate2"
+import FacilitiesCardTemplate from "./FacilitiesCardTemplate"
 
 export default function PrayerRoomMosqueCard() {
-  return <FacilitiesCardTemplate2 data={facilities.prayerRoomMosque} />
+  return <FacilitiesCardTemplate data={facilities.prayerRoomMosque} />
 }

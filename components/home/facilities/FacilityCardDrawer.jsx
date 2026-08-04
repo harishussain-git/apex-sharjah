@@ -84,15 +84,15 @@ export default function FacilityCardDrawer({ data, open, onClose }) {
               <p className="text-sm leading-6 text-[#4a5875] md:text-base">
                 {drawerIntro}
               </p>
-
-              <div className="rounded-2xl bg-[#eef4ff] p-4 text-black">
-                <p className="text-3xl font-semibold leading-none md:text-[2.5rem]">
-                  {data.metric}
-                </p>
-                <p className="mt-2 text-sm leading-5 text-black/80">
-                  {data.metricLabel}
-                </p>
-              </div>
+{/* 
+              // <div className="rounded-2xl bg-[#eef4ff] p-4 text-black">
+              //   <p className="text-3xl font-semibold leading-none md:text-[2.5rem]">
+              //     {data.metric}fgdsdfsdf
+              //   </p>
+              //   <p className="mt-2 text-sm leading-5 text-black/80">
+              //     {data.metricLabel}
+              //   </p>
+              // </div> */}
             </div>
 
             {drawerPoints.length ? (

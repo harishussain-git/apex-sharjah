@@ -57,7 +57,7 @@ const contactItems = [
 ]
 
 const trustItems = [
-  { icon: PiGraduationCap, text: "Playgroup to Grade 12" },
+  { icon: PiGraduationCap, text: "KG1 to Grade 4" },
   { icon: PiClock, text: "Response within 24 hours" },
   { icon: PiShieldCheck, text: "Secure enquiry" },
 ]

@@ -38,112 +38,106 @@ const anchors = [
     frame: 1,
     component: "HeroContent2",
     enter: { animation: "zoom-out", from: 1, to: 1 },
-    exit: { animation: "zoom-in", from: 1, to: 7 },
+    exit: { animation: "zoom-in", from: 1, to: 6 },
     stepDurationDown: 1,
     stepDurationUp: 1,
   },
   {
-    id: "demo2-schoolfront", frame: 45, component: "SchoolFront2",
-    enter: { animation: "zoom-out", from: 39, to: 45 },
-    exit: { animation: "zoom-in", from: 45, to: 51 },
-    stepDurationDown: 1.2,
+    id: "demo2-schoolfront", frame: 40, component: "SchoolFront2",
+    enter: { animation: "zoom-out", from: 35, to: 40 },
+    exit: { animation: "zoom-in", from: 40, to: 45 },
+    stepDurationDown: 1,
     stepDurationUp: 1,
   },
   {
-    id: "demo2-classroom", frame: 103, component: "ClassroomCard",
-    enter: { animation: "zoom-out", from: 97, to: 103 },
-    exit: { animation: "zoom-in", from: 103, to: 109 },
-    stepDurationDown: 2,
-    stepDurationUp: 0.5
-  },
-  {
-    id: "demo2-early-development", frame: 134, component: "EarlyDevelopmentCard",
-    enter: { animation: "zoom-out", from: 128, to: 134 },
-    exit: { animation: "zoom-in", from: 134, to: 140 },
+    id: "demo2-classroom", frame: 71, component: "ClassroomCard",
+    enter: { animation: "zoom-out", from: 66, to: 71 },
+    exit: { animation: "zoom-in", from: 71, to: 76 },
     stepDurationDown: 1,
     stepDurationUp: 1
   },
   {
-    id: "demo2-innovation-labs", frame: 168, component: "InnovationLabsCard",
-    enter: { animation: "zoom-out", from: 162, to: 168 },
-    exit: { animation: "zoom-in", from: 168, to: 174 },
+    id: "demo2-early-development", frame: 100, component: "EarlyDevelopmentCard",
+    enter: { animation: "zoom-out", from: 95, to: 100 },
+    exit: { animation: "zoom-in", from: 100, to: 105 },
+    stepDurationDown: 1,
+    stepDurationUp: 1
+  },
+  {
+    id: "demo2-innovation-labs", frame: 137, component: "InnovationLabsCard",
+    enter: { animation: "zoom-out", from: 132, to: 137 },
+    exit: { animation: "zoom-in", from: 137, to: 142 },
     stepDurationDown: 1.2,
     stepDurationUp: 3
   },
   {
     id: "demo2-arts", frame: 266, component: "ArtsCard",
-    enter: { animation: "zoom-out", from: 260, to: 266 },
-    exit: { animation: "zoom-in", from: 266, to: 272 },
+    enter: { animation: "zoom-out", from: 261, to: 266 },
+    exit: { animation: "zoom-in", from: 266, to: 271 },
     stepDurationDown: 4.5,
     stepDurationUp: 1
   },
   {
-    id: "demo2-indoorplay", frame: 339, component: "IndoorPlayCard",
-    enter: { animation: "zoom-out", from: 333, to: 339 },
-    exit: { animation: "zoom-in", from: 339, to: 345 },
+    id: "demo2-indoorplay", frame: 302, component: "IndoorPlayCard",
+    enter: { animation: "zoom-out", from: 297, to: 302 },
+    exit: { animation: "zoom-in", from: 302, to: 307 },
     stepDurationDown: 1.6,
     stepDurationUp: 1.6
   },
   {
-    id: "demo2-karate", frame: 389, component: "KaratePlayCard",
-    enter: { animation: "zoom-out", from: 383, to: 389 },
-    exit: { animation: "zoom-in", from: 389, to: 395 },
-    stepDurationDown: 1.6,
-    stepDurationUp: 1.6
+    id: "demo2-football", frame: 326, component: "FootballPlayCard",
+    enter: { animation: "zoom-out", from: 321, to: 326 },
+    exit: { animation: "zoom-in", from: 326, to: 331 },
+    stepDurationDown: 1,
+    stepDurationUp: 1
   },
   {
-    id: "demo2-football", frame: 455, component: "FootballPlayCard",
-    enter: { animation: "zoom-out", from: 449, to: 455 },
-    exit: { animation: "zoom-in", from: 455, to: 461 },
+    id: "demo2-swim", frame: 403, component: "KidsPoolSwimmingCard",
+    enter: { animation: "zoom-out", from: 398, to: 403 },
+    exit: { animation: "zoom-in", from: 403, to: 408 },
+    // down duration means. from previous to this step how long it takes.
     stepDurationDown: 2,
     stepDurationUp: 1
   },
   {
-    id: "demo2-swim", frame: 546, component: "KidsPoolSwimmingCard",
-    enter: { animation: "zoom-out", from: 540, to: 546 },
-    exit: { animation: "zoom-in", from: 546, to: 552 },
-    stepDurationDown: 3,
-    stepDurationUp: 1
-  },
-  {
-    id: "demo2-reverse-engineering", frame: 580, component: "ReverseEngineeringCard",
-    enter: { animation: "zoom-out", from: 574, to: 580 },
-    exit: { animation: "zoom-in", from: 580, to: 586 },
-    stepDurationDown: 1.6,
+    id: "demo2-reverse-engineering", frame: 421, component: "ReverseEngineeringCard",
+    enter: { animation: "zoom-out", from: 416, to: 421 },
+    exit: { animation: "zoom-in", from: 421, to: 426 },
+    stepDurationDown: 1,
     stepDurationUp: 1.3
   },
   {
-    id: "demo2-food", frame: 629, component: "FoodCard",
-    enter: { animation: "zoom-out", from: 623, to: 629 },
-    exit: { animation: "zoom-in", from: 629, to: 635 },
+    id: "demo2-food", frame: 465, component: "FoodCard",
+    enter: { animation: "zoom-out", from: 460, to: 465 },
+    exit: { animation: "zoom-in", from: 465, to: 470 },
     stepDurationDown: 2.3,
     stepDurationUp: 1.7
   },
   {
-    id: "demo2-garden", frame: 680, component: "IslamicGardenNatureLearningCard",
-    enter: { animation: "zoom-out", from: 674, to: 680 },
-    exit: { animation: "zoom-in", from: 680, to: 686 },
+    id: "demo2-garden", frame: 516, component: "IslamicGardenNatureLearningCard",
+    enter: { animation: "zoom-out", from: 511, to: 516 },
+    exit: { animation: "zoom-in", from: 516, to: 521 },
     stepDurationDown: 2,
     stepDurationUp: 2
   },
   {
-    id: "demo2-masjid", frame: 725, component: "PrayerRoomMosqueCard",
-    enter: { animation: "zoom-out", from: 719, to: 725 },
-    exit: { animation: "zoom-in", from: 725, to: 731 },
+    id: "demo2-masjid", frame: 561, component: "PrayerRoomMosqueCard",
+    enter: { animation: "zoom-out", from: 556, to: 561 },
+    exit: { animation: "zoom-in", from: 561, to: 566 },
     stepDurationDown: 2.3,
     stepDurationUp: 1.1
   },
   {
-    id: "demo2-communication", frame: 761, component: "CommunicationCard",
-    enter: { animation: "zoom-out", from: 755, to: 761 },
-    exit: { animation: "zoom-in", from: 761, to: 767 },
+    id: "demo2-communication", frame: 597, component: "CommunicationCard",
+    enter: { animation: "zoom-out", from: 592, to: 597 },
+    exit: { animation: "zoom-in", from: 597, to: 602 },
     stepDurationDown: 1.6,
     stepDurationUp: 2
   },
     {
-    id: "demo2-home", frame: 867, component: "SmartTransportSafeConnectivityCard",
-    enter: { animation: "zoom-out", from: 861, to: 867 },
-    exit: { animation: "zoom-in", from: 867, to: 873 },
+    id: "demo2-home", frame: 703, component: "SmartTransportSafeConnectivityCard",
+    enter: { animation: "zoom-out", from: 698, to: 703 },
+    exit: { animation: "zoom-in", from: 703, to: 703 },
     stepDurationDown: 4.5,
     stepDurationUp: 3
   },
@@ -175,7 +169,6 @@ const journeySteps = [
   { id: "demo2-innovation-labs", label: facilities.innovationLabs.eyebrow },
   { id: "demo2-arts", label: facilities.arts.eyebrow },
   { id: "demo2-indoorplay", label: facilities.indoorSportsHall.eyebrow },
-  { id: "demo2-karate", label: facilities.karate.eyebrow },
   { id: "demo2-football", label: facilities.football.eyebrow },
   { id: "demo2-swim", label: facilities.kidsPoolSwimming.eyebrow },
   { id: "demo2-reverse-engineering", label: facilities.reverseEngineering.eyebrow },

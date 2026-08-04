@@ -57,14 +57,14 @@ function CardContent({ data, FacilityIcon, onReadMore, compact = false }) {
         {data.intro}
       </p>
 
-      <div className="mt-4 flex items-center gap-2">
+      {/* <div className="mt-4 flex items-center gap-2">
         <p className="text-[clamp(0.8rem,1vw+0.6rem,1rem)] font-semibold leading-none text-black">
           {data.metric}
         </p>
         <p className="text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] leading-[1.2] text-black/90">
           {data.metricLabel}
         </p>
-      </div>
+      </div> */}
 
       <ul className="mt-4 space-y-2 text-[#0b1018]">
         {data.points?.map((point) => (

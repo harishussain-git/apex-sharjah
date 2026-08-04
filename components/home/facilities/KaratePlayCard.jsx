@@ -1,8 +1,8 @@
 "use client"
 
 import facilities from "../../../content/facilities.json"
-import FacilitiesCardTemplate2 from "./FacilitiesCardTemplate2"
+import FacilitiesCardTemplate from "./FacilitiesCardTemplate"
 
 export default function KaratePlayCard() {
-  return <FacilitiesCardTemplate2 data={facilities.karate} />
+  return <FacilitiesCardTemplate data={facilities.karate} />
 }

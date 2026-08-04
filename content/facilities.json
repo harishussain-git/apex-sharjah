@@ -2,8 +2,8 @@
   "classroom": {
     "eyebrow": "Smart Classrooms",
     "title": "Technology that supports learning - not distracts from it.",
-    "intro": "Every classroom is designed for clarity, curiosity, and understanding.",
-    "drawerIntro": "Each classroom blends calm design, age-appropriate technology, and teacher-led structure so students can stay focused, participate confidently, and build strong learning habits every day.",
+    "intro": "Every classroom is designed for clarity, curiosity and understanding.",
+    "drawerIntro": "Each classroom blends calm design, age-appropriate technology and teacher-led structure so students can stay focused, participate confidently and build strong learning habits every day.",
     "metric": "20-30%",
     "metricLabel": "higher engagement in classrooms",
     "points": [
@@ -21,7 +21,7 @@
     "items": [
       {
         "title": "Focused Learning Zones",
-        "text": "Seating, lighting, and classroom flow are planned to reduce distraction and help students stay attentive during both instruction and hands-on work.",
+        "text": "Seating, lighting and classroom flow are planned to reduce distraction and help students stay attentive during both instruction and hands-on work.",
         "image": "/home/features/classroom.webp"
       },
       {
@@ -34,10 +34,10 @@
     "buttonLink": "/demo2"
   },
   "earlyDevelopment": {
-    "eyebrow": "Early Development",
-    "title": "Learning begins with touch, movement, and discovery",
-    "intro": "Sand, water, textures, and guided activities support balance, coordination, focus, and early motor skill development.",
-    "drawerIntro": "Our early development spaces are built for safe sensory exploration, movement, and repetition so younger children can strengthen coordination, curiosity, and confidence through play-based routines.",
+    "eyebrow": "Early Years Development",
+    "title": "Learning begins with touch, movement and discovery",
+    "intro": "Sand, water, textures and guided activities support balance, coordination, focus and early motor skill development.",
+    "drawerIntro": "Our early development spaces are built for safe sensory exploration, movement and repetition so younger children can strengthen coordination, curiosity and confidence through play-based routines.",
     "metric": "20%",
     "metricLabel": "stronger motor skills founded.",
     "points": [
@@ -55,12 +55,12 @@
     "items": [
       {
         "title": "Sensory Discovery Areas",
-        "text": "Children explore texture, sound, and movement in calming spaces that encourage experimentation while supporting early concentration and self-regulation.",
+        "text": "Children explore texture, sound and movement in calming spaces that encourage experimentation while supporting early concentration and self-regulation.",
         "image": "/home/features/sensory.webp"
       },
       {
         "title": "Water And Texture Play",
-        "text": "Practical activities with water, sand, and tactile materials help develop grip strength, coordination, and confidence through joyful repetition.",
+        "text": "Practical activities with water, sand and tactile materials help develop grip strength, coordination and confidence through joyful repetition.",
         "image": "/home/features/child-sensory.webp"
       }
     ],
@@ -68,14 +68,15 @@
     "buttonLink": "/demo2"
   },
   "innovationLabs": {
-    "eyebrow": "Innovation Labs",
+    "eyebrow": "Innovation Lab",
     "title": "Turning ideas into real-world creation",
-    "intro": "Hands-on environments where students build, code, and explore future technologies.",
-    "drawerIntro": "Innovation labs give students space to test ideas, build prototypes, and see how design, coding, and problem-solving connect to real-world challenges.",
+    "intro": "Practical learning experiences with Makerspace, Robotics and Reverse Engineering.",
+    "drawerIntro": "Innovation labs give students space to test ideas, build prototypes and see how design, coding and problem-solving connect to real-world challenges.",
     "metric": "2x",
     "metricLabel": "more practical learning exposure than 80% schools",
     "points": [
       "Build-and-test projects",
+      "Makerspace and AI",
       "Coding and robotics",
       "Future tech exploration",
       "Practical STEM experiences"
@@ -84,17 +85,17 @@
       "Project-based STEM challenges",
       "Coding and robotics for applied thinking",
       "Experiment-first learning with teacher support",
-      "Real materials, tools, and prototype workflows"
+      "Real materials, tools and prototype workflows"
     ],
     "items": [
       {
         "title": "Build And Test Stations",
-        "text": "Students move beyond theory by designing, assembling, and improving working models in a space that rewards experimentation and iteration.",
+        "text": "Students move beyond theory by designing, assembling and improving working models in a space that rewards experimentation and iteration.",
         "image": "/home/features/educraft.webp"
       },
       {
         "title": "Coding And Robotics",
-        "text": "Structured digital making activities help students understand logic, teamwork, and systems thinking through practical, visible outcomes.",
+        "text": "Structured digital making activities help students understand logic, teamwork and systems thinking through practical, visible outcomes.",
         "image": "/home/features/creative-2.webp"
       }
     ],
@@ -103,20 +104,20 @@
   },
   "arts": {
     "eyebrow": "Arts & Creativity",
-    "title": "A happy place where children create, imagine, and express themselves",
-    "intro": "Students explore color, texture, craft, and design in a warm studio space that builds confidence and creativity.",
-    "drawerIntro": "Creative studios invite students to explore ideas with their hands, experiment with different materials, and build confidence by turning imagination into visible work.",
+    "title": "A happy place where children create, imagine and express themselves",
+    "intro": "Students explore color, texture, craft and design in a warm studio space that builds confidence and creativity.",
+    "drawerIntro": "Creative studios invite students to explore ideas with their hands, experiment with different materials and build confidence by turning imagination into visible work.",
     "metric": "5+",
     "metricLabel": "creative experiences in one inspiring space",
     "points": [
       "Drawing & Painting",
       "Craft Activities",
       "Textile Learning",
-      "Creative Expression",
-      "Fine Motor Skill Development"
+      "Pottery",
+      "Mixed Media and Artists"
     ],
     "drawerPoints": [
-      "Dedicated zones for painting, craft, and making",
+      "Dedicated zones for painting, craft and making",
       "Material-rich activities that build fine motor control",
       "Open-ended prompts that encourage originality",
       "Display-ready work that boosts confidence"
@@ -124,7 +125,7 @@
     "items": [
       {
         "title": "Studio Making Tables",
-        "text": "Children work with paper, paint, fabric, and craft materials in a welcoming environment designed for experimentation and self-expression.",
+        "text": "Children work with paper, paint, fabric and craft materials in a welcoming environment designed for experimentation and self-expression.",
         "image": "/home/features/art.webp"
       },
       {
@@ -139,15 +140,15 @@
   "reverseEngineering": {
     "eyebrow": "Reverse Engineering",
     "title": "Children learn how things work by trying with their own hands",
-    "intro": "Hands-on labs help students become curious, confident, and capable through guided real-world activities.",
-    "drawerIntro": "These exploration rooms help students understand systems by taking things apart, rebuilding them, and learning the practical logic behind tools, materials, and everyday mechanisms.",
+    "intro": "Hands-on labs help students become curious, confident and capable through guided real-world activities.",
+    "drawerIntro": "These exploration rooms help students understand systems by taking things apart, rebuilding them and learning the practical logic behind tools, materials and everyday mechanisms.",
     "metric": "10+",
     "metricLabel": "hands-on life skill areas covered",
     "points": [
-      "Carpentry Learning",
+      "Woodworking",
       "Reverse Engineering",
       "Electrical Fundamentals",
-      "Plumbing Fundamentals",
+      "Plumbing Basics",
       "Practical Skill Development"
     ],
     "drawerPoints": [
@@ -159,12 +160,12 @@
     "items": [
       {
         "title": "Practical Tool Learning",
-        "text": "Students build comfort with measuring, assembling, and working carefully with guided tools that make abstract concepts easier to understand.",
+        "text": "Students build comfort with measuring, assembling and working carefully with guided tools that make abstract concepts easier to understand.",
         "image": "/home/features/reverse-eng.webp"
       },
       {
         "title": "Systems And Mechanisms",
-        "text": "By opening, observing, and rebuilding simple structures, learners begin to see how design decisions affect function in the real world.",
+        "text": "By opening, observing and rebuilding simple structures, learners begin to see how design decisions affect function in the real world.",
         "image": "/home/features/reverseeng.webp"
       }
     ],
@@ -174,8 +175,8 @@
   "food": {
     "eyebrow": "Food Science",
     "title": "Healthy habits shaped through real hands-on experience",
-    "intro": "Children explore cooking basics, nutrition, cleanliness, responsibility, and healthy habits through guided practical learning.",
-    "drawerIntro": "Food science and life skills sessions turn everyday routines into meaningful learning, helping children understand healthy choices, responsibility, and practical independence.",
+    "intro": "Children explore cooking basics, nutrition, cleanliness, responsibility and healthy habits through guided practical learning.",
+    "drawerIntro": "Food science and life skills sessions turn everyday routines into meaningful learning, helping children understand healthy choices, responsibility and practical independence.",
     "metric": "4",
     "metricLabel": "life-skill learning pillars",
     "points": [
@@ -194,12 +195,12 @@
     "items": [
       {
         "title": "Cooking And Preparation Basics",
-        "text": "Children learn simple food preparation routines that strengthen sequencing, responsibility, and practical confidence in a safe environment.",
+        "text": "Children learn simple food preparation routines that strengthen sequencing, responsibility and practical confidence in a safe environment.",
         "image": "/home/features/food.webp"
       },
       {
         "title": "Nutrition And Healthy Habits",
-        "text": "Lessons connect ingredients, cleanliness, and healthy choices so students understand the daily habits that support long-term wellbeing.",
+        "text": "Lessons connect ingredients, cleanliness and healthy choices so students understand the daily habits that support long-term wellbeing.",
         "image": "/home/features/plants.webp"
       }
     ],
@@ -209,13 +210,15 @@
   "auditoriumHall": {
     "eyebrow": "Personality Development",
     "title": "A welcoming stage where children learn to speak with confidence",
-    "intro": "A warm performance space for storytelling, dramatics, and public speaking.",
-    "drawerIntro": "The auditorium gives children a supportive setting to perform, express ideas clearly, and build confidence in front of others through regular stage-based activities.",
+    "intro": "A warm performance space for storytelling, dramatics and public speaking.",
+    "drawerIntro": "The auditorium gives children a supportive setting to perform, express ideas clearly and build confidence in front of others through regular stage-based activities.",
     "metric": "3",
     "metricLabel": "confidence-building performance formats",
     "points": [
       "Storytelling Sessions",
       "Dramatics & Role Play",
+      "Speech & Drama",
+      "Role Play",
       "Public Speaking Practice",
       "Stage Confidence Building"
     ],
@@ -228,12 +231,12 @@
     "items": [
       {
         "title": "Stage Performance Area",
-        "text": "Children participate in storytelling, skits, and performances that help them express ideas clearly and confidently.",
+        "text": "Children participate in storytelling, skits and performances that help them express ideas clearly and confidently.",
         "image": "/home/features/art.webp"
       },
       {
         "title": "Public Speaking Platform",
-        "text": "Structured speaking opportunities help students improve voice, presence, and comfort while addressing a group.",
+        "text": "Structured speaking opportunities help students improve voice, presence and comfort while addressing a group.",
         "image": "/home/features/creative-1.webp"
       }
     ],
@@ -242,9 +245,9 @@
   },
   "indoorSportsHall": {
     "eyebrow": "Indoor Sports",
-    "title": "An active indoor space for movement, agility, and motor skill growth",
-    "intro": "A versatile hall designed for indoor sports, movement practice, and physical development.",
-    "drawerIntro": "The indoor sports hall supports energetic movement in a safe all-weather setting where children can strengthen agility, coordination, balance, and gross motor skills.",
+    "title": "An active indoor space for movement, agility and motor skill growth",
+    "intro": "A versatile hall designed for indoor sports, movement practice and physical development.",
+    "drawerIntro": "The indoor sports hall supports energetic movement in a safe all-weather setting where children can strengthen agility, coordination, balance and gross motor skills.",
     "metric": "4",
     "metricLabel": "core movement skills supported",
     "points": [
@@ -262,12 +265,12 @@
     "items": [
       {
         "title": "Versatile Activity Floor",
-        "text": "Open indoor space allows children to move freely through games, drills, and physical skill-building sessions.",
+        "text": "Open indoor space allows children to move freely through games, drills and physical skill-building sessions.",
         "image": "/home/features/edu.webp"
       },
       {
         "title": "Motor Skill Training",
-        "text": "Age-appropriate activities help develop balance, speed, coordination, and physical confidence.",
+        "text": "Age-appropriate activities help develop balance, speed, coordination and physical confidence.",
         "image": "/home/features/child-sensory.webp"
       }
     ],
@@ -276,9 +279,9 @@
   },
   "activityRooms": {
     "eyebrow": "Activity Rooms",
-    "title": "Flexible rooms for play, movement, and group activities",
-    "intro": "Eight rumpus and sports activity rooms designed for fun, imagination, and collaboration.",
-    "drawerIntro": "These activity rooms give children flexible indoor spaces for energetic play, structured sessions, and collaborative experiences that support both creativity and physical development.",
+    "title": "Flexible rooms for play, movement and group activities",
+    "intro": "Eight rumpus and sports activity rooms designed for fun, imagination and collaboration.",
+    "drawerIntro": "These activity rooms give children flexible indoor spaces for energetic play, structured sessions and collaborative experiences that support both creativity and physical development.",
     "metric": "8",
     "metricLabel": "rumpus and sports activity rooms",
     "points": [
@@ -296,12 +299,12 @@
     "items": [
       {
         "title": "Rumpus Play Rooms",
-        "text": "Children enjoy active indoor play in secure rooms that encourage imagination, exploration, and teamwork.",
+        "text": "Children enjoy active indoor play in secure rooms that encourage imagination, exploration and teamwork.",
         "image": "/home/features/sensory.webp"
       },
       {
         "title": "Sports Activity Spaces",
-        "text": "Dedicated rooms support guided physical activities that build coordination, participation, and confidence.",
+        "text": "Dedicated rooms support guided physical activities that build coordination, participation and confidence.",
         "image": "/home/features/educraft.webp"
       }
     ],
@@ -310,9 +313,9 @@
   },
   "outdoorSports": {
     "eyebrow": "Outdoor Sports",
-    "title": "Expansive outdoor areas for play, fitness, and athletic growth",
-    "intro": "Open play zones, sports fields, and a running track support active learning every day.",
-    "drawerIntro": "Outdoor facilities give children room to run, play, compete, and build stamina through team sports, free movement, and structured athletic activities.",
+    "title": "Expansive outdoor areas for play, fitness and athletic growth",
+    "intro": "Open play zones, sports fields and a running track support active learning every day.",
+    "drawerIntro": "Outdoor facilities give children room to run, play, compete and build stamina through team sports, free movement and structured athletic activities.",
     "metric": "3",
     "metricLabel": "major outdoor activity zones",
     "points": [
@@ -330,12 +333,12 @@
     "items": [
       {
         "title": "Outdoor Play Zones",
-        "text": "Children enjoy spacious and secure outdoor areas designed for movement, social interaction, and imaginative play.",
+        "text": "Children enjoy spacious and secure outdoor areas designed for movement, social interaction and imaginative play.",
         "image": "/home/features/classroom.webp"
       },
       {
         "title": "Fields And Running Track",
-        "text": "Sports grounds and track facilities help students build stamina, teamwork, and athletic confidence.",
+        "text": "Sports grounds and track facilities help students build stamina, teamwork and athletic confidence.",
         "image": "/home/features/reverseeng.webp"
       }
     ],
@@ -345,8 +348,8 @@
   "wellbeingFitness": {
     "eyebrow": "Wellbeing & Fitness",
     "title": "Child-friendly spaces that support calm minds and healthy bodies",
-    "intro": "Dedicated areas for wellbeing, mindfulness, and physical fitness development.",
-    "drawerIntro": "These spaces are designed to support emotional wellbeing, self-awareness, and healthy physical development through calm routines, movement, and guided fitness activities.",
+    "intro": "Dedicated areas for wellbeing, mindfulness and physical fitness development.",
+    "drawerIntro": "These spaces are designed to support emotional wellbeing, self-awareness and healthy physical development through calm routines, movement and guided fitness activities.",
     "metric": "2",
     "metricLabel": "wellbeing and fitness focus areas",
     "points": [
@@ -364,12 +367,12 @@
     "items": [
       {
         "title": "Mindfulness And Wellbeing Areas",
-        "text": "Quiet, child-friendly environments help students slow down, reset, and strengthen emotional awareness.",
+        "text": "Quiet, child-friendly environments help students slow down, reset and strengthen emotional awareness.",
         "image": "/home/features/plants.webp"
       },
       {
         "title": "Fitness Development Spaces",
-        "text": "Guided physical routines help children build strength, coordination, and healthy movement habits.",
+        "text": "Guided physical routines help children build strength, coordination and healthy movement habits.",
         "image": "/home/features/food.webp"
       }
     ],
@@ -378,9 +381,9 @@
   },
   "karate": {
     "eyebrow": "Martial Arts",
-    "title": "A disciplined space where children build focus, balance, and self-confidence",
-    "intro": "Structured karate sessions help children grow stronger, calmer, and more confident.",
-    "drawerIntro": "Karate training gives children a focused environment to develop discipline, coordination, body control, and respect through consistent guided practice.",
+    "title": "A disciplined space where children build focus, balance and self-confidence",
+    "intro": "Structured karate sessions help children grow stronger, calmer and more confident.",
+    "drawerIntro": "Karate training gives children a focused environment to develop discipline, coordination, body control and respect through consistent guided practice.",
     "metric": "4",
     "metricLabel": "core skills strengthened through practice",
     "points": [
@@ -398,12 +401,12 @@
     "items": [
       {
         "title": "Structured Training Sessions",
-        "text": "Children follow clear routines that strengthen discipline, concentration, and body awareness in a supportive setting.",
+        "text": "Children follow clear routines that strengthen discipline, concentration and body awareness in a supportive setting.",
         "image": "/home/features/child-sensory.webp"
       },
       {
         "title": "Confidence Through Movement",
-        "text": "Karate practice helps students build physical control, resilience, and self-belief step by step.",
+        "text": "Karate practice helps students build physical control, resilience and self-belief step by step.",
         "image": "/home/features/creative-2.webp"
       }
     ],
@@ -412,9 +415,9 @@
   },
   "football": {
     "eyebrow": "Outdoor Sports",
-    "title": "An energetic field where children learn teamwork, stamina, and game spirit",
-    "intro": "Football sessions build fitness, coordination, teamwork, and confidence through active play.",
-    "drawerIntro": "The football ground gives children an exciting team environment where they can develop endurance, coordination, strategy, and sportsmanship through guided play.",
+    "title": "An energetic field where children learn teamwork, stamina and game spirit",
+    "intro": "Football sessions build fitness, coordination, teamwork and confidence through active play.",
+    "drawerIntro": "The football ground gives children an exciting team environment where they can develop endurance, coordination, strategy and sportsmanship through guided play.",
     "metric": "4",
     "metricLabel": "key team-sport abilities developed",
     "points": [
@@ -425,19 +428,19 @@
     ],
     "drawerPoints": [
       "Large field space for active team play",
-      "Drills that improve speed, control, and coordination",
+      "Drills that improve speed, control and coordination",
       "Shared play that builds teamwork and communication",
       "Fitness development through energetic outdoor movement"
     ],
     "items": [
       {
         "title": "Team Play And Coordination",
-        "text": "Children learn to move, pass, and play together while building social confidence and game understanding.",
+        "text": "Children learn to move, pass and play together while building social confidence and game understanding.",
         "image": "/home/features/classroom.webp"
       },
       {
         "title": "Outdoor Fitness And Stamina",
-        "text": "Football activities support endurance, agility, and healthy physical development through joyful movement.",
+        "text": "Football activities support endurance, agility and healthy physical development through joyful movement.",
         "image": "/home/features/reverseeng.webp"
       }
     ],
@@ -447,8 +450,8 @@
   "kidsPoolSwimming": {
     "eyebrow": "Swimming",
     "title": "Safe water spaces where children grow in confidence",
-    "intro": "Shallow pool play and supervised swimming help children build comfort, coordination, and water safety.",
-    "drawerIntro": "Our child-friendly pool areas introduce water in a calm and supervised way, helping students enjoy movement, learn basic swimming habits, and grow more confident around water.",
+    "intro": "Shallow pool play and supervised swimming help children build comfort, coordination and water safety.",
+    "drawerIntro": "Our child-friendly pool areas introduce water in a calm and supervised way, helping students enjoy movement, learn basic swimming habits and grow more confident around water.",
     "metric": "4",
     "metricLabel": "guided water learning areas",
     "points": [
@@ -466,12 +469,12 @@
     "items": [
       {
         "title": "Kids Pool Play",
-        "text": "A child-friendly shallow pool gives young learners a safe start with water play, comfort, and confidence building.",
+        "text": "A child-friendly shallow pool gives young learners a safe start with water play, comfort and confidence building.",
         "image": "/home/features/pool.webp"
       },
       {
         "title": "Supervised Swimming",
-        "text": "Guided swimming sessions help children strengthen coordination, discipline, and essential water safety awareness.",
+        "text": "Guided swimming sessions help children strengthen coordination, discipline and essential water safety awareness.",
         "image": "/home/features/swim.webp"
       }
     ],
@@ -479,10 +482,10 @@
     "buttonLink": "/demo2"
   },
   "islamicGardenNatureLearning": {
-    "eyebrow": "Islamic Garden & Nature",
+    "eyebrow": "Farms and Garden",
     "title": "Nature-rich spaces that connect learning with reflection",
-    "intro": "Qur'anic plants and outdoor learning areas help children grow with care, gratitude, and environmental awareness.",
-    "drawerIntro": "These living learning spaces invite children to observe nature, explore Qur'anic plants, and develop respect for the environment through calm outdoor experiences.",
+    "intro": "Plants and outdoor learning areas help children grow with care, gratitude and environmental awareness.",
+    "drawerIntro": "These living learning spaces invite children to observe nature, explore variety of plants and develop respect for the environment through calm outdoor experiences.",
     "metric": "5",
     "metricLabel": "outdoor learning themes",
     "points": [
@@ -501,12 +504,12 @@
     "items": [
       {
         "title": "Qur'anic Plants Garden",
-        "text": "Children explore meaningful plants in a peaceful setting that connects knowledge, reflection, and appreciation of nature.",
+        "text": "Children explore meaningful plants in a peaceful setting that connects knowledge, reflection and appreciation of nature.",
         "image": "/home/features/garden.webp"
       },
       {
         "title": "Nature Learning Areas",
-        "text": "Outdoor spaces support environmental learning, curiosity, and a sense of care for the world around them.",
+        "text": "Outdoor spaces support environmental learning, curiosity and a sense of care for the world around them.",
         "image": "/home/features/garden2.webp"
       }
     ],
@@ -515,9 +518,9 @@
   },
   "prayerRoomMosque": {
     "eyebrow": "Prayer / Masjid",
-    "title": "A peaceful space for prayer, values, and reflection",
-    "intro": "A serene environment where children experience prayer, calm reflection, and value-based growth.",
-    "drawerIntro": "The prayer room offers a respectful setting where students can pause, reflect, and strengthen spiritual habits in an Islamic environment rooted in shared values.",
+    "title": "A peaceful space for prayer, values and reflection",
+    "intro": "A serene environment where children experience prayer, calm reflection and value-based growth.",
+    "drawerIntro": "The prayer room offers a respectful setting where students can pause, reflect and strengthen spiritual habits in an Islamic environment rooted in shared values.",
     "metric": "Daily",
     "metricLabel": "moments for prayer and reflection",
     "points": [
@@ -535,12 +538,12 @@
     "items": [
       {
         "title": "Quiet Reflection Area",
-        "text": "A calm dedicated space helps children slow down, reflect, and develop peaceful daily habits.",
+        "text": "A calm dedicated space helps children slow down, reflect and develop peaceful daily habits.",
         "image": "/home/features/masjid.webp"
       },
       {
         "title": "Islamic Values Environment",
-        "text": "Shared routines and guided practice support spiritual development, discipline, and respectful conduct.",
+        "text": "Shared routines and guided practice support spiritual development, discipline and respectful conduct.",
         "image": "/home/features/plants.webp"
       }
     ],
@@ -551,7 +554,7 @@
     "eyebrow": "Smart Transport & Safe Connectivity",
     "title": "Safe school journeys and simple peace of mind for parents",
     "intro": "GPS-tracked transport and secure communication systems help children travel safely while parents stay informed.",
-    "drawerIntro": "Our transport and communication systems are designed to support both students and parents, combining safe travel, clear updates, and dependable digital coordination.",
+    "drawerIntro": "Our transport and communication systems are designed to support both students and parents, combining safe travel, clear updates and dependable digital coordination.",
     "metric": "Live",
     "metricLabel": "tracking and parent updates",
     "points": [
