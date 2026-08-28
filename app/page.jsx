@@ -56,9 +56,9 @@ export function PageLiveSoon() {
           className="mb-8 h-auto w-32 sm:w-40"
           priority
         />
-        <h1 className="font-accent text-5xl leading-[0.95] font-semibold tracking-[-0.04em] sm:text-7xl">
+        {/* <h1 className="font-accent text-5xl leading-[0.95] font-semibold tracking-[-0.04em] sm:text-7xl">
           Site will be live soon
-        </h1>
+        </h1> */}
       </section>
 
       <p className="text-center text-xs tracking-[0.12em] text-black/75 uppercase sm:text-left">
