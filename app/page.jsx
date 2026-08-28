@@ -1,49 +1,16 @@
-"use client"
-
-import { useEffect, useState } from "react"
 import Image from "next/image"
+import { connection } from "next/server"
 
-const START_TIME_IN_SECONDS = 12 * 60 * 60 + 34 * 60
+import Countdown from "./Countdown"
 
-function formatTime(totalSeconds) {
-  const hours = Math.floor(totalSeconds / 3600)
-  const minutes = Math.floor((totalSeconds % 3600) / 60)
-  const seconds = totalSeconds % 60
+const LAUNCH_TIME = Date.parse("2026-08-28T22:00:00+05:30")
 
-  return [hours, minutes, seconds]
-    .map((value) => String(value).padStart(2, "0"))
-    .join(":")
-}
+export async function PageLiveSoon() {
+  await connection()
+  // This route is dynamic; capture the server clock for the countdown baseline.
+  // eslint-disable-next-line react-hooks/purity
+  const initialServerTime = Date.now()
 
-function Countdown() {
-  const [timeLeft, setTimeLeft] = useState(START_TIME_IN_SECONDS)
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setTimeLeft((currentTime) => {
-        if (currentTime <= 1) {
-          window.clearInterval(intervalId)
-          return 0
-        }
-
-        return currentTime - 1
-      })
-    }, 1000)
-
-    return () => window.clearInterval(intervalId)
-  }, [])
-
-  return (
-    <p
-      aria-label={`${timeLeft} seconds remaining`}
-      className="font-accent text-3xl font-semibold tracking-tight tabular-nums"
-    >
-      {formatTime(timeLeft)}
-    </p>
-  )
-}
-
-export function PageLiveSoon() {
   return (
     <main className="flex min-h-svh flex-col bg-[#a9ccf9] px-6 py-8 text-[#334187] sm:px-10 sm:py-10">
 
@@ -64,7 +31,10 @@ export function PageLiveSoon() {
       <p className="text-center text-xs tracking-[0.12em] text-black/75 uppercase sm:text-left">
         SITE PERFORMANCE OPTIMIZATION - IN PROGRESS...
       </p>
-      <Countdown />
+      <Countdown
+        initialServerTime={initialServerTime}
+        targetTime={LAUNCH_TIME}
+      />
     </main>
   )
 }
