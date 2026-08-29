@@ -16,7 +16,10 @@ function formatTime(totalSeconds) {
     .join(":")
 }
 
-export default function Countdown({ initialServerTime, targetTime }) {
+export default function PageLiveSoonCountdown({
+  initialServerTime,
+  targetTime,
+}) {
   const [timeLeft, setTimeLeft] = useState(() =>
     getSecondsRemaining(targetTime, initialServerTime),
   )

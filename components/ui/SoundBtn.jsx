@@ -189,23 +189,45 @@ export default function SoundBtn() {
   }, [playSound])
 
   return (
-    <button
-      type="button"
-      onClick={toggleSound}
-      className={`fixed bottom-6 left-6 z-[1001] inline-flex h-14 w-14 items-center justify-center rounded-full border border-black/10 shadow-[0_12px_30px_rgba(0,0,0,0.14)] backdrop-blur transition-all sm:right-6 ${
-        isPlaying ? "bg-white text-neutral-900" : "bg-black text-white"
-      } ${isLoading ? "cursor-wait opacity-80" : "cursor-pointer"}`}
-      aria-label={isPlaying ? "Pause background sound" : "Play background sound"}
-      aria-pressed={isPlaying}
-    >
-      <Image
-        src={isPlaying ? "/icons/sound-on.gif" : "/icons/sound-off.svg"}
-        alt=""
-        width={28}
-        height={28}
-        unoptimized
-        className="h-6 w-6 object-contain"
-      />
-    </button>
+    <>
+      {/* desktop */}
+      <button
+        type="button"
+        onClick={toggleSound}
+        className={`fixed hidden bottom-6 left-6 z-1001 md:inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 shadow-[0_12px_30px_rgba(0,0,0,0.14)] backdrop-blur transition-all ${isPlaying ? "bg-white text-neutral-900" : "bg-[#364284] text-white"
+          } ${isLoading ? "cursor-wait opacity-80" : "cursor-pointer"}`}
+        aria-label={isPlaying ? "Pause background sound" : "Play background sound"}
+        aria-pressed={isPlaying}
+      >
+        <Image
+          src={isPlaying ? "/icons/sound-on.gif" : "/icons/sound-off.svg"}
+          alt=""
+          width={28}
+          height={28}
+          unoptimized
+          className="h-6 w-6 object-contain"
+        />
+      </button>
+
+      {/* mobile */}
+      <button
+        type="button"
+        onClick={toggleSound}
+        className={`fixed z-1001 inline-flex md:hidden h-12 w-12 items-center justify-center rounded-full border border-black/10 shadow-[0_12px_30px_rgba(0,0,0,0.14)] backdrop-blur transition-all top-2 right-20 ${isPlaying ? "bg-white text-neutral-900" : "bg-[#364284] text-white"
+          } ${isLoading ? "cursor-wait opacity-80" : "cursor-pointer"}`}
+        aria-label={isPlaying ? "Pause background sound" : "Play background sound"}
+        aria-pressed={isPlaying}
+      >
+        <Image
+          src={isPlaying ? "/icons/sound-on.gif" : "/icons/sound-off.svg"}
+          alt=""
+          width={28}
+          height={28}
+          unoptimized
+          className="h-6 w-6 object-contain"
+        />
+      </button>
+    </>
+
   )
 }
