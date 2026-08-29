@@ -1,6 +1,7 @@
 import "./globals.css"
 import localFont from "next/font/local"
 import { Lato } from "next/font/google"
+import SiteShell from "@/components/layout/SiteShell"
 
 const lato = Lato({
   subsets: ["latin"],
@@ -32,7 +33,9 @@ export default function RootLayout({ children }) {
       className={`${lato.variable} ${rfRufo.variable}`}
       style={{ backgroundColor: "#0b1220" }}
     >
-      <body>{children}</body>
+      <body>
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   )
 }

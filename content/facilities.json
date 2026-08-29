@@ -31,7 +31,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "earlyDevelopment": {
     "eyebrow": "Early Years Development",
@@ -65,7 +65,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "innovationLabs": {
     "eyebrow": "Innovation Lab",
@@ -100,7 +100,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "arts": {
     "eyebrow": "Arts & Creativity",
@@ -135,7 +135,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "reverseEngineering": {
     "eyebrow": "Reverse Engineering",
@@ -170,7 +170,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "food": {
     "eyebrow": "Food Science",
@@ -205,7 +205,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "auditoriumHall": {
     "eyebrow": "Personality Development",
@@ -240,7 +240,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "indoorSportsHall": {
     "eyebrow": "Indoor Sports",
@@ -274,7 +274,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "activityRooms": {
     "eyebrow": "Activity Rooms",
@@ -308,7 +308,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "outdoorSports": {
     "eyebrow": "Outdoor Sports",
@@ -342,7 +342,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "wellbeingFitness": {
     "eyebrow": "Wellbeing & Fitness",
@@ -376,7 +376,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "karate": {
     "eyebrow": "Martial Arts",
@@ -410,7 +410,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "football": {
     "eyebrow": "Outdoor Sports",
@@ -444,7 +444,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "kidsPoolSwimming": {
     "eyebrow": "Swimming",
@@ -478,7 +478,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "islamicGardenNatureLearning": {
     "eyebrow": "Farms and Garden",
@@ -513,7 +513,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "prayerRoomMosque": {
     "eyebrow": "Prayer / Masjid",
@@ -547,7 +547,7 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   },
   "smartTransportSafeConnectivity": {
     "eyebrow": "Smart Transport & Safe Connectivity",
@@ -581,6 +581,6 @@
       }
     ],
     "buttonText": "Read more",
-    "buttonLink": "/demo2"
+    "buttonLink": "/"
   }
 }

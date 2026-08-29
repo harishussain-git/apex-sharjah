@@ -1,5 +1,5 @@
-import PageLiveSoon from "@/components/PageLiveSoon"
+import HomePage from "@/components/home/HomePage"
 
 export default function Page() {
-  return <PageLiveSoon />
+  return <HomePage />
 }
