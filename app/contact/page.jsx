@@ -7,6 +7,7 @@ import {
   PiPhoneFill,
 } from "react-icons/pi"
 import FAQAccordion from "@/components/ui/FAQAccordion"
+import ContactPageForm from "@/components/forms/ContactPageForm"
 
 const contactItems = [
   {
@@ -38,9 +39,6 @@ const contactItems = [
     social: true,
   },
 ]
-
-const inputClass =
-  "w-full border-0 border-b border-gray-300 bg-transparent px-0 py-4 text-sm text-slate-950 outline-none placeholder:text-gray-500 focus:border-[#081947] focus:ring-0"
 
 export default function ContactPage() {
   return (
@@ -112,34 +110,7 @@ export default function ContactPage() {
                 you soon.
               </p>
 
-              <form className="mt-10 space-y-4">
-                <input className={inputClass} type="text" placeholder="Name of Student" />
-
-                <select className={inputClass} defaultValue="">
-                  <option value="" disabled>
-                    Inquiry Type
-                  </option>
-                  <option>Admission Inquiry</option>
-                  <option>Academic Information</option>
-                  <option>School Visit</option>
-                  <option>General Question</option>
-                </select>
-
-                <input className={inputClass} type="email" placeholder="Email Address" />
-                <input className={inputClass} type="tel" placeholder="Phone Number" />
-                <textarea
-                  className={`${inputClass} min-h-28 resize-none`}
-                  placeholder="Your Message"
-                />
-
-                <button
-                  type="submit"
-                  className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#081947] px-8 py-4 text-sm font-semibold text-white transition hover:bg-[#051234]"
-                >
-
-                  Send Message
-                </button>
-              </form>
+              <ContactPageForm />
             </div>
           </div>
 

@@ -2,6 +2,9 @@
 
 import { useMemo, useState } from "react"
 import Image from "next/image"
+import HoneypotField from "@/components/forms/HoneypotField"
+import useFormSubmission from "@/hooks/useFormSubmission"
+import { FORM_OPTIONS } from "@/lib/forms/formDefinitions"
 import {
   PiClock,
   PiEnvelopeSimple,
@@ -17,7 +20,7 @@ const formSections = [
     title: "Parent / Guardian Details",
     fields: [
       { name: "guardianName", label: "Parent / Guardian Name", type: "text", placeholder: "Enter full name" },
-      { name: "relationship", label: "Relationship with Child", type: "select", placeholder: "Select relationship", options: ["Father", "Mother", "Guardian"] },
+      { name: "relationship", label: "Relationship with Child", type: "select", placeholder: "Select relationship", options: FORM_OPTIONS.relationship },
       { name: "email", label: "Contact Email", type: "email", placeholder: "Enter email address" },
       { name: "phone", label: "Contact Number", type: "tel", placeholder: "Enter mobile number" },
     ],
@@ -26,15 +29,15 @@ const formSections = [
     title: "Student Details",
     fields: [
       { name: "studentName", label: "Student Name", type: "text", placeholder: "Enter student full name" },
-      { name: "gender", label: "Gender", type: "select", placeholder: "Select gender", options: ["Male", "Female"] },
+      { name: "gender", label: "Gender", type: "select", placeholder: "Select gender", options: FORM_OPTIONS.gender },
       { name: "dob", label: "Date of Birth", type: "date", placeholder: "DD / MM / YYYY" },
       { name: "age", label: "Age (auto-filled)", type: "text", placeholder: "-", readOnly: true },
-      { name: "academicYear", label: "Academic Year", type: "select", placeholder: "Select academic year", options: ["2026-27", "2027-28"] },
-      { name: "grade", label: "Admission to Grade", type: "select", placeholder: "Select grade", options: ["Playgroup", "KG 1", "KG 2", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6", "Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"] },
-      { name: "nationality", label: "Nationality", type: "select", placeholder: "Select nationality", options: ["UAE", "India", "Pakistan", "Bangladesh", "Philippines", "Other"] },
-      { name: "emirate", label: "Emirate of Residence", type: "select", placeholder: "Select emirate", options: ["Sharjah", "Dubai", "Ajman", "Abu Dhabi", "Umm Al Quwain", "Ras Al Khaimah", "Fujairah"] },
+      { name: "academicYear", label: "Academic Year", type: "select", placeholder: "Select academic year", options: FORM_OPTIONS.academicYear },
+      { name: "grade", label: "Admission to Grade", type: "select", placeholder: "Select grade", options: FORM_OPTIONS.grade },
+      { name: "nationality", label: "Nationality", type: "select", placeholder: "Select nationality", options: FORM_OPTIONS.nationality },
+      { name: "emirate", label: "Emirate of Residence", type: "select", placeholder: "Select emirate", options: FORM_OPTIONS.emirate },
       { name: "area", label: "Area of Residence", type: "text", placeholder: "Enter area" },
-      { name: "transport", label: "Transportation Required", type: "select", placeholder: "Select option", options: ["Yes", "No", "Not sure"] },
+      { name: "transport", label: "Transportation Required", type: "select", placeholder: "Select option", options: FORM_OPTIONS.transport },
     ],
   },
 ]
@@ -46,6 +49,14 @@ const initialValues = Object.fromEntries(
 const requiredFields = formSections.flatMap((section) =>
   section.fields.filter((field) => !field.readOnly).map((field) => field.name),
 )
+
+const fieldMaxLengths = {
+  guardianName: 100,
+  email: 254,
+  phone: 20,
+  studentName: 100,
+  area: 120,
+}
 
 const contactItems = [
   {
@@ -80,7 +91,8 @@ function getAge(dob) {
 export default function AdmissionPage() {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
-  const [success, setSuccess] = useState(false)
+  const { isSubmitting, isSuccess, message, resetStatus, submit } =
+    useFormSubmission()
 
   const numberedSections = useMemo(() => {
     let count = 0
@@ -98,7 +110,7 @@ export default function AdmissionPage() {
       ...(name === "dob" ? { age: getAge(value) } : {}),
     }))
     setErrors((current) => ({ ...current, [name]: "" }))
-    setSuccess(false)
+    resetStatus()
   }
 
   const validate = () => {
@@ -120,11 +132,18 @@ export default function AdmissionPage() {
     return Object.keys(nextErrors).length === 0
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
 
-    if (validate()) {
-      setSuccess(true)
+    if (!validate()) return
+
+    const result = await submit("admission", event.currentTarget)
+
+    if (!result.success) {
+      setErrors((currentErrors) => ({
+        ...currentErrors,
+        ...result.fieldErrors,
+      }))
     }
   }
 
@@ -184,7 +203,8 @@ export default function AdmissionPage() {
         </aside>
 
         <section className="rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_18px_70px_rgba(23,35,77,0.08)] md:p-8">
-          <form onSubmit={handleSubmit} noValidate>
+          <form onSubmit={handleSubmit} noValidate aria-busy={isSubmitting}>
+            <HoneypotField />
             {numberedSections.map((section) => (
               <div key={section.title} className="mb-8">
                 <div className="mb-5 flex items-center gap-4">
@@ -202,6 +222,8 @@ export default function AdmissionPage() {
 
                       {field.type === "select" ? (
                         <select
+                          name={field.name}
+                          required={!field.readOnly}
                           value={values[field.name]}
                           onChange={(event) => updateValue(field.name, event.target.value)}
                           className={`${fieldClass} appearance-none`}
@@ -215,7 +237,17 @@ export default function AdmissionPage() {
                         </select>
                       ) : (
                         <input
+                          name={field.name}
                           type={field.type}
+                          required={!field.readOnly}
+                          maxLength={fieldMaxLengths[field.name]}
+                          autoComplete={
+                            field.name === "email"
+                              ? "email"
+                              : field.name === "phone"
+                                ? "tel"
+                                : undefined
+                          }
                           value={values[field.name]}
                           readOnly={field.readOnly}
                           placeholder={field.placeholder}
@@ -235,14 +267,23 @@ export default function AdmissionPage() {
 
             <button
               type="submit"
-              className="flex h-13 w-full items-center justify-center rounded-xl bg-[#0656d9] px-6 text-base font-bold text-white shadow-[0_14px_34px_rgba(6,86,217,0.26)] transition hover:bg-[#0148bd] focus:outline-none focus:ring-4 focus:ring-[#0656d9]/20"
+              disabled={isSubmitting}
+              className="flex h-13 w-full items-center justify-center rounded-xl bg-[#0656d9] px-6 text-base font-bold text-white shadow-[0_14px_34px_rgba(6,86,217,0.26)] transition hover:bg-[#0148bd] focus:outline-none focus:ring-4 focus:ring-[#0656d9]/20 disabled:cursor-not-allowed disabled:opacity-65"
             >
-              Book Admission
+              {isSubmitting ? "Sending..." : "Book Admission"}
             </button>
 
-            {success ? (
-              <p className="mt-4 rounded-xl bg-emerald-50 px-4 py-3 text-center text-sm font-bold text-emerald-700">
-                Thank you. You will be contacted by our staff soon.
+            {message ? (
+              <p
+                role="status"
+                aria-live="polite"
+                className={`mt-4 rounded-xl px-4 py-3 text-center text-sm font-bold ${
+                  isSuccess
+                    ? "bg-emerald-50 text-emerald-700"
+                    : "bg-red-50 text-red-700"
+                }`}
+              >
+                {message}
               </p>
             ) : null}
 

@@ -1,15 +1,9 @@
 "use client"
 
 import { useEffect, useId, useState } from "react"
-
-const interestOptions = [
-  "Admission Inquiry",
-  "School Tour",
-  "Fees & Details",
-  "Curriculum",
-  "Transport",
-  "General Enquiry",
-]
+import HoneypotField from "@/components/forms/HoneypotField"
+import useFormSubmission from "@/hooks/useFormSubmission"
+import { FORM_OPTIONS } from "@/lib/forms/formDefinitions"
 
 const initialValues = {
   fullName: "",
@@ -25,11 +19,19 @@ export default function ContactDialog({ label = "Contact", className = "", varia
   const formId = `${dialogId}-form`
   const fullNameErrorId = `${dialogId}-full-name-error`
   const phoneErrorId = `${dialogId}-phone-error`
+  const emailErrorId = `${dialogId}-email-error`
   const interestErrorId = `${dialogId}-interest-error`
   const [open, setOpen] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
+  const {
+    fieldErrors,
+    isSubmitting,
+    isSuccess,
+    message,
+    resetStatus,
+    submit,
+  } = useFormSubmission()
 
   useEffect(() => {
     if (!open) return undefined
@@ -60,7 +62,7 @@ export default function ContactDialog({ label = "Contact", className = "", varia
       ...currentValues,
       [name]: nextValue,
     }))
-    setSubmitted(false)
+    resetStatus()
     setErrors((currentErrors) => ({
       ...currentErrors,
       [name]: "",
@@ -85,17 +87,27 @@ export default function ContactDialog({ label = "Contact", className = "", varia
       nextErrors.interest = "Please select an option."
     }
 
+    if (values.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+      nextErrors.email = "Enter a valid email address."
+    }
+
     setErrors(nextErrors)
     return Object.keys(nextErrors).length === 0
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     if (!validateForm()) return
 
-    setSubmitted(true)
-    setValues(initialValues)
-    setErrors({})
+    const result = await submit("contact-dialog", event.currentTarget)
+
+    if (result.success) {
+      setValues(initialValues)
+      setErrors({})
+      return
+    }
+
+    setErrors(result.fieldErrors ?? {})
   }
 
   const triggerClasses =
@@ -112,7 +124,10 @@ export default function ContactDialog({ label = "Contact", className = "", varia
         type="button"
         aria-haspopup="dialog"
         aria-expanded={open}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          resetStatus()
+          setOpen(true)
+        }}
         className={`${triggerClasses} ${className}`}
       >
         {label}
@@ -158,13 +173,20 @@ export default function ContactDialog({ label = "Contact", className = "", varia
               </p>
             </div>
 
-            <form id={formId} onSubmit={handleSubmit} className="grid gap-4 grid-cols-1 md:grid-cols-3 items-start">
+            <form
+              id={formId}
+              onSubmit={handleSubmit}
+              aria-busy={isSubmitting}
+              className="grid gap-4 grid-cols-1 md:grid-cols-3 items-start"
+            >
+              <HoneypotField />
 
               <label className="grid text-sm font-bold text-slate-800 gap-2">
                 Full Name <span className="sr-only">required</span>
                 <input
                   required
                   name="fullName"
+                  maxLength={100}
                   value={values.fullName}
                   onChange={handleChange}
                   aria-invalid={Boolean(errors.fullName)}
@@ -207,11 +229,19 @@ export default function ContactDialog({ label = "Contact", className = "", varia
                 <input
                   name="email"
                   type="email"
+                  maxLength={254}
                   value={values.email}
                   onChange={handleChange}
+                  aria-invalid={Boolean(errors.email || fieldErrors.email)}
+                  aria-describedby={errors.email || fieldErrors.email ? emailErrorId : undefined}
                   placeholder="Enter your email address"
                   className={fieldClasses}
                 />
+                {errors.email || fieldErrors.email ? (
+                  <span id={emailErrorId} className="text-xs font-semibold text-red-600">
+                    {errors.email || fieldErrors.email}
+                  </span>
+                ) : null}
               </label>
 
               <label className="grid gap-2 text-sm font-bold text-slate-800">
@@ -226,7 +256,7 @@ export default function ContactDialog({ label = "Contact", className = "", varia
                   className={`${fieldClasses} appearance-none text-slate-500`}
                 >
                   <option value="">Select an option</option>
-                  {interestOptions.map((option) => (
+                  {FORM_OPTIONS.contactInterest.map((option) => (
                     <option key={option} value={option}>
                       {option}
                     </option>
@@ -247,33 +277,44 @@ export default function ContactDialog({ label = "Contact", className = "", varia
                   onChange={handleChange}
                   placeholder="Type your message here..."
                   rows={3}
+                  maxLength={2000}
                   className={`${fieldClasses} min-h-24 resize-none py-4`}
                 />
               </label>
 
-              {submitted ? (
-                <p className="rounded-2xl bg-emerald-50 px-5 py-4 text-sm font-semibold text-emerald-700 md:col-span-3">
-                  Thank you. Our team will contact you shortly.
+              {message ? (
+                <p
+                  role="status"
+                  aria-live="polite"
+                  className={`rounded-2xl px-5 py-4 text-sm font-semibold md:col-span-3 ${
+                    isSuccess
+                      ? "bg-emerald-50 text-emerald-700"
+                      : "bg-red-50 text-red-700"
+                  }`}
+                >
+                  {message}
                 </p>
               ) : null}
 
               <button
                 type="submit"
-                className="group flex items-center justify-center gap-4 rounded-full bg-[#25218d] px-5 py-4 text-sm font-bold text-white shadow-[0_18px_34px_rgb(37_33_141_/_28%)] transition hover:-translate-y-0.5 hover:bg-[#111744] focus:outline-none focus:ring-2 focus:ring-[#25218d] focus:ring-offset-2 md:hidden"
+                disabled={isSubmitting}
+                className="group flex items-center justify-center gap-4 rounded-full bg-[#25218d] px-5 py-4 text-sm font-bold text-white shadow-[0_18px_34px_rgb(37_33_141_/_28%)] transition hover:-translate-y-0.5 hover:bg-[#111744] focus:outline-none focus:ring-2 focus:ring-[#25218d] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-65 md:hidden"
               >
                 <span className="inline-flex size-11 items-center justify-center rounded-full bg-white/12">
                   <svg viewBox="0 0 24 24" className="size-5" fill="none" aria-hidden="true">
                     <path d="M20.5 3.5 10 14M20.5 3.5 15 21l-5-7-7-5 17.5-5.5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
                   </svg>
                 </span>
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
 
             <button
               type="submit"
               form={formId}
-              className="hidden flex-col items-center justify-center gap-4 text-center text-sm font-bold text-[#25218d] transition hover:-translate-y-0.5 hover:text-[#111744] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25218d] focus-visible:ring-offset-4 md:flex"
+              disabled={isSubmitting}
+              className="hidden flex-col items-center justify-center gap-4 text-center text-sm font-bold text-[#25218d] transition hover:-translate-y-0.5 hover:text-[#111744] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25218d] focus-visible:ring-offset-4 disabled:cursor-not-allowed disabled:opacity-65 md:flex"
             >
               <span className="inline-flex size-20 items-center justify-center rounded-full bg-[#25218d] text-white shadow-[0_18px_34px_rgb(37_33_141_/_32%)]">
                 <svg viewBox="0 0 24 24" className="size-8" fill="none" aria-hidden="true">
@@ -281,7 +322,7 @@ export default function ContactDialog({ label = "Contact", className = "", varia
                 </svg>
               </span>
               <span className="leading-tight">
-                Send
+                {isSubmitting ? "Sending" : "Send"}
                 <br />
                 Message
               </span>

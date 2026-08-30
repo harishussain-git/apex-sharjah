@@ -1,0 +1,28 @@
+{
+  "publicPath": "/sequences/home",
+  "version": "v6",
+  "initialLoadRatio": 0.25,
+  "contentAnimation": {
+    "enterFrames": 5,
+    "exitFrames": 5,
+    "enterAnimation": "zoom-out",
+    "exitAnimation": "zoom-in"
+  },
+  "sections": [
+    { "id": "home-hero", "folder": "01-hero" },
+    { "id": "home-campus", "folder": "02-campus" },
+    { "id": "home-classroom", "folder": "03-classroom" },
+    { "id": "home-early-development", "folder": "04-early-development" },
+    { "id": "home-innovation-labs", "folder": "05-innovation-labs" },
+    { "id": "home-arts", "folder": "06-arts" },
+    { "id": "home-indoor-sports", "folder": "07-indoor-sports" },
+    { "id": "home-football", "folder": "08-football" },
+    { "id": "home-swimming", "folder": "09-swimming" },
+    { "id": "home-reverse-engineering", "folder": "10-reverse-engineering" },
+    { "id": "home-food", "folder": "11-food" },
+    { "id": "home-garden", "folder": "12-garden" },
+    { "id": "home-prayer-room", "folder": "13-prayer-room" },
+    { "id": "home-auditorium", "folder": "14-auditorium" },
+    { "id": "home-transport", "folder": "15-transport" }
+  ]
+}

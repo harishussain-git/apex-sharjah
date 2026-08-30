@@ -1,0 +1,134 @@
+{
+  "publicPath": "/sequences/home",
+  "version": "v6",
+  "frameCount": 672,
+  "initialFrameCount": 168,
+  "contentAnimation": {
+    "enterFrames": 5,
+    "exitFrames": 5,
+    "enterAnimation": "zoom-out",
+    "exitAnimation": "zoom-in"
+  },
+  "sections": [
+    {
+      "id": "home-hero",
+      "folder": "01-hero",
+      "frameCount": 1,
+      "startFrame": 1,
+      "endFrame": 1,
+      "mainFrame": 1
+    },
+    {
+      "id": "home-campus",
+      "folder": "02-campus",
+      "frameCount": 39,
+      "startFrame": 2,
+      "endFrame": 40,
+      "mainFrame": 40
+    },
+    {
+      "id": "home-classroom",
+      "folder": "03-classroom",
+      "frameCount": 31,
+      "startFrame": 41,
+      "endFrame": 71,
+      "mainFrame": 71
+    },
+    {
+      "id": "home-early-development",
+      "folder": "04-early-development",
+      "frameCount": 29,
+      "startFrame": 72,
+      "endFrame": 100,
+      "mainFrame": 100
+    },
+    {
+      "id": "home-innovation-labs",
+      "folder": "05-innovation-labs",
+      "frameCount": 37,
+      "startFrame": 101,
+      "endFrame": 137,
+      "mainFrame": 137
+    },
+    {
+      "id": "home-arts",
+      "folder": "06-arts",
+      "frameCount": 98,
+      "startFrame": 138,
+      "endFrame": 235,
+      "mainFrame": 235
+    },
+    {
+      "id": "home-indoor-sports",
+      "folder": "07-indoor-sports",
+      "frameCount": 36,
+      "startFrame": 236,
+      "endFrame": 271,
+      "mainFrame": 271
+    },
+    {
+      "id": "home-football",
+      "folder": "08-football",
+      "frameCount": 24,
+      "startFrame": 272,
+      "endFrame": 295,
+      "mainFrame": 295
+    },
+    {
+      "id": "home-swimming",
+      "folder": "09-swimming",
+      "frameCount": 77,
+      "startFrame": 296,
+      "endFrame": 372,
+      "mainFrame": 372
+    },
+    {
+      "id": "home-reverse-engineering",
+      "folder": "10-reverse-engineering",
+      "frameCount": 18,
+      "startFrame": 373,
+      "endFrame": 390,
+      "mainFrame": 390
+    },
+    {
+      "id": "home-food",
+      "folder": "11-food",
+      "frameCount": 44,
+      "startFrame": 391,
+      "endFrame": 434,
+      "mainFrame": 434
+    },
+    {
+      "id": "home-garden",
+      "folder": "12-garden",
+      "frameCount": 51,
+      "startFrame": 435,
+      "endFrame": 485,
+      "mainFrame": 485
+    },
+    {
+      "id": "home-prayer-room",
+      "folder": "13-prayer-room",
+      "frameCount": 45,
+      "startFrame": 486,
+      "endFrame": 530,
+      "mainFrame": 530
+    },
+    {
+      "id": "home-auditorium",
+      "folder": "14-auditorium",
+      "frameCount": 36,
+      "startFrame": 531,
+      "endFrame": 566,
+      "mainFrame": 566
+    },
+    {
+      "id": "home-transport",
+      "folder": "15-transport",
+      "frameCount": 106,
+      "startFrame": 567,
+      "endFrame": 672,
+      "mainFrame": 672
+    }
+  ]
+}
