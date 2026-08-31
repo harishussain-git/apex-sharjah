@@ -79,7 +79,14 @@ export async function POST(request) {
     honeypot != null &&
     (typeof honeypot !== "string" || honeypot.trim())
   ) {
-    return jsonResponse(successResponse)
+    return jsonResponse(
+      {
+        success: false,
+        message: "We could not send your message right now. Please try again shortly.",
+        fieldErrors: {},
+      },
+      400,
+    )
   }
 
   const validation = validateFormSubmission(payload?.formType, payload?.fields)

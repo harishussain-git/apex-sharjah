@@ -73,13 +73,13 @@ function FacilityCard({ data }) {
               ))}
             </ul>
 
-            <button
+            {/* <button
               type="button"
               onClick={() => setOpen(true)}
               className="mt-4 inline-flex cursor-pointer rounded-xl bg-white px-5 py-2 text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] font-medium text-black transition-colors duration-300 hover:bg-[#f7f7ff]"
             >
               {data.buttonText}
-            </button>
+            </button> */}
           </div>
         </article>
 

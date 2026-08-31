@@ -8,6 +8,12 @@ const initialState = {
   fieldErrors: {},
 }
 
+const submissionError = {
+  success: false,
+  message: "We could not send your message right now. Please try again shortly.",
+  fieldErrors: {},
+}
+
 export default function useFormSubmission() {
   const [state, setState] = useState(initialState)
 
@@ -34,26 +40,38 @@ export default function useFormSubmission() {
       })
       const result = await response.json()
 
+      if (!response.ok || result?.success !== true) {
+        const errorResult = {
+          success: false,
+          message: result?.message || submissionError.message,
+          fieldErrors: result?.fieldErrors ?? {},
+        }
+
+        setState({
+          status: "error",
+          message: errorResult.message,
+          fieldErrors: errorResult.fieldErrors,
+        })
+
+        return errorResult
+      }
+
       setState({
-        status: result.success ? "success" : "error",
+        status: "success",
         message: result.message,
         fieldErrors: result.fieldErrors ?? {},
       })
 
       return result
-    } catch {
-      const result = {
-        success: false,
-        message: "We could not send your message right now. Please try again shortly.",
-        fieldErrors: {},
-      }
+    } catch (error) {
+      console.error("[forms] Submission failed.", error)
 
       setState({
         status: "error",
-        message: result.message,
-        fieldErrors: result.fieldErrors,
+        message: submissionError.message,
+        fieldErrors: submissionError.fieldErrors,
       })
-      return result
+      return submissionError
     }
   }, [])
 
