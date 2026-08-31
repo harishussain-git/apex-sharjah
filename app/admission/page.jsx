@@ -63,14 +63,13 @@ const contactItems = [
     icon: PiMapPin,
     text: "Plot # 2028/A, Street 129, Al Sabkha, Al Riqa Suburb, Sharjah, UAE",
   },
-  { icon: PiEnvelopeSimple, text: "info@nimsapex.com" },
+  { icon: PiEnvelopeSimple, text: "contact@apexsharjah.com" },
   { icon: PiPhone, text: "+971 50 459 8701" },
 ]
 
 const trustItems = [
   { icon: PiGraduationCap, text: "KG1 to Grade 4" },
-  { icon: PiClock, text: "Response within 24 hours" },
-  { icon: PiShieldCheck, text: "Secure enquiry" },
+  { icon: PiClock, text: "Response within 24 hours" }
 ]
 
 function getAge(dob) {

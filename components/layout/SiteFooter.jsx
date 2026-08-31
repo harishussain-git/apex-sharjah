@@ -1,16 +1,24 @@
 import Image from "next/image"
-import { PiArrowUpRight, PiEnvelopeSimple, PiMapPin, PiPhone } from "react-icons/pi"
+import Link from "next/link"
+import { PiArrowUpRight, PiMapPin, PiPhone } from "react-icons/pi"
 
 const footerLinks = [
   {
     title: "Explore",
-    links: ["About School", "Admissions", "Campus Life", "Programs"],
+    links: [
+      { label: "About School", href: "/about" },
+      { label: "Admissions", href: "/admission" },
+    ],
   },
   {
     title: "Resources",
-    links: ["FAQs", "School Calendar", "Parent Guide", "Contact"],
+    links: [{ label: "Contact", href: "/contact" }],
   },
 ]
+
+const schoolAddress =
+  "Plot # 2028/A, Street 129, Al Sabkha, Al Riqa Suburb, Sharjah, UAE"
+const schoolMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(schoolAddress)}`
 
 export default function SiteFooter() {
   return (
@@ -31,38 +39,32 @@ export default function SiteFooter() {
               creativity, and confidence grow together.
             </p>
 
-            <a
+            <Link
               href="/admission"
               className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/6 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
             >
               <span>Book Admission</span>
-              <PiArrowUpRight className="text-base" />
-            </a>
+              <PiArrowUpRight aria-hidden="true" className="text-base" />
+            </Link>
           </div>
 
           <div className="space-y-4">
             <p className="text-eyebrow text-white/55">Visit</p>
-            <div className="flex items-start gap-3 text-white/78">
-              <PiMapPin className="mt-1 shrink-0 text-lg text-white/60" />
-              <p className="text-body">
-                Apex Vision Model School, Sharjah
-                <br />
-                United Arab Emirates
-              </p>
-            </div>
-            <div className="flex items-center gap-3 text-white/78">
-              <PiPhone className="shrink-0 text-lg text-white/60" />
-              <a href="tel:+971600000000" className="text-body transition hover:text-white">
-                +971 600 000 000
-              </a>
-            </div>
-            <div className="flex items-center gap-3 text-white/78">
-              <PiEnvelopeSimple className="shrink-0 text-lg text-white/60" />
+            <address className="flex items-start gap-3 not-italic text-white/78">
+              <PiMapPin aria-hidden="true" className="mt-1 shrink-0 text-lg text-white/60" />
               <a
-                href="mailto:admissions@apexschool.ae"
+                href={schoolMapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-body transition hover:text-white"
               >
-                admissions@apexschool.ae
+                {schoolAddress}
+              </a>
+            </address>
+            <div className="flex items-center gap-3 text-white/78">
+              <PiPhone aria-hidden="true" className="shrink-0 text-lg text-white/60" />
+              <a href="tel:+971504598701" className="text-body transition hover:text-white">
+                +971 50 459 8701
               </a>
             </div>
           </div>
@@ -72,29 +74,21 @@ export default function SiteFooter() {
               <p className="text-eyebrow text-white/55">{group.title}</p>
               <div className="mt-4 space-y-3">
                 {group.links.map((link) => (
-                  <a
-                    key={link}
-                    href="#"
+                  <Link
+                    key={link.href}
+                    href={link.href}
                     className="block text-body text-white/78 transition hover:text-white"
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 ))}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col gap-3 pt-5 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Apex Vision Model School. All rights reserved.</p>
-          <div className="flex gap-5">
-            <a href="#" className="transition hover:text-white/80">
-              Privacy Policy
-            </a>
-            <a href="#" className="transition hover:text-white/80">
-              Terms
-            </a>
-          </div>
+        <div className="pt-5 text-sm text-white/45">
+          <p>&copy; 2026 Apex Vision Model School. All rights reserved.</p>
         </div>
       </div>
     </footer>

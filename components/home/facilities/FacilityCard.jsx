@@ -1,10 +1,11 @@
 "use client"
 
-import { memo, useCallback, useState } from "react"
+import { memo, useCallback, useId, useState } from "react"
 import {
   PiBaby,
   PiBarbell,
   PiBus,
+  PiCaretUp,
   PiCheckLight,
   PiFlask,
   PiImageSquareLight,
@@ -38,7 +39,12 @@ const facilityIcons = {
 
 function FacilityCard({ data }) {
   const [open, setOpen] = useState(false)
+  const [pointsOpen, setPointsOpen] = useState(false)
+  const mobilePointsId = useId()
   const closeDrawer = useCallback(() => setOpen(false), [])
+  const togglePoints = useCallback(() => {
+    setPointsOpen((isOpen) => !isOpen)
+  }, [])
 
   if (!data) return null
 
@@ -85,9 +91,24 @@ function FacilityCard({ data }) {
 
         <article className="absolute bottom-4 left-1/2 block w-full -translate-x-1/2 rounded-[1.4rem] border border-white/70 bg-white/72 p-2 shadow-[0_18px_50px_rgba(44,61,98,0.14)] backdrop-blur-xl md:hidden">
           <div className="rounded-[1.1rem] bg-[#fbfbfb]/96 p-4 text-[#141414]">
-            <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-black/72">
-              <FacilityIcon aria-hidden="true" className="shrink-0 text-[1rem] text-black/80" />
-              <span>{data.eyebrow}</span>
+            <div className="flex w-full items-center justify-between">
+              <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-black/72">
+                <FacilityIcon aria-hidden="true" className="shrink-0 text-[1rem] text-black/80" />
+                <span>{data.eyebrow}</span>
+              </div>
+              <button
+                type="button"
+                aria-expanded={pointsOpen}
+                aria-controls={mobilePointsId}
+                aria-label={`${pointsOpen ? "Hide" : "Show"} ${data.eyebrow} details`}
+                onClick={togglePoints}
+                className="inline-flex size-8 shrink-0 items-center justify-center rounded-full text-black/80 transition-colors active:bg-black/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0040ae]/60"
+              >
+                <PiCaretUp
+                  aria-hidden="true"
+                  className={`transition-transform duration-300 ease-out ${pointsOpen ? "rotate-180" : ""}`}
+                />
+              </button>
             </div>
 
             <h2 className="mt-4 max-w-[30ch] font-accent text-[clamp(1.5rem,1vw+1rem,2.5rem)] font-bold uppercase leading-[1.08] text-black">
@@ -96,22 +117,36 @@ function FacilityCard({ data }) {
 
             <div className="my-4 h-px w-full bg-[#d9d9d9]" />
 
-            <div className="flex items-center gap-2">
-              <p className="text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] font-semibold leading-none text-black">
-                {data.metric}
-              </p>
-              <p className="text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] leading-[1.2] text-black/90">
-                {data.metricLabel}
-              </p>
+            <p className="text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] font-semibold leading-[1.28] text-[#1f2d48]">
+              {data.intro}
+            </p>
+
+            <div
+              id={mobilePointsId}
+              aria-hidden={!pointsOpen}
+              className={`grid transition-[grid-template-rows,opacity,margin] duration-300 ease-out ${
+                pointsOpen ? "mt-4 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+              }`}
+            >
+              <div className="overflow-hidden">
+                <ul className="space-y-2 text-[#0b1018]">
+                  {data.points?.map((point) => (
+                    <li key={point} className="flex items-center gap-2 text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] leading-[1.2]">
+                      <PiCheckLight aria-hidden="true" className="shrink-0 text-[1rem] text-[#0040ae]" />
+                      <span className="font-medium">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <button
+            {/* <button
               type="button"
               onClick={() => setOpen(true)}
               className="mt-4 inline-flex cursor-pointer rounded-xl bg-[#dbe8fb] px-4 py-2 text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] font-medium text-black transition-colors duration-300 hover:bg-[#cdddf6]"
             >
               {data.buttonText}
-            </button>
+            </button> */}
           </div>
         </article>
       </div>
