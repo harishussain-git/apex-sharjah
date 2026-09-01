@@ -13,7 +13,7 @@ export default function SiteHeader() {
         <Link href="/" aria-label="Apex homepage" className="inline-flex items-center md:w-32 lg:w-36">
           <Image
             src="/home/apex-logo-big.webp"
-            alt="Apex"
+            alt="Apex Vision Model School"
             width={160}
             height={54}
             priority

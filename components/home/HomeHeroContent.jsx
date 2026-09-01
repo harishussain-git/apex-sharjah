@@ -21,9 +21,9 @@ export default function HomeHeroContent() {
           <p className="text-[clamp(.5rem,1vw+.6rem,.8rem)] tracking-wider font-semibold uppercase">Years of educational excellence</p>
         </div>
 
-        <h1 className="hero-title  text-4xl md:text-5xl lg:text-6xl  md:leading-12 lg:leading-14 font-bold font-accent uppercase tracking-tight ">
+        <p className="hero-title  text-4xl md:text-5xl lg:text-6xl  md:leading-12 lg:leading-14 font-bold font-accent uppercase tracking-tight ">
           Education that shapes character and confidence
-        </h1>
+        </p>
 
         <p className="hero-copy hidden max-w-2xl text-[clamp(.5rem,1vw+.7rem,.9rem)] md:mt-2  lg:mt-4 md:block">
           Guiding every child with knowledge, values, and confidence for the future.

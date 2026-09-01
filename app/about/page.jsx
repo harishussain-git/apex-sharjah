@@ -1,6 +1,7 @@
 import SiteFooter from "@/components/layout/SiteFooter"
 import FAQAccordion from "@/components/ui/FAQAccordion"
 import Image from "next/image"
+import { createPageMetadata } from "@/lib/seo"
 import {
   PiEye,
   PiGraduationCap,
@@ -28,6 +29,13 @@ const values = [
   { title: "Innovation and Creativity", Icon: PiLightbulb },
   { title: "Collaboration and Respect", Icon: PiUsersThree },
 ]
+
+export const metadata = createPageMetadata({
+  title: "About Our School",
+  description:
+    "Learn about Apex Vision Model School, a forward-thinking learning community dedicated to excellence in education, character development, innovation, creativity, and compassion.",
+  path: "/about",
+})
 
 export default function AboutPage() {
   return (
@@ -70,7 +78,7 @@ export default function AboutPage() {
       <section className="w-full bg-white text-[#081947]">
         <div className="relative h-[260px] bg-gray-100 shadow-[0_18px_50px_rgba(0,0,0,0.08)] md:h-[420px]">
           <div className="absolute left-0 top-0 z-10 w-full md:h-[420px]">
-            <p className="text-animation-light max-w-7xl px-8 text-white mx-auto font-accent text-7xl mt-32 w-full">About us</p>
+            <h1 className="text-animation-light max-w-7xl px-8 text-white mx-auto font-accent text-7xl mt-32 w-full">About us</h1>
           </div>
           <Image
             src="/img/menu-video-thumbnail2.webp"

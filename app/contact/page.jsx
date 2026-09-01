@@ -8,6 +8,14 @@ import {
 } from "react-icons/pi"
 import FAQAccordion from "@/components/ui/FAQAccordion"
 import ContactPageForm from "@/components/forms/ContactPageForm"
+import { createPageMetadata } from "@/lib/seo"
+
+export const metadata = createPageMetadata({
+  title: "Contact Us",
+  description:
+    "Contact Apex Vision Model School in Sharjah for questions about admissions, academics, school life, campus visits, or other enquiries.",
+  path: "/contact",
+})
 
 const contactItems = [
   {
@@ -115,9 +123,9 @@ export default function ContactPage() {
           </div>
 
           <div id="faqs" className="scroll-mt-28">
-            <h1 className="mt-20 max-w-xl font-accent text-5xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-5xl">
+            <h2 className="mt-20 max-w-xl font-accent text-5xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-5xl">
               Frequently Asked Questions
-            </h1>
+            </h2>
             <FAQAccordion className="mx-auto mt-12" />
           </div>
 

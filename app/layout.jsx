@@ -2,6 +2,7 @@ import "./globals.css"
 import localFont from "next/font/local"
 import { Lato } from "next/font/google"
 import SiteShell from "@/components/layout/SiteShell"
+import { createPageMetadata, SITE_NAME, SITE_URL } from "@/lib/seo"
 
 const lato = Lato({
   subsets: ["latin"],
@@ -21,9 +22,22 @@ const rfRufo = localFont({
   ],
 })
 
+const homeTitle = "Apex Vision Model School Sharjah | Character & Confidence"
+const homeDescription =
+  "Apex Vision Model School in Sharjah is a forward-thinking learning community where academic strength, values, creativity, and confidence grow together."
+
 export const metadata = {
-  title: "Apex",
-  description: "Apex Vision Model School Sharjah",
+  metadataBase: SITE_URL,
+  ...createPageMetadata({
+    title: homeTitle,
+    description: homeDescription,
+    path: "/",
+    absoluteTitle: true,
+  }),
+  title: {
+    default: homeTitle,
+    template: `%s | ${SITE_NAME}`,
+  },
 }
 
 export default function RootLayout({ children }) {

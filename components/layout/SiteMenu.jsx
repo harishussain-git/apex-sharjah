@@ -71,7 +71,7 @@ export default function SiteMenu() {
             <Link href="/" onClick={() => setOpen(false)} className="absolute left-8 top-8 inline-flex" aria-label="Apex homepage">
               <Image
                 src="/home/apex-logo-big.webp"
-                alt="Apex"
+                alt="Apex Vision Model School"
                 width={260}
                 height={54}
                 priority
@@ -94,7 +94,7 @@ export default function SiteMenu() {
 
           <header className="flex items-center justify-between bg-white px-6 py-2 md:col-start-2 md:px-8 md:py-3">
             <Link href="/" onClick={() => setOpen(false)} className="inline-flex md:hidden" aria-label="Apex homepage">
-              <Image src="/home/apex-logo-big.webp" alt="Apex" width={150} height={50} className="h-auto w-28" />
+              <Image src="/home/apex-logo-big.webp" alt="Apex Vision Model School" width={150} height={50} className="h-auto w-28" />
             </Link>
 
             <div className="ml-auto flex items-center gap-3 sm:gap-6">
