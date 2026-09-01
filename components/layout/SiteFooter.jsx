@@ -7,7 +7,11 @@ const footerLinks = [
     title: "Explore",
     links: [
       { label: "About School", href: "/about" },
-      { label: "Admissions", href: "/admission" },
+      {
+        label: "Admissions",
+        href: "https://bmark.nimsuae.com/bm-school/Docme-UI/online-registration?c2Nob29sX2lk=MjI=",
+        newTab: true,
+      },
     ],
   },
   {
@@ -40,7 +44,9 @@ export default function SiteFooter() {
             </p>
 
             <Link
-              href="/admission"
+              href="https://bmark.nimsuae.com/bm-school/Docme-UI/online-registration?c2Nob29sX2lk=MjI="
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/6 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
             >
               <span>Book Admission</span>
@@ -77,6 +83,8 @@ export default function SiteFooter() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    target={link.newTab ? "_blank" : undefined}
+                    rel={link.newTab ? "noopener noreferrer" : undefined}
                     className="block text-body text-white/78 transition hover:text-white"
                   >
                     {link.label}

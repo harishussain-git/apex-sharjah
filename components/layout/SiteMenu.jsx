@@ -8,7 +8,11 @@ import ContactDialog from "../ui/ContactDialog"
 const menuItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Admission", href: "/admission" },
+  {
+    label: "Admission",
+    href: "https://bmark.nimsuae.com/bm-school/Docme-UI/online-registration?c2Nob29sX2lk=MjI=",
+    newTab: true,
+  },
   { label: "Contact Us", href: "/contact" },
 ]
 
@@ -136,6 +140,8 @@ export default function SiteMenu() {
                   >
                     <Link
                       href={item.href}
+                      target={item.newTab ? "_blank" : undefined}
+                      rel={item.newTab ? "noopener noreferrer" : undefined}
                       onClick={() => setOpen(false)}
                       className="group inline-flex font-accent text-[clamp(3.15rem,14vw,5.75rem)] font-medium uppercase leading-[0.9]  text-black transition hover:text-[#343195] md:text-[clamp(3.75rem,4.2vw,4.6rem)]"
                     >

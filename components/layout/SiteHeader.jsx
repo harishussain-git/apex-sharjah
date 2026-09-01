@@ -35,7 +35,9 @@ export default function SiteHeader() {
           {/* Desktop Book Admission */}
           <div className="hidden md:block">
             <Link
-              href="/admission"
+              href="https://bmark.nimsuae.com/bm-school/Docme-UI/online-registration?c2Nob29sX2lk=MjI="
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex md:min-h-10 lg:min-h-12 items-center justify-center rounded-full border border-black/10 bg-[var(--color-primary-500)] md:px-5 lg:px-7 text-[clamp(0.6rem,1vw+0.5rem,0.8rem)] font-semibold text-white transition hover:cursor-pointer hover:bg-[#2a356f] hover:text-white"
             >
               Book Admission

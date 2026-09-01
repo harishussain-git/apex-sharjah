@@ -43,7 +43,8 @@ const cards = [
       "World-Class Facilities",
     ],
     cta: "Apply Now",
-    href: "/admission",
+    href: "https://bmark.nimsuae.com/bm-school/Docme-UI/online-registration?c2Nob29sX2lk=MjI=",
+    newTab: true,
     featured: true,
   },
   {
@@ -120,6 +121,8 @@ export default function HomeCtaSection() {
                     {card.href ? (
                       <Link
                         href={card.href}
+                        target={card.newTab ? "_blank" : undefined}
+                        rel={card.newTab ? "noopener noreferrer" : undefined}
                         className={`inline-flex min-w-[210px] items-center justify-center gap-4 rounded-full border px-6 py-3.5 text-base font-medium transition hover:translate-x-1 ${card.buttonClass} ${card.featured ? "!text-black border-white/0 hover:bg-white/92" : "bg-transparent hover:bg-white/60"}`}
                       >
                         <span className={card.featured ? "text-black" : ""}>{card.cta}</span>

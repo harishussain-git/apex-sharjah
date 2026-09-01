@@ -16,9 +16,9 @@ import {
 } from "react-icons/pi"
 
 const stats = [
-  { label: "Students", value: "1,200+", Icon: PiStudent },
-  { label: "Qualified Teachers", value: "80+", Icon: PiGraduationCap },
-  { label: "Years of Excellence", value: "50+", Icon: PiMedal },
+  { label: "Students", value: "20,000+", Icon: PiStudent },
+  { label: "Qualified Teachers", value: "400+", Icon: PiGraduationCap },
+  { label: "Years of Excellence", value: "45+", Icon: PiMedal },
   { label: "Awards & Recognitions", value: "25+", Icon: PiTrophy },
 ]
 
@@ -105,8 +105,7 @@ export default function AboutPage() {
                 positive impact in the world.
               </h2>
               <p className="mt-16 max-w-3xl text-base font-semibold leading-8 text-slate-700">
-                We combine academic rigor with innovation, creativity, and
-                compassion to prepare future-ready learners for a dynamic world.
+                The NIMS Group UAE is a prominent educational network established in 1980 by Dr. M.K. Kamaluddin under the Manarul Huda Trust to provide affordable, modern education to the Indian community in the United Arab Emirates.
               </p>
             </div>
           </div>
