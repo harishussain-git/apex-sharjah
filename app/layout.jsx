@@ -29,6 +29,7 @@ const rfRufo = localFont({
   ],
 })
 
+// seo
 export const metadata = {
   metadataBase: SITE_URL,
   ...createPageMetadata(PAGE_SEO.home),
