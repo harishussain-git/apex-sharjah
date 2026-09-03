@@ -1,5 +1,7 @@
 import SiteFooter from "@/components/layout/SiteFooter"
 import FAQAccordion from "@/components/ui/FAQAccordion"
+import AnimatedCounter from "@/components/ui/AnimatedCounter"
+import Reveal from "@/components/ui/Reveal"
 import Image from "next/image"
 import { createPageMetadata } from "@/lib/seo"
 import {
@@ -16,10 +18,10 @@ import {
 } from "react-icons/pi"
 
 const stats = [
-  { label: "Students", value: "20,000+", Icon: PiStudent },
-  { label: "Qualified Teachers", value: "400+", Icon: PiGraduationCap },
-  { label: "Years of Excellence", value: "45+", Icon: PiMedal },
-  { label: "Awards & Recognitions", value: "25+", Icon: PiTrophy },
+  { label: "Students", value: 20000, suffix: "+", Icon: PiStudent },
+  { label: "Qualified Teachers", value: 400, suffix: "+", Icon: PiGraduationCap },
+  { label: "Years of Excellence", value: 45, suffix: "+", Icon: PiMedal },
+  { label: "Awards & Recognitions", value: 25, suffix: "+", Icon: PiTrophy },
 ]
 
 const values = [
@@ -61,11 +63,6 @@ export default function AboutPage() {
           }
         }
 
-        .text-animation {
-          color: #081947;
-          animation: textSlideUp 0.85s ease-out both;
-        }
-
         .text-animation-light {
           animation: textSlideUp 0.85s ease-out both;
         }
@@ -91,14 +88,14 @@ export default function AboutPage() {
         </div>
 
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-[28%_72%]">
+          <Reveal className="grid gap-12 lg:grid-cols-[28%_72%]">
             <div className="flex items-start gap-5">
               <span className="mt-2 h-3 w-3 rounded-full bg-[#081947]" />
               <p className="font-semibold">About</p>
             </div>
 
             <div>
-              <h2 className="text-animation max-w-4xl text-4xl font-semibold leading-tight  tracking-tight md:text-4xl">
+              <h2 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-4xl">
                 Apex Vision Model School is a forward-thinking learning community
                 dedicated to excellence in education and character development.
                 We empower students to explore their potential and make a
@@ -108,26 +105,39 @@ export default function AboutPage() {
                 The NIMS Group UAE is a prominent educational network established in 1980 by Dr. M.K. Kamaluddin under the Manarul Huda Trust to provide affordable, modern education to the Indian community in the United Arab Emirates.
               </p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((item) => (
-              <div key={item.label} className="rounded-[28px] bg-gray-100 p-9">
+          <Reveal className="mt-20 flex w-full flex-col justify-between gap-8 md:flex-row md:items-end md:gap-0">
+            <div>
+              <p className="text-[#374386] uppercase text-xs tracking-widest font-bold pb-2">NIMS Group network at a glance.</p>
+              <p>Representing the combined impact of all NIMS Group institutions, including Apex Vision Model School.</p>
+            </div>
+            <img src="/img/nims-logo.webp" alt="NIMS Group network at a glance" className="w-24 mr-12" />
+
+          </Reveal>
+
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((item, index) => (
+              <Reveal
+                key={item.label}
+                delay={index * 80}
+                className="rounded-[28px] bg-gray-100 p-9"
+              >
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-3xl">
                   <item.Icon />
                 </span>
                 <p className="mt-10 font-semibold">{item.label}</p>
-                <p className="mt-8 text-5xl font-semibold tracking-tight">
-                  {item.value}
+                <p className="mt-8 text-5xl font-semibold tracking-tight tabular-nums">
+                  <AnimatedCounter value={item.value} suffix={item.suffix} />
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
 
         <div className="bg-slate-50">
           <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-28">
-            <div className="grid gap-14 lg:grid-cols-[28%_14%_58%] lg:items-start">
+            <Reveal className="grid gap-14 lg:grid-cols-[28%_14%_58%] lg:items-start">
               <div className="flex items-start gap-5">
                 <span className="mt-2 h-3 w-3 rounded-full bg-[#081947]" />
                 <p className="font-semibold">Our Vision</p>
@@ -140,9 +150,9 @@ export default function AboutPage() {
                 thrive in a dynamic world, live with integrity and empathy, and
                 contribute meaningfully to a global society.
               </p>
-            </div>
+            </Reveal>
 
-            <div className="mt-24 grid gap-14 lg:grid-cols-[28%_14%_58%] lg:items-start">
+            <Reveal className="mt-24 grid gap-14 lg:grid-cols-[28%_14%_58%] lg:items-start">
               <div className="flex items-start gap-5">
                 <span className="mt-2 h-3 w-3 rounded-full bg-[#081947]" />
                 <p className="font-semibold">Our Mission</p>
@@ -158,20 +168,21 @@ export default function AboutPage() {
                 ever-changing world, through forward-thinking pedagogy and a
                 culture of mutual respect.
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
 
         <div className="mx-auto w-full max-w-7xl px-6 py-20 md:px-10 md:py-28">
-          <div className="flex items-start gap-5">
+          <Reveal className="flex items-start gap-5">
             <span className="mt-2 h-3 w-3 rounded-full bg-[#081947]" />
             <p className="font-semibold">Core Values</p>
-          </div>
+          </Reveal>
 
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-5">
             {values.map((item, index) => (
-              <div
+              <Reveal
                 key={item.title}
+                delay={index * 80}
                 className={`text-center md:px-8 ${index > 0 ? "md:border-l md:border-slate-200" : ""
                   }`}
               >
@@ -181,15 +192,20 @@ export default function AboutPage() {
                 <p className="mt-8 text-lg font-semibold leading-7">
                   {item.title}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
 
-          <h2 className="mt-28 text-center text-5xl font-semibold tracking-tight">
+          <Reveal
+            as="h2"
+            className="mt-28 text-center text-5xl font-semibold tracking-tight"
+          >
             Frequently Asked Questions
-          </h2>
+          </Reveal>
 
-          <FAQAccordion className="mx-auto mt-12 max-w-5xl" />
+          <Reveal delay={100}>
+            <FAQAccordion className="mx-auto mt-12 max-w-5xl" />
+          </Reveal>
         </div>
       </section>
       <SiteFooter />
