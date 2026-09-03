@@ -1,5 +1,5 @@
 import SiteFooter from "@/components/layout/SiteFooter"
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6"
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6"
 import {
   PiEnvelopeSimpleFill,
   PiGlobeHemisphereWestFill,
@@ -8,6 +8,11 @@ import {
 } from "react-icons/pi"
 import FAQAccordion from "@/components/ui/FAQAccordion"
 import ContactPageForm from "@/components/forms/ContactPageForm"
+import {
+  ADMISSIONS_EMAIL,
+  CONTACT_PHONE,
+  GENERAL_EMAIL,
+} from "@/lib/contactDetails"
 import { createPageMetadata } from "@/lib/seo"
 
 export const metadata = createPageMetadata({
@@ -22,7 +27,7 @@ const contactItems = [
     title: "Call Us",
     Icon: PiPhoneFill,
     lines: [
-      "+971 50 459 8701",
+      CONTACT_PHONE,
       "Monday to Thursday 7:00 AM - 3:30 PM",
       "Saturday and Sunday 8:00 AM - 1:00 PM",
     ],
@@ -39,12 +44,33 @@ const contactItems = [
   {
     title: "Email Us",
     Icon: PiEnvelopeSimpleFill,
-    lines: ["info@nimsapex.com"],
+    lines: [
+      `General Information: ${GENERAL_EMAIL}`,
+      `Registration / Admission: ${ADMISSIONS_EMAIL}`,
+    ],
   },
   {
     title: "Connect With Us",
     Icon: PiGlobeHemisphereWestFill,
     social: true,
+  },
+]
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/apexvisionmodelschool/",
+    Icon: FaInstagram,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/apexvisionmodelschool/",
+    Icon: FaLinkedinIn,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/apexvisionmodelschool",
+    Icon: FaFacebookF,
   },
 ]
 
@@ -92,10 +118,18 @@ export default function ContactPage() {
                       <h2 className="font-semibold text-slate-950">{item.title}</h2>
                       {item.social ? (
                         <div className="mt-5 flex items-center gap-7 text-xl text-slate-950">
-                          <FaFacebookF />
-                          <FaInstagram />
-                          <FaLinkedinIn />
-                          <FaYoutube />
+                          {socialLinks.map(({ label, href, Icon }) => (
+                            <a
+                              key={label}
+                              href={href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={`Follow Apex Vision Model School on ${label}`}
+                              className="transition hover:text-[#343195]"
+                            >
+                              <Icon aria-hidden="true" />
+                            </a>
+                          ))}
                         </div>
                       ) : (
                         <div className="mt-4 space-y-2 text-sm leading-6 text-slate-800">

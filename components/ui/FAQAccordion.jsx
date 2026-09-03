@@ -26,8 +26,11 @@ const defaultFaqs = [
   },
   {
     question: "What are the school timings?",
-    answer:
-      "School timings are shared with parents according to the grade level and academic schedule.",
+    answerItems: [
+      { label: "KG", value: "8:00 AM – 1:00 PM" },
+      { label: "Grade 1 onwards", value: "8:00 AM – 3:00 PM" },
+      { label: "Administration", value: "7:00 AM – 3:00 PM" },
+    ],
   },
   {
     question: "Do you provide transport facilities?",
@@ -98,7 +101,18 @@ export default function FAQAccordion({ items = defaultFaqs, defaultOpen = 0, cla
               }`}
             >
               <div className="overflow-hidden">
-                {item.answer ? (
+                {item.answerItems ? (
+                  <ul className="mt-6 list-disc space-y-2 pl-5 text-base font-medium leading-7 text-slate-700">
+                    {item.answerItems.map((detail) => (
+                      <li key={detail.label}>
+                        <strong className="font-semibold text-slate-900">
+                          {detail.label}:
+                        </strong>{" "}
+                        {detail.value}
+                      </li>
+                    ))}
+                  </ul>
+                ) : item.answer ? (
                   <p className="mt-6 text-base font-medium leading-7 text-slate-700">
                     {item.answer}
                   </p>

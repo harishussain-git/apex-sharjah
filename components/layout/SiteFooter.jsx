@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { PiArrowUpRight, PiMapPin, PiPhone } from "react-icons/pi"
+import { CONTACT_PHONE, CONTACT_PHONE_HREF } from "@/lib/contactDetails"
 
 const footerLinks = [
   {
@@ -69,8 +70,8 @@ export default function SiteFooter() {
             </address>
             <div className="flex items-center gap-3 text-white/78">
               <PiPhone aria-hidden="true" className="shrink-0 text-lg text-white/60" />
-              <a href="tel:+971504598701" className="text-body transition hover:text-white">
-                +971 50 459 8701
+              <a href={CONTACT_PHONE_HREF} className="text-body transition hover:text-white">
+                {CONTACT_PHONE}
               </a>
             </div>
           </div>

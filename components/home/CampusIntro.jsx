@@ -35,7 +35,7 @@ export default function CampusIntro() {
             className="inline-flex items-center gap-3 rounded-2xl border border-white/70 bg-[#f8b92b] px-5 py-3 text-sm font-semibold text-black shadow-[0_18px_44px_rgba(248,185,43,0.28)] transition-transform duration-300 hover:-translate-y-0.5 cursor-pointer"
           >
             <PiHeadsetLight className="text-2xl" />
-            <span>Speak with a Counsellor</span>
+            <span>Speak with the Admission Officer</span>
           </a>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Image from "next/image"
 import HoneypotField from "@/components/forms/HoneypotField"
 import useFormSubmission from "@/hooks/useFormSubmission"
 import { FORM_OPTIONS } from "@/lib/forms/formDefinitions"
+import { ADMISSIONS_EMAIL, CONTACT_PHONE } from "@/lib/contactDetails"
 import {
   PiClock,
   PiEnvelopeSimple,
@@ -63,8 +64,8 @@ const contactItems = [
     icon: PiMapPin,
     text: "Plot # 2028/A, Street 129, Al Sabkha, Al Riqa Suburb, Sharjah, UAE",
   },
-  { icon: PiEnvelopeSimple, text: "contact@apexsharjah.com" },
-  { icon: PiPhone, text: "+971 50 459 8701" },
+  { icon: PiEnvelopeSimple, text: ADMISSIONS_EMAIL },
+  { icon: PiPhone, text: CONTACT_PHONE },
 ]
 
 const trustItems = [

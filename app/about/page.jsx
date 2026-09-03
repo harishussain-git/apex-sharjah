@@ -145,7 +145,7 @@ export default function AboutPage() {
               <span className="flex h-24 w-24 items-center justify-center rounded-full bg-white text-4xl">
                 <PiEye />
               </span>
-              <p className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight">
+              <p className="max-w-3xl text-2xl font-semibold leading-tight tracking-tight">
                 To inspire and empower future-ready learners with the skills to
                 thrive in a dynamic world, live with integrity and empathy, and
                 contribute meaningfully to a global society.

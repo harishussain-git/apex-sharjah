@@ -4,6 +4,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import ContactDialog from "../ui/ContactDialog"
+import {
+  CONTACT_PHONE,
+  CONTACT_PHONE_HREF,
+  GENERAL_EMAIL,
+} from "@/lib/contactDetails"
 
 const menuItems = [
   { label: "Home", href: "/" },
@@ -184,25 +189,25 @@ export default function SiteMenu() {
             </div>
 
             <div className="flex flex-col gap-4 border-b border-slate-200 pb-6 text-sm font-bold text-slate-500 sm:flex-row sm:items-center sm:gap-10">
-              <a href="tel:+97141234567" className="inline-flex items-center gap-3 transition hover:text-[#343195]">
+              <a href={CONTACT_PHONE_HREF} className="inline-flex items-center gap-3 transition hover:text-[#343195]">
                 <span className="inline-flex size-10 items-center justify-center rounded-full border border-[#343195]/25 text-[#343195]">
                   <svg viewBox="0 0 24 24" className="size-5" fill="none" aria-hidden="true">
                     <path d="M8.5 5.5 6.8 3.8a1.8 1.8 0 0 0-2.6 0l-.9.9c-.9.9-.8 2.4.1 3.8a29 29 0 0 0 12.1 12.1c1.4.9 2.9 1 3.8.1l.9-.9a1.8 1.8 0 0 0 0-2.6l-1.7-1.7a1.8 1.8 0 0 0-2.4-.2l-1.1.8a18.5 18.5 0 0 1-7.1-7.1l.8-1.1a1.8 1.8 0 0 0-.2-2.4Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                +971 4 123 4567
+                {CONTACT_PHONE}
               </a>
 
               <span className="hidden h-8 w-px bg-slate-200 sm:block" />
 
-              <a href="mailto:info@apexschool.ae" className="inline-flex items-center gap-3 transition hover:text-[#343195]">
+              <a href={`mailto:${GENERAL_EMAIL}`} className="inline-flex items-center gap-3 transition hover:text-[#343195]">
                 <span className="inline-flex size-10 items-center justify-center rounded-full border border-[#343195]/25 text-[#343195]">
                   <svg viewBox="0 0 24 24" className="size-5" fill="none" aria-hidden="true">
                     <path d="M4 6.5h16v11H4v-11Z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
                     <path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
-                info@apexschool.ae
+                {GENERAL_EMAIL}
               </a>
             </div>
 
