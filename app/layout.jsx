@@ -42,7 +42,7 @@ export const metadata = {
     google: "nYgVN_Qjwkroge7eYcIJqq6R6iS0BNTOSGwOkR89EF4",
   },
 }
-
+// google verification
 export default function RootLayout({ children }) {
   return (
     <html
