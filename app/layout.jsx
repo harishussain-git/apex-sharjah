@@ -38,6 +38,9 @@ export const metadata = {
     default: homeTitle,
     template: `%s | ${SITE_NAME}`,
   },
+  verification: {
+    google: "nYgVN_Qjwkroge7eYcIJqq6R6iS0BNTOSGwOkR89EF4",
+  },
 }
 
 export default function RootLayout({ children }) {
