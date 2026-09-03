@@ -3,7 +3,7 @@ import FAQAccordion from "@/components/ui/FAQAccordion"
 import AnimatedCounter from "@/components/ui/AnimatedCounter"
 import Reveal from "@/components/ui/Reveal"
 import Image from "next/image"
-import { createPageMetadata } from "@/lib/seo"
+import { createPageMetadata, PAGE_SEO } from "@/lib/seo"
 import {
   PiEye,
   PiGraduationCap,
@@ -32,12 +32,7 @@ const values = [
   { title: "Collaboration and Respect", Icon: PiUsersThree },
 ]
 
-export const metadata = createPageMetadata({
-  title: "About Our School",
-  description:
-    "Learn about Apex Vision Model School, a forward-thinking learning community dedicated to excellence in education, character development, innovation, creativity, and compassion.",
-  path: "/about",
-})
+export const metadata = createPageMetadata(PAGE_SEO.about)
 
 export default function AboutPage() {
   return (

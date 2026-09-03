@@ -13,14 +13,9 @@ import {
   CONTACT_PHONE,
   GENERAL_EMAIL,
 } from "@/lib/contactDetails"
-import { createPageMetadata } from "@/lib/seo"
+import { createPageMetadata, PAGE_SEO } from "@/lib/seo"
 
-export const metadata = createPageMetadata({
-  title: "Contact Us",
-  description:
-    "Contact Apex Vision Model School in Sharjah for questions about admissions, academics, school life, campus visits, or other enquiries.",
-  path: "/contact",
-})
+export const metadata = createPageMetadata(PAGE_SEO.contact)
 
 const contactItems = [
   {
