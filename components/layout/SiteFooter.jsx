@@ -17,7 +17,10 @@ const footerLinks = [
   },
   {
     title: "Resources",
-    links: [{ label: "Contact", href: "/contact" }],
+    links: [
+      { label: "Mandatory Disclosure", href: "/mandatory-disclosure" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
 ]
 

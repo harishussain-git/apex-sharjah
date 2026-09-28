@@ -18,6 +18,7 @@ const menuItems = [
     href: "https://bmark.nimsuae.com/bm-school/Docme-UI/online-registration?c2Nob29sX2lk=MjI=",
     newTab: true,
   },
+  { label: "Mandatory Disclosure", href: "/mandatory-disclosure" },
   { label: "Contact Us", href: "/contact" },
 ]
 

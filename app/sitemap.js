@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/seo"
 const routes = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/mandatory-disclosure", changeFrequency: "monthly", priority: 0.7 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
 ]
 

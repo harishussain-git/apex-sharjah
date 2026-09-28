@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "title": "CBSE Mandatory Disclosure | Apex Vision Model School",
+    "description": "View and download school information and mandatory disclosure documents for Apex Vision Model School, Sharjah.",
+    "canonical": "/mandatory-disclosure"
+  },
+  "page": {
+    "title": "CBSE Mandatory Disclosure",
+    "description": "Access school information and disclosure documents for Apex Vision Model School, Sharjah.",
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Mandatory Disclosure",
+    "downloadLabel": "Download",
+    "sectionLabel": "Disclosure documents",
+    "fileTypeLabel": "PDF"
+  },
+  "documents": [
+    {
+      "id": "pest-control-authentication-certificate",
+      "title": "Pest Control Authentication Certificate",
+      "file": "/documents/disclosure/pest-control-certificate.pdf"
+    },
+    {
+      "id": "health-clinic-licence",
+      "title": "Health Clinic Licence",
+      "file": "/documents/disclosure/health-clinic-licence.pdf"
+    },
+    {
+      "id": "fire-safety-certificate",
+      "title": "Fire Safety Certificate",
+      "file": "/documents/disclosure/fire-safety-certificate.pdf"
+    },
+    {
+      "id": "building-safety-certificate",
+      "title": "Building Safety Certificate",
+      "file": "/documents/disclosure/building-safety-certificate.pdf"
+    },
+    {
+      "id": "fee-structure-2026-27",
+      "title": "Fee Structure 2026–27",
+      "file": "/documents/disclosure/fee-structure-2026-27.pdf"
+    },
+    {
+      "id": "mandatory-public-disclosure",
+      "title": "Mandatory Public Disclosure",
+      "file": null
+    },
+    {
+      "id": "academic-calendar",
+      "title": "Academic Calendar",
+      "file": null
+    },
+    {
+      "id": "school-management-committee",
+      "title": "School Management Committee",
+      "file": null
+    },
+    {
+      "id": "parent-teacher-association",
+      "title": "Parent-Teacher Association",
+      "file": null
+    },
+    {
+      "id": "spea-educational-licence",
+      "title": "SPEA Educational Licence",
+      "file": null
+    },
+    {
+      "id": "water-health-and-sanitation-certificates",
+      "title": "Water, Health and Sanitation Certificates",
+      "file": null
+    },
+    {
+      "id": "self-declaration",
+      "title": "Self-Declaration",
+      "file": null
+    }
+  ]
+}
