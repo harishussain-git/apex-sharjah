@@ -15,24 +15,9 @@
   },
   "documents": [
     {
-      "id": "pest-control-authentication-certificate",
-      "title": "Pest Control Authentication Certificate",
-      "file": "/documents/disclosure/pest-control-certificate.pdf"
-    },
-    {
-      "id": "health-clinic-licence",
-      "title": "Health Clinic Licence",
-      "file": "/documents/disclosure/health-clinic-licence.pdf"
-    },
-    {
-      "id": "fire-safety-certificate",
-      "title": "Fire Safety Certificate",
-      "file": "/documents/disclosure/fire-safety-certificate.pdf"
-    },
-    {
-      "id": "building-safety-certificate",
-      "title": "Building Safety Certificate",
-      "file": "/documents/disclosure/building-safety-certificate.pdf"
+      "id": "annual-academic-calendar",
+      "title": "Annual Academic Calendar",
+      "file": "/documents/disclosure/annual-academic-calendar.pdf"
     },
     {
       "id": "fee-structure-2026-27",
@@ -40,33 +25,53 @@
       "file": "/documents/disclosure/fee-structure-2026-27.pdf"
     },
     {
-      "id": "mandatory-public-disclosure",
-      "title": "Mandatory Public Disclosure",
-      "file": null
-    },
-    {
-      "id": "academic-calendar",
-      "title": "Academic Calendar",
-      "file": null
-    },
-    {
       "id": "school-management-committee",
       "title": "School Management Committee",
-      "file": null
+      "file": "/documents/disclosure/school-management-committee.pdf"
     },
     {
-      "id": "parent-teacher-association",
-      "title": "Parent-Teacher Association",
-      "file": null
+      "id": "school-parents-council-2026",
+      "title": "School Parents Council 2026",
+      "file": "/documents/disclosure/school-parents-council-2026.pdf"
+    },
+    {
+      "id": "school-professional-licence",
+      "title": "School Professional Licence",
+      "file": "/documents/disclosure/school-professional-licence.pdf"
     },
     {
       "id": "spea-educational-licence",
       "title": "SPEA Educational Licence",
-      "file": null
+      "file": "/documents/disclosure/spea-educational-licence.pdf"
     },
     {
-      "id": "water-health-and-sanitation-certificates",
-      "title": "Water, Health and Sanitation Certificates",
+      "id": "building-safety-certificate",
+      "title": "Building Safety Certificate",
+      "file": "/documents/disclosure/building-safety-certificate.pdf"
+    },
+    {
+      "id": "fire-safety-certificate",
+      "title": "Fire Safety Certificate",
+      "file": "/documents/disclosure/fire-safety-certificate.pdf"
+    },
+    {
+      "id": "health-clinic-licence",
+      "title": "Health Clinic Licence",
+      "file": "/documents/disclosure/health-clinic-licence.pdf"
+    },
+    {
+      "id": "pest-control-authentication-certificate",
+      "title": "Pest Control Authentication Certificate",
+      "file": "/documents/disclosure/pest-control-certificate.pdf"
+    },
+    {
+      "id": "water-health-and-sanitation-certificate",
+      "title": "Water, Health and Sanitation Certificate",
+      "file": "/documents/disclosure/water-health-sanitation-certificate.pdf"
+    },
+    {
+      "id": "mandatory-public-disclosure",
+      "title": "Mandatory Public Disclosure",
       "file": null
     },
     {
