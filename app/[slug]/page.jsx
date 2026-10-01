@@ -1,4 +1,5 @@
-import { notFound, redirect } from "next/navigation"
+import { notFound } from "next/navigation"
+import SeoDesign1 from "@/components/ui/SeoDesign1"
 import seoPages from "@/content/seo.json"
 
 function getSeoPage(slug) {
@@ -23,8 +24,9 @@ export async function generateMetadata({ params }) {
 
 export default async function SeoLocationPage({ params }) {
   const { slug } = await params
+  const page = getSeoPage(slug)
 
-  if (!getSeoPage(slug)) notFound()
+  if (!page) notFound()
 
-  redirect("/")
+  return <SeoDesign1 page={page} />
 }
