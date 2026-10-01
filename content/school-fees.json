@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "title": "School Fees | Apex Vision Model School",
+    "description": "View tuition, books, uniform and transport fees for Apex Vision Model School, Sharjah, including SPEA-approved and discounted fee amounts.",
+    "canonical": "/school-fees"
+  },
+  "page": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "School Fees"
+    },
+    "title": "School Fees",
+    "description": "A clear overview of tuition, books, uniforms and transport fees.",
+    "currencyNote": "All amounts in AED",
+    "tuition": {
+      "title": "Tuition & Other Fees",
+      "gradeLabel": "Grade",
+      "approvedLabel": "SPEA Approved Tuition Fee (AED)",
+      "discountedLabel": "Apex Discounted Tuition Fee (AED)",
+      "helperText": "Select a grade to view admission, book and uniform fees.",
+      "additionalFeesTitle": "Additional Fees",
+      "admissionFeeLabel": "Admission Fee",
+      "admissionFee": "AED 500",
+      "itemLabel": "Item",
+      "additionalApprovedLabel": "SPEA Approved (AED)",
+      "additionalDiscountedLabel": "Apex Discounted (AED)",
+      "additionalItems": [
+        {
+          "id": "books",
+          "label": "Books",
+          "approved": "350",
+          "discounted": "300 – 350"
+        },
+        {
+          "id": "uniform",
+          "label": "Uniform",
+          "approved": "710",
+          "discounted": "250"
+        }
+      ],
+      "grades": [
+        {
+          "id": "kg-1",
+          "label": "KG 1",
+          "approved": "12,500",
+          "discounted": "7,500"
+        },
+        {
+          "id": "kg-2",
+          "label": "KG 2",
+          "approved": "13,000",
+          "discounted": "8,000"
+        },
+        {
+          "id": "grade-1",
+          "label": "Grade 1",
+          "approved": "13,500",
+          "discounted": "8,500"
+        },
+        {
+          "id": "grade-2",
+          "label": "Grade 2",
+          "approved": "14,000",
+          "discounted": "9,000"
+        },
+        {
+          "id": "grade-3",
+          "label": "Grade 3",
+          "approved": "15,000",
+          "discounted": "9,500"
+        },
+        {
+          "id": "grade-4",
+          "label": "Grade 4",
+          "approved": "15,500",
+          "discounted": "10,000"
+        }
+      ]
+    },
+    "transport": {
+      "title": "Transport Fees",
+      "routeLabel": "Route",
+      "approvedLabel": "SPEA Approved (AED)",
+      "discountedLabel": "Apex Discounted (AED)",
+      "helperText": "Contact our admissions team for route details and applicable charges.",
+      "routes": [
+        {
+          "id": "sharjah",
+          "label": "Sharjah",
+          "approved": "500",
+          "discounted": "300 – 375"
+        },
+        {
+          "id": "ajman",
+          "label": "Ajman",
+          "approved": "500",
+          "discounted": "360 – 375"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Have a Question About Fees?",
+      "description": "Our admissions team is here to help.",
+      "buttonLabel": "Contact Admissions",
+      "buttonHref": "mailto:registrar@apexsharjah.com",
+      "phone": {
+        "label": "050 459 8701",
+        "href": "tel:+971504598701"
+      },
+      "email": {
+        "label": "registrar@apexsharjah.com",
+        "href": "mailto:registrar@apexsharjah.com"
+      }
+    }
+  }
+}

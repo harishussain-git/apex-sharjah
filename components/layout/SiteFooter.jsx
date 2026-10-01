@@ -18,6 +18,7 @@ const footerLinks = [
   {
     title: "Resources",
     links: [
+      { label: "School Fees", href: "/school-fees" },
       { label: "Mandatory Disclosure", href: "/mandatory-disclosure" },
       { label: "Contact", href: "/contact" },
     ],
