@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
+import PreLoader from "@/components/layout/PreLoader"
 
 const imagePattern = /\.(avif|gif|jpe?g|png|svg|webp)(\?.*)?$/i
 
@@ -142,15 +143,11 @@ export default function AssetLoader({ assets = [], children, label = "Loading" }
     <>
       {status.ready ? children : null}
       <main
-        className={`fixed inset-0 z-[9999] grid min-h-screen place-items-center bg-white px-6 text-center text-[var(--color-primary-500)] transition-opacity duration-500 ${status.ready ? "opacity-0" : "opacity-100"
+        aria-label={label}
+        className={`fixed inset-0 z-[9999] grid min-h-screen place-items-center bg-white text-center text-[var(--color-primary-500)] transition-opacity duration-500 ${status.ready ? "opacity-0" : "opacity-100"
           }`}
       >
-        <div>
-          <p className="text-eyebrow">{label}</p>
-          <p className="mt-3 font-accent text-6xl font-semibold leading-none">
-            {percent}%
-          </p>
-        </div>
+        <PreLoader progress={percent} />
       </main>
     </>
   )

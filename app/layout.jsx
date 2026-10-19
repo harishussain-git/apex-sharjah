@@ -1,6 +1,7 @@
 import "./globals.css"
 import localFont from "next/font/local"
 import { Lato } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import SiteShell from "@/components/layout/SiteShell"
 import {
   createPageMetadata,
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
     >
       <body>
         <SiteShell>{children}</SiteShell>
+        <Analytics />
       </body>
     </html>
   )
