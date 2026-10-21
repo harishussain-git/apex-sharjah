@@ -23,7 +23,7 @@ const contactItems = [
     Icon: PiPhoneFill,
     lines: [
       CONTACT_PHONE,
-      "Monday to Thursday 7:00 AM - 3:30 PM",
+      "Monday to Thursday 7:00 AM - 3:00 PM",
       "Saturday and Sunday 8:00 AM - 1:00 PM",
     ],
   },
