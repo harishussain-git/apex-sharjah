@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation"
 import SeoDesign1 from "@/components/ui/SeoDesign1"
 import seoPages from "@/content/seo.json"
+import { SITE_URL } from "@/lib/seo"
+import StructuredData from "@/components/seo/StructuredData"
+import { CBSE_SCHOOL_SLUG, CBSE_SCHOOL_STRUCTURED_DATA } from "@/lib/structuredData"
 
 function getSeoPage(slug) {
   return seoPages.find((page) => page.slug === slug)
@@ -19,6 +22,9 @@ export async function generateMetadata({ params }) {
   return {
     title: { absolute: page.title },
     description: page.description,
+    alternates: {
+      canonical: new URL(`/${page.slug}`, SITE_URL).toString(),
+    },
   }
 }
 
@@ -28,5 +34,12 @@ export default async function SeoLocationPage({ params }) {
 
   if (!page) notFound()
 
-  return <SeoDesign1 page={page} />
+  return (
+    <>
+      {slug === CBSE_SCHOOL_SLUG && (
+        <StructuredData id="cbse-school-structured-data" data={CBSE_SCHOOL_STRUCTURED_DATA} />
+      )}
+      <SeoDesign1 page={page} />
+    </>
+  )
 }

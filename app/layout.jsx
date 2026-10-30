@@ -3,6 +3,8 @@ import localFont from "next/font/local"
 import { Lato } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import SiteShell from "@/components/layout/SiteShell"
+import StructuredData from "@/components/seo/StructuredData"
+import { SITE_STRUCTURED_DATA } from "@/lib/structuredData"
 import {
   createPageMetadata,
   GOOGLE_SITE_VERIFICATION,
@@ -34,6 +36,8 @@ const rfRufo = localFont({
 export const metadata = {
   metadataBase: SITE_URL,
   ...createPageMetadata(PAGE_SEO.home),
+  // Canonicals belong to individual pages, never to inherited site defaults.
+  alternates: null,
   title: {
     default: PAGE_SEO.home.title,
     template: `%s | ${SITE_NAME}`,
@@ -52,6 +56,7 @@ export default function RootLayout({ children }) {
       style={{ backgroundColor: "#0b1220" }}
     >
       <body>
+        <StructuredData id="site-structured-data" data={SITE_STRUCTURED_DATA} />
         <SiteShell>{children}</SiteShell>
         <Analytics />
       </body>

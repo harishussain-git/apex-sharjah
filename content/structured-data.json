@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.apexsharjah.com/#website",
+      "url": "https://www.apexsharjah.com/",
+      "name": "Apex Vision Model School",
+      "inLanguage": "en-AE",
+      "publisher": { "@id": "https://www.apexsharjah.com/#school" }
+    },
+    {
+      "@type": "School",
+      "@id": "https://www.apexsharjah.com/#school",
+      "name": "Apex Vision Model School",
+      "alternateName": "Apex Vision Model School Sharjah",
+      "url": "https://www.apexsharjah.com/",
+      "description": "English-medium CBSE school in Al Riqa, Sharjah, currently teaching KG1 to Grade 4.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.apexsharjah.com/home/apex-logo-big.webp"
+      },
+      "image": "https://www.apexsharjah.com/img/opengraph-image.webp",
+      "telephone": "+971504598701",
+      "email": "info@apexsharjah.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot # 2028/A, Street 129, Al Sabkha, Al Riqa Suburb",
+        "addressLocality": "Sharjah",
+        "addressRegion": "Sharjah",
+        "addressCountry": "AE"
+      },
+      "areaServed": { "@type": "City", "name": "Sharjah" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "admissions",
+        "telephone": "+971504598701",
+        "email": "info@apexsharjah.com",
+        "availableLanguage": "English"
+      },
+      "parentOrganization": {
+        "@type": "EducationalOrganization",
+        "name": "NIMS Group UAE",
+        "foundingDate": "1980"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.apexsharjah.com/cbse-school-sharjah#webpage",
+      "url": "https://www.apexsharjah.com/cbse-school-sharjah",
+      "name": "CBSE School in Sharjah | Apex Vision Model School",
+      "inLanguage": "en-AE",
+      "isPartOf": { "@id": "https://www.apexsharjah.com/#website" },
+      "about": { "@id": "https://www.apexsharjah.com/#school" },
+      "breadcrumb": { "@id": "https://www.apexsharjah.com/cbse-school-sharjah#breadcrumb" },
+      "mainEntity": { "@id": "https://www.apexsharjah.com/cbse-school-sharjah#faq" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.apexsharjah.com/cbse-school-sharjah#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.apexsharjah.com/" },
+        { "@type": "ListItem", "position": 2, "name": "CBSE School in Sharjah", "item": "https://www.apexsharjah.com/cbse-school-sharjah" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.apexsharjah.com/cbse-school-sharjah#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes Apex Vision Model School different from other CBSE schools in Sharjah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apex belongs to the NIMS Group, which Dr. M.K. Kamaluddin started in 1980 under the Manarul Huda Trust to offer affordable education to the Indian community in the UAE. So a newer campus sits inside an established network. It also puts its paperwork online: the SPEA educational licence, building and fire safety certificates, fee structure and parent council list can all be downloaded from the Mandatory Disclosure page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I judge a new CBSE school in Sharjah that has no results yet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Judge it on what you can check today, not on promises. Ask for the SPEA licence, the building and fire safety certificates, the health clinic licence and the current fee structure. Apex publishes these on its Mandatory Disclosure page, so you can read them before you visit. Then meet the people who will actually teach your child's class."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I check about CBSE affiliation and SPEA approval?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check two separate things: the SPEA educational licence, which is the Sharjah regulator's approval to operate, and the school's CBSE affiliation status, which covers the curriculum. Apex lists its SPEA licence under Mandatory Disclosure. Ask the admissions team on 050 459 8701 for the CBSE affiliation details in writing, and compare the grades named there with the grades your child needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the school timings, and is transport available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KG runs from 8:00 AM to 1:00 PM, and Grade 1 onwards from 8:00 AM to 3:00 PM. Transport is available in selected areas, subject to route availability, so confirm your address before you apply. The campus is on Street 129 in Al Sabkha, Al Riqa Suburb, Sharjah."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I ask during a campus visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ask about three things: grades, fees and transport. Apex currently teaches KG1 to Grade 4, so check which year your child would join and what happens after Grade 4. Ask for the 2026–27 fee structure and what it covers, and whether a transport route reaches your area. The contact form has a School Tour option."
+          }
+        }
+      ]
+    }
+  ]
+}
